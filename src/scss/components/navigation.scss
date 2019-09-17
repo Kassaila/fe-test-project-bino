@@ -1,0 +1,52 @@
+.nav {
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    @include media("<desktop") {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      display: none;
+    }
+    li {
+      margin-left: 53px;
+      @include media("<desktop") {
+        margin-left: 0;
+      }
+      a {
+        display: block;
+        color: map-get($colors, "dark");
+        text-transform: uppercase;
+        font-weight: 700;
+        border: 1px solid transparent;
+        padding: 22px 0;
+        transition: 0.3s ease;
+        &:hover {
+          color: map-get($colors, "orange");
+          text-decoration: none;
+          border-bottom: 1px solid map-get($colors, "orange");
+        }
+        @media (max-width: 992px) {
+          text-align: center;
+        }
+      }
+    }
+  }
+  &__button_mobile {
+    display: none;
+    @include media("<desktop") {
+      width: 50px;
+      height: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: space-between;
+    }
+    figure {
+      height: 4px;
+      background-color: #fff;
+    }
+  }
+}

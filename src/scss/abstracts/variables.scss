@@ -5,8 +5,8 @@
 // For headers
 $headings: (
   "sizes": (
-    "h1-font-size": 30px,
-    "h2-font-size": 27px,
+    "h1-font-size": 72px,
+    "h2-font-size": 36px,
     "h3-font-size": 24px,
     "h4-font-size": 21px,
     "h5-font-size": 17px,
@@ -14,7 +14,7 @@ $headings: (
   ),
   "fonts": (
     "headings-font-family": inherit,
-    "headings-color": inherit
+    "headings-color": #6a6a6a
   )
 );
 
@@ -24,18 +24,18 @@ $base: (
     unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
   "base-font-serif":
     unquote("'Times New Roman', Times, Baskerville, Georgia, serif"),
-  "base-text-color": #000,
+  "base-text-color": #999,
   "base-background-color": #fff,
-  "base-link-color": #39f,
+  "base-link-color": #e74c3c,
   "base-font-size": 14px,
-  "base-line-height": 1.2,
-  "base-font-family": unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  "base-line-height": 2.07,
+  "base-font-family": unquote("SourceSansPro, Arial, 'Helvetica Neue', Helvetica, sans-serif"),
   "base-min-width": 320px
 );
 
 // Vars for forms
 $forms: (
-  "form-font-family": unquote("Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  "form-font-family": unquote("OpenSans, Arial, 'Helvetica Neue', Helvetica, sans-serif"),
   "form-element-padding": unquote("0.4em 0.7em"),
   "form-element-border-color": #999,
   "form-element-focus-border-color": #000,
@@ -63,9 +63,7 @@ $media-expressions: (
 // colors
 $colors: (
   "orange": #e74c3c,
-  "white": (
-    "light": #fff,
-    "medium": #f4f5f9,
-    "dark": #cbc6c0
-  )
+  "white": #fff,
+  "medium": #f4f5f9,
+  "dark": #cbc6c0
 );

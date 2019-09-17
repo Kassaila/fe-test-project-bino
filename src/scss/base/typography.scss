@@ -45,8 +45,9 @@ p {
 
 a {
   color: map-get($base, 'base-link-color');
+  text-decoration: none;
   &:hover,
   &:focus {
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
