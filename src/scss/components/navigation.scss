@@ -1,4 +1,5 @@
 .nav {
+  margin-left: auto;
   &__list {
     display: flex;
     list-style: none;
@@ -29,7 +30,7 @@
           text-decoration: none;
           border-bottom: 1px solid map-get($colors, "orange");
         }
-        @media (max-width: 992px) {
+        @include media("<desktop") {
           text-align: center;
         }
       }
@@ -45,20 +46,20 @@
       align-items: stretch;
       justify-content: space-between;
     }
-    figure {
+    span {
       height: 4px;
       background-color: #fff;
       transform-origin: 0;
       transition: 0.5s ease;
     }
     &.active {
-      figure:first-child {
+      span:first-child {
         transform: rotateZ(38deg);
       }
-      figure:nth-child(2) {
+      span:nth-child(2) {
         opacity: 0;
       }
-      figure:last-child {
+      span:last-child {
         transform: rotateZ(-38deg);
       }
     }
