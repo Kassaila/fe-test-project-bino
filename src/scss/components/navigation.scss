@@ -19,7 +19,7 @@
       }
       a {
         display: block;
-        color: map-get($colors, "dark");
+        color: map-get($colors, "main-dark");
         text-transform: uppercase;
         font-weight: 700;
         border: 1px solid transparent;
