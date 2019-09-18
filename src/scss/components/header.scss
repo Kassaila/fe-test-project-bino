@@ -1,8 +1,10 @@
 .header {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
   background-color: transparent;
   padding-top: 24px;
-
   &__logo {
     align-self: center;
   }

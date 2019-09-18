@@ -14,9 +14,9 @@
 
 //
 main {
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #000;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
 }
