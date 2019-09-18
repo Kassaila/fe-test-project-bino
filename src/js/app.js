@@ -2,18 +2,12 @@
 //
 // This file will be compiled into app.js and will not be minified.
 // Feel free with using ES6 here.
+import navMobile from './modules/nav_mobile';
 
 ($ => {
   // When DOM is ready
   $(() => {
-    $(".nav__button_mobile").on("click", function() {
-      if (!$(this).hasClass("active")) {
-        $(this).addClass("active");
-        $(".nav__list").animate({ opacity: "toggle", height: "toggle" });
-      } else {
-        $(this).removeClass("active");
-        $(".nav__list").animate({ opacity: "toggle", height: "toggle" });
-      }
-    });
+    // navigation mobile
+    navMobile();
   });
 })(jQuery);
