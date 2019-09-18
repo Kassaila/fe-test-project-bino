@@ -9,6 +9,7 @@
       right: 0;
       width: 100%;
       display: none;
+      background-color: rgba(0, 0, 0, 0.2);
     }
     li {
       margin-left: 53px;
@@ -51,15 +52,15 @@
       transition: 0.5s ease;
     }
     &.active {
-        figure:first-child {
-            transform: rotateZ(38deg);
-        }
-        figure:nth-child(2) {
-            opacity: 0;
-        }
-        figure:last-child {
-            transform: rotateZ(-38deg);
-        }
+      figure:first-child {
+        transform: rotateZ(38deg);
+      }
+      figure:nth-child(2) {
+        opacity: 0;
+      }
+      figure:last-child {
+        transform: rotateZ(-38deg);
+      }
     }
   }
 }
