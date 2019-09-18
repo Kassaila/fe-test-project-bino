@@ -1,9 +1,9 @@
 .nav {
+  margin-left: auto;
   &__list {
     display: flex;
     list-style: none;
     padding: 0;
-    margin-left: auto;
     @include media("<desktop") {
       position: absolute;
       top: 100%;
