@@ -1,0 +1,53 @@
+%triangle {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  height: 150px;
+  z-index: 2;
+}
+
+.welcome_section {
+  position: relative;
+  height: 100vh;
+
+  &:before {
+    @extend %triangle;
+    left: 0;
+    background-image: linear-gradient(to right top, #fff 50%, transparent 50%);
+  }
+  &:after {
+    @extend %triangle;
+    right: 0;
+    background-image: linear-gradient(to left top, #fff 50%, transparent 50%);
+  }
+}
+.welcome_slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.figures_decor {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  @include size(64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, 50%);
+  background-color: #f4f5f9;
+  border-radius: 50%;
+  z-index: 3;
+
+  &:before {
+    content: "";
+    position: absolute;
+    @include size(74px);
+    background-color: #fff;
+    opacity: 0.25;
+    border-radius: 50%;
+    z-index: -1;
+  }
+}
