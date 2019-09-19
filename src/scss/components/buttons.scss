@@ -1,0 +1,8 @@
+.button {
+    @extend %linkreset;
+    min-width: 225px;
+    text-align: center;
+    color: map-get($colors, 'white');
+    box-shadow: 0px 2px 4.8px 0.3px rgba(0, 0, 0, 0.25);
+    padding: 22px;
+}
