@@ -2,14 +2,13 @@
   content: "";
   position: absolute;
   bottom: 0;
-  width: 50%;
-  height: 150px;
+  width: 48%;
+  height: 12%;
   z-index: 2;
 }
 
 .welcome_section {
   position: relative;
-  height: 100vh;
 
   &:before {
     @extend %triangle;
@@ -21,12 +20,6 @@
     right: 0;
     background-image: linear-gradient(to left top, #fff 50%, transparent 50%);
   }
-}
-.welcome_slider {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
 }
 .figures_decor {
   position: absolute;
