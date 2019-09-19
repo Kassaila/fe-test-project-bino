@@ -14,20 +14,18 @@
     display: flex;
     flex-wrap: wrap;
     li {
+      line-height: 1;
       &:not(:last-child) {
         margin-right: 21px;
       }
     }
     a {
+      @extend %linkreset;
       font-size: 19px;
       color: map-get($base, "base-text-color");
       transition: 0.3s ease;
       &:hover {
         color: map-get($colors, "orange");
-        text-decoration: none;
-      }
-      &:focus {
-        text-decoration: none;
       }
     }
   }
