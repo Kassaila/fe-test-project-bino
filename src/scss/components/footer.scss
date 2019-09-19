@@ -26,6 +26,10 @@
       transition: 0.3s ease;
       &:hover {
         color: map-get($colors, "orange");
+        text-decoration: none;
+      }
+      &:focus {
+        text-decoration: none;
       }
     }
   }
