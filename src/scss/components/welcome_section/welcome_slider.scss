@@ -91,7 +91,9 @@
     text-align: center;
     color: map-get($colors, "main-dark");
     margin-top: 37px;
-
+    >*:last-child {
+      margin-bottom: 0;
+    }
     @include media("<desktop") {
       margin-top: 20px;
     }

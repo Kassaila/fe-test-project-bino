@@ -1,22 +1,21 @@
-%triangle {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 48%;
-  height: 12%;
-  z-index: 2;
-}
-
 .welcome_section {
   position: relative;
 
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 48%;
+    height: 12%;
+    z-index: 2;
+  }
+
   &:before {
-    @extend %triangle;
     left: 0;
     background-image: linear-gradient(to right top, #fff 50%, transparent 50%);
   }
   &:after {
-    @extend %triangle;
     right: 0;
     background-image: linear-gradient(to left top, #fff 50%, transparent 50%);
   }

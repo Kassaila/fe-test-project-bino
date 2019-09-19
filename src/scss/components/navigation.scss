@@ -18,12 +18,12 @@
         margin-left: 0;
       }
       a {
-        @extend %linkreset;
         display: block;
         font-family: map-get($base, 'base-font-sans-serif');
+        font-weight: 700;
         color: map-get($colors, "main-dark");
         text-transform: uppercase;
-        font-weight: 700;
+        text-decoration: none;
         border: 1px solid transparent;
         padding: 22px 0;
         transition: 0.3s ease;
