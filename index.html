@@ -13,7 +13,12 @@
       <header class="header">
         <div class="container">
           <div class="row">
-            <img src="assets/images/logo.png" class="header__logo" alt="Bino logo" />
+            <a href="#" class="header__logo">
+              <picture>
+                <source srcset="assets/images/logo-480.png" media="(max-width: 480px)">
+                <img src="assets/images/logo.png" alt="Bino logo" />
+              </picture>
+            </a>
             <nav class="nav">
               <button class="nav__button_mobile" type="button">
                   <span></span>
@@ -34,44 +39,50 @@
           </div>
         </div>
       </header>
-
       <section id="welcome_section" class="welcome_section">
           <a href="#" class="figures_decor icon-anchor"></a>
           <div class="welcome_slider">
 
               <div class="welcome_slider__block">
                   <picture>
-                      <source srcset="assets/images/welcome_section/welcome-1920.jpg,
-                      assets/images/welcome_section/welcome-1920@2x.jpg 2x" media="(min-width: 1281px)">
-                      <source srcset="assets/images/welcome_section/welcome-1280.jpg,
-                      assets/images/welcome_section/welcome-1280@2x.jpg 2x" media="(min-width: 981px)">
-                      <source srcset="assets/images/welcome_section/welcome-980.jpg,
-                      assets/images/welcome_section/welcome-980@2x.jpg 2x" media="(min-width: 769px)">
-                      <source srcset="assets/images/welcome_section/welcome-768.jpg,
-                      assets/images/welcome_section/welcome-768@2x.jpg 2x" media="(min-width: 415px)">
-                      <source srcset="assets/images/welcome_section/welcome-414.jpg,
-                      assets/images/welcome_section/welcome-414@2x.jpg 2x" media="(min-height: 900px)">
-                      <img class="welcome_slider__picture" src="assets/images/welcome_section/welcome-480.jpg"
-                          srcset="assets/images/welcome_section/welcome-480@2x.jpg 2x" alt="bino picture" />
+                      <source srcset="assets/images/welcome-1920-h-1440.jpg,
+                      assets/images/welcome-1920-h-1440@2x.jpg 2x" media="(min-width: 1281px) and (min-height: 1024px)">
+                      <source srcset="assets/images/welcome-1920.jpg,
+                      assets/images/welcome-1920@2x.jpg 2x" media="(min-width: 1281px)">
+                      <source srcset="assets/images/welcome-1280-h-1440.jpg,
+                      assets/images/welcome-1280-h-1440@2x.jpg 2x" media="(min-width: 981px) and (min-height: 980px)">
+                      <source srcset="assets/images/welcome-1280.jpg,
+                      assets/images/welcome-1280@2x.jpg 2x" media="(min-width: 981px)">
+                      <source srcset="assets/images/welcome-980-h-1024.jpg,
+                      assets/images/welcome-980-h-1024@2x.jpg 2x" media="(min-width: 769px) and (min-height: 900px)">
+                      <source srcset="assets/images/welcome-980.jpg,
+                      assets/images/welcome-980@2x.jpg 2x" media="(min-width: 769px)">
+                      <source srcset="assets/images/welcome-768-h-1024.jpg,
+                      assets/images/welcome-768-h-1024@2x.jpg 2x" media="(min-width: 415px) and (min-height: 800px)">
+                      <source srcset="assets/images/welcome-768.jpg,
+                      assets/images/welcome-768@2x.jpg 2x" media="(min-width: 415px)">
+                      <source srcset="assets/images/welcome-414.jpg,
+                      assets/images/welcome-414@2x.jpg 2x" media="(min-height: 900px)">
+                      <img class="welcome_slider__picture" src="assets/images/welcome-480.jpg"
+                          srcset="assets/images/welcome-480@2x.jpg 2x" alt="bino picture" />
                   </picture>
-                  <span class="welcome_slider__picture_overlay"></span>
-                  <div class="container">
-                      <div class="welcome_slider__content">
+                  <div class="welcome_slider__content">
+                      <div class="container">
                           <div class="column">
                               <h1 class="welcome_slider__slogan">Our Clients Are Our First Priority</h1>
                               <p class="welcome_slider__title">WELCOME to bino</p>
                               <span class="block_decor__underline"></span>
-                          </div>
-                          <div class="welcome_slider__text">
-                              <p>
-                                  Lorem Ipsum is simply dummy text of the printing and typesetting
-                                  industry. Lorem Ipsum has been the industry's standard dummy text ever
-                                  since the 1500s, when an unknown printer took a galley of type and
-                                  scrambled it to make a type specimen book.</p>
-                          </div>
-                          <div class="btn_row">
-                              <a href="#" class="btn btn_large btn_orange">GET STARTED NOW</a>
-                              <a href="#" class="btn btn_large btn_transparent">LEARN MORE</a>
+                              <div class="welcome_slider__text">
+                                  <p>
+                                      Lorem Ipsum is simply dummy text of the printing and typesetting
+                                      industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                      since the 1500s, when an unknown printer took a galley of type and
+                                      scrambled it to make a type specimen book.</p>
+                              </div>
+                              <div class="btn_row">
+                                  <a href="#" class="btn btn_large btn_orange">GET STARTED NOW</a>
+                                  <a href="#" class="btn btn_large btn_transparent">LEARN MORE</a>
+                              </div>
                           </div>
                       </div>
                   </div>
@@ -79,36 +90,46 @@
 
               <div class="welcome_slider__block">
                   <picture>
-                      <source srcset="assets/images/welcome_section/welcome-1920.jpg,
-                              assets/images/welcome_section/welcome-1920@2x.jpg 2x" media="(min-width: 1281px)">
-                      <source srcset="assets/images/welcome_section/welcome-1280.jpg,
-                              assets/images/welcome_section/welcome-1280@2x.jpg 2x" media="(min-width: 981px)">
-                      <source srcset="assets/images/welcome_section/welcome-980.jpg,
-                              assets/images/welcome_section/welcome-980@2x.jpg 2x" media="(min-width: 769px)">
-                      <source srcset="assets/images/welcome_section/welcome-768.jpg,
-                              assets/images/welcome_section/welcome-768@2x.jpg 2x" media="(min-width: 415px)">
-                      <source srcset="assets/images/welcome_section/welcome-414.jpg,
-                              assets/images/welcome_section/welcome-414@2x.jpg 2x" media="(min-height: 900px)">
-                      <img class="welcome_slider__picture" src="assets/images/welcome_section/welcome-480.jpg"
-                          srcset="assets/images/welcome_section/welcome-480@2x.jpg 2x" alt="bino picture" />
+                      <source srcset="assets/images/welcome-1920-h-1440.jpg,
+                              assets/images/welcome-1920-h-1440@2x.jpg 2x"
+                          media="(min-width: 1281px) and (min-height: 1024px)">
+                      <source srcset="assets/images/welcome-1920.jpg,
+                              assets/images/welcome-1920@2x.jpg 2x" media="(min-width: 1281px)">
+                      <source srcset="assets/images/welcome-1280-h-1440.jpg,
+                              assets/images/welcome-1280-h-1440@2x.jpg 2x"
+                          media="(min-width: 981px) and (min-height: 980px)">
+                      <source srcset="assets/images/welcome-1280.jpg,
+                              assets/images/welcome-1280@2x.jpg 2x" media="(min-width: 981px)">
+                      <source srcset="assets/images/welcome-980-h-1024.jpg,
+                              assets/images/welcome-980-h-1024@2x.jpg 2x" media="(min-width: 769px) and (min-height: 900px)">
+                      <source srcset="assets/images/welcome-980.jpg,
+                              assets/images/welcome-980@2x.jpg 2x" media="(min-width: 769px)">
+                      <source srcset="assets/images/welcome-768-h-1024.jpg,
+                              assets/images/welcome-768-h-1024@2x.jpg 2x" media="(min-width: 415px) and (min-height: 800px)">
+                      <source srcset="assets/images/welcome-768.jpg,
+                              assets/images/welcome-768@2x.jpg 2x" media="(min-width: 415px)">
+                      <source srcset="assets/images/welcome-414.jpg,
+                              assets/images/welcome-414@2x.jpg 2x" media="(min-height: 900px)">
+                      <img class="welcome_slider__picture" src="assets/images/welcome-480.jpg"
+                          srcset="assets/images/welcome-480@2x.jpg 2x" alt="bino picture" />
                   </picture>
-                  <span class="welcome_slider__picture_overlay"></span>
-                  <div class="container">
-                      <div class="welcome_slider__content">
+                  <div class="welcome_slider__content">
+                      <div class="container">
                           <div class="column">
                               <h1 class="welcome_slider__slogan">Our Clients Are Our First Priority</h1>
                               <p class="welcome_slider__title">WELCOME 2</p>
                               <span class="block_decor__underline"></span>
-                          </div>
-                          <div class="welcome_slider__text">
-                              <p>
-                                  Lorem Ipsum is simply dummy text of the printing and typesetting
-                                  industry. Lorem Ipsum has been the industry's standard dummy text ever
-                                  since the 1500s, when an unknown printer took a galley of type and
-                                  scrambled it to make a type specimen book.</p>
-                          </div>
-                          <div class="row btn_row">
-                              <a href="#" class="btn btn_large btn_transparent">LEARN MORE</a>
+                              <div class="welcome_slider__text">
+                                  <p>
+                                      Lorem Ipsum is simply dummy text of the printing and typesetting
+                                      industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                      since the 1500s, when an unknown printer took a galley of type and
+                                      scrambled it to make a type specimen book.</p>
+                              </div>
+                              <div class="btn_row">
+                                  <a href="#" class="btn btn_large btn_orange">GET STARTED NOW</a>
+                                  <a href="#" class="btn btn_large btn_transparent">LEARN MORE</a>
+                              </div>
                           </div>
                       </div>
                   </div>
@@ -116,36 +137,46 @@
 
               <div class="welcome_slider__block">
                   <picture>
-                      <source srcset="assets/images/welcome_section/welcome-1920.jpg,
-                              assets/images/welcome_section/welcome-1920@2x.jpg 2x" media="(min-width: 1281px)">
-                      <source srcset="assets/images/welcome_section/welcome-1280.jpg,
-                              assets/images/welcome_section/welcome-1280@2x.jpg 2x" media="(min-width: 981px)">
-                      <source srcset="assets/images/welcome_section/welcome-980.jpg,
-                              assets/images/welcome_section/welcome-980@2x.jpg 2x" media="(min-width: 769px)">
-                      <source srcset="assets/images/welcome_section/welcome-768.jpg,
-                              assets/images/welcome_section/welcome-768@2x.jpg 2x" media="(min-width: 415px)">
-                      <source srcset="assets/images/welcome_section/welcome-414.jpg,
-                              assets/images/welcome_section/welcome-414@2x.jpg 2x" media="(min-height: 900px)">
-                      <img class="welcome_slider__picture" src="assets/images/welcome_section/welcome-480.jpg"
-                          srcset="assets/images/welcome_section/welcome-480@2x.jpg 2x" alt="bino picture" />
+                      <source srcset="assets/images/welcome-1920-h-1440.jpg,
+                              assets/images/welcome-1920-h-1440@2x.jpg 2x"
+                          media="(min-width: 1281px) and (min-height: 1024px)">
+                      <source srcset="assets/images/welcome-1920.jpg,
+                              assets/images/welcome-1920@2x.jpg 2x" media="(min-width: 1281px)">
+                      <source srcset="assets/images/welcome-1280-h-1440.jpg,
+                              assets/images/welcome-1280-h-1440@2x.jpg 2x"
+                          media="(min-width: 981px) and (min-height: 980px)">
+                      <source srcset="assets/images/welcome-1280.jpg,
+                              assets/images/welcome-1280@2x.jpg 2x" media="(min-width: 981px)">
+                      <source srcset="assets/images/welcome-980-h-1024.jpg,
+                              assets/images/welcome-980-h-1024@2x.jpg 2x" media="(min-width: 769px) and (min-height: 900px)">
+                      <source srcset="assets/images/welcome-980.jpg,
+                              assets/images/welcome-980@2x.jpg 2x" media="(min-width: 769px)">
+                      <source srcset="assets/images/welcome-768-h-1024.jpg,
+                              assets/images/welcome-768-h-1024@2x.jpg 2x" media="(min-width: 415px) and (min-height: 800px)">
+                      <source srcset="assets/images/welcome-768.jpg,
+                              assets/images/welcome-768@2x.jpg 2x" media="(min-width: 415px)">
+                      <source srcset="assets/images/welcome-414.jpg,
+                              assets/images/welcome-414@2x.jpg 2x" media="(min-height: 900px)">
+                      <img class="welcome_slider__picture" src="assets/images/welcome-480.jpg"
+                          srcset="assets/images/welcome-480@2x.jpg 2x" alt="bino picture" />
                   </picture>
-                  <span class="welcome_slider__picture_overlay"></span>
-                  <div class="container">
-                      <div class="welcome_slider__content">
+                  <div class="welcome_slider__content">
+                      <div class="container">
                           <div class="column">
                               <h1 class="welcome_slider__slogan">Our Clients Are Our First Priority</h1>
                               <p class="welcome_slider__title">WELCOME 3</p>
                               <span class="block_decor__underline"></span>
-                          </div>
-                          <div class="welcome_slider__text">
-                              <p>
-                                  Lorem Ipsum is simply dummy text of the printing and typesetting
-                                  industry. Lorem Ipsum has been the industry's standard dummy text ever
-                                  since the 1500s, when an unknown printer took a galley of type and
-                                  scrambled it to make a type specimen book.</p>
-                          </div>
-                          <div class="row btn_row">
-                              <a href="#" class="btn btn_large btn_transparent">LEARN MORE</a>
+                              <div class="welcome_slider__text">
+                                  <p>
+                                      Lorem Ipsum is simply dummy text of the printing and typesetting
+                                      industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                      since the 1500s, when an unknown printer took a galley of type and
+                                      scrambled it to make a type specimen book.</p>
+                              </div>
+                              <div class="btn_row">
+                                  <a href="#" class="btn btn_large btn_orange">GET STARTED NOW</a>
+                                  <a href="#" class="btn btn_large btn_transparent">LEARN MORE</a>
+                              </div>
                           </div>
                       </div>
                   </div>
