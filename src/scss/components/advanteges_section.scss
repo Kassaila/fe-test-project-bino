@@ -6,6 +6,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include media('<widescreen') {
+      justify-content: space-around;
+    }
   }
   &__block {
     width: 25%;
@@ -25,7 +28,8 @@
     }
     @include media('<widescreen') {
       width: 50%;
-      max-width: none;
+      max-width: 450px;
+      margin-bottom: 40px;
     }
     @include media('<tablet') {
       width: 100%;
