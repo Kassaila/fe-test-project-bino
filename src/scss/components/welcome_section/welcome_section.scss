@@ -1,14 +1,18 @@
 .welcome_section {
   position: relative;
-  
+
   &:before,
   &:after {
     content: "";
     position: absolute;
     bottom: 0;
-    border-top: 11.5vh solid transparent;
-    border-bottom: 11.5vh solid #fff;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid #fff;
     z-index: 2;
+    @include media("<desktop") {
+      border-top: 10vh solid transparent;
+      border-bottom: 10vh solid #fff;
+    }
   }
   &:before {
     left: 0;
