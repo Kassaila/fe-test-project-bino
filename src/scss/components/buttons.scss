@@ -16,6 +16,11 @@
         font-weight: 700;
         letter-spacing: 0.14px;
         padding: 13px;
+        @include media('<tablet') {
+            min-width: 200px;
+            font-size: 12px;
+            padding: 10px;
+        }
     }
     &_small {
         min-width: 225px;

@@ -15,7 +15,6 @@ const welcomeSlider = () => {
         settings: {
           arrows: false,
           dots: true,
-          adaptiveHeight: true,
         },
       },
     ],

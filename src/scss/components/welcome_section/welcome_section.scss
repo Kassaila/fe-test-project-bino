@@ -5,13 +5,14 @@
   &:after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
     border-top: 60px solid transparent;
     border-bottom: 60px solid #fff;
     z-index: 2;
     @include media("<desktop") {
-      border-top: 10vh solid transparent;
-      border-bottom: 10vh solid #fff;
+      bottom: 20px;
+      border-top: 3vh solid transparent;
+      border-bottom: 3vh solid #fff;
     }
   }
   &:before {
@@ -28,7 +29,7 @@
 .figures_decor {
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: 40px;
   width: 64px;
   height: 64px;
   display: flex;
@@ -41,6 +42,12 @@
   border-radius: 50%;
   z-index: 3;
   transition: 0.3s ease;
+  @include media("<desktop") {
+    bottom: 20px;
+    width: 34px;
+    height: 34px;
+    font-size: 21px;
+  }
   &:hover,
   &:focus {
     text-decoration: none;
@@ -60,6 +67,10 @@
     opacity: 0.25;
     border-radius: 50%;
     z-index: -1;
+    @include media("<desktop") {
+      width: 44px;
+      height: 44px;
+    }
   }
   &:after,
   &:before {
