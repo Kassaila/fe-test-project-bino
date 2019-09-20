@@ -1,6 +1,6 @@
 const welcomeSlider = () => {
-  if ($(".welcome_slider").length < 0) return;
-  $(".welcome_slider").slick({
+  if ($('.welcome_slider').length < 0) return;
+  $('.welcome_slider').slick({
     infinite: false,
     speed: 800,
     slidesToShow: 1,
@@ -15,10 +15,10 @@ const welcomeSlider = () => {
         settings: {
           arrows: false,
           dots: true,
-          adaptiveHeight: true
-        }
-      }
-    ]
+          adaptiveHeight: true,
+        },
+      },
+    ],
   });
 };
 export default welcomeSlider;

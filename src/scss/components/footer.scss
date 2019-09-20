@@ -20,8 +20,8 @@
       }
     }
     a {
-      @extend %linkreset;
       font-size: 19px;
+      text-decoration: none;
       color: map-get($base, "base-text-color");
       transition: 0.3s ease;
       &:hover {

@@ -53,15 +53,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 323px 0 0;
+    padding: 323px 0 100px;
     z-index: 3;
     @include media("<desktop") {
       padding: 18vh 0;
     }
   }
   &__slogan {
-    letter-spacing: 1.2px;
+    font-size: 24px;
     font-weight: 400;
+    letter-spacing: 1.2px;
     text-align: center;
     color: map-get($colors, "main-light");
     margin-bottom: 26px;
@@ -73,6 +74,9 @@
   }
   &__title {
     font-family: map-get($base, "base-font-sans-serif");
+    font-size: 72px;
+    line-height: 1.2;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 7.2px;
     text-align: center;
@@ -91,7 +95,7 @@
     text-align: center;
     color: map-get($colors, "main-dark");
     margin-top: 37px;
-    >*:last-child {
+    > *:last-child {
       margin-bottom: 0;
     }
     @include media("<desktop") {
@@ -102,7 +106,8 @@
     @extend %btnreset;
     position: absolute;
     top: 44%;
-    @include size(45px);
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,6 +118,9 @@
     border-radius: 2px;
     transition: 0.3s ease;
     z-index: 5;
+    &:not(.slick-disabled):hover {
+      opacity: 0.8;
+    }
   }
   .slick-prev {
     left: 45px;
@@ -149,7 +157,8 @@
       clip: rect(0, 0, 0, 0);
     }
     li {
-      @include size(12px);
+      width: 12px;
+      height: 12px;
       background-color: #f4f5f9;
       border-radius: 50%;
       cursor: pointer;
