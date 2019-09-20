@@ -1,23 +1,24 @@
 .welcome_section {
   position: relative;
-
+  
   &:before,
   &:after {
     content: "";
     position: absolute;
     bottom: 0;
-    width: 48%;
-    height: 12%;
+    border-top: 11.5vh solid transparent;
+    border-bottom: 11.5vh solid #fff;
     z-index: 2;
   }
-
   &:before {
     left: 0;
-    background-image: linear-gradient(to right top, #fff 50%, transparent 50%);
+    border-right: 25vw solid transparent;
+    border-left: 25vw solid #fff;
   }
   &:after {
     right: 0;
-    background-image: linear-gradient(to left top, #fff 50%, transparent 50%);
+    border-right: 25vw solid #fff;
+    border-left: 25vw solid transparent;
   }
 }
 .figures_decor {
