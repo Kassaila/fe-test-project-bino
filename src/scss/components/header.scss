@@ -7,14 +7,21 @@
   top: 0;
   width: 100%;
   background-color: #202020;
-  padding-top: 18px;
+  padding: 18px 0 13px;
   transition: 0.3s ease;
   &__logo {
+    height: 60px;
     align-self: center;
+    @include media('<tablet') {
+      height: 25px;
+    }
+    img {
+      height: 100%;
+    }
   }
   z-index: 10;
   @include media('<desktop') {
     background-color: #202020;
-    padding-top: 12px;
+    padding: 12px 0;
   }
 }

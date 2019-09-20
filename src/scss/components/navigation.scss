@@ -1,5 +1,7 @@
 .nav {
   margin-left: auto;
+  display: flex;
+  align-items: center;
   &__list {
     display: flex;
     list-style: none;
