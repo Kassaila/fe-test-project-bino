@@ -10,7 +10,8 @@
       right: 0;
       width: 100%;
       display: none;
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: #202020;
+      margin: 0;
     }
     li {
       margin-left: 53px;
@@ -19,15 +20,16 @@
       }
       a {
         display: block;
-        color: map-get($colors, "dark");
-        text-transform: uppercase;
+        font-family: map-get($base, 'base-font-sans-serif');
         font-weight: 700;
+        color: map-get($colors, "main-dark");
+        text-transform: uppercase;
+        text-decoration: none;
         border: 1px solid transparent;
         padding: 22px 0;
         transition: 0.3s ease;
         &:hover {
           color: map-get($colors, "orange");
-          text-decoration: none;
           border-bottom: 1px solid map-get($colors, "orange");
         }
         @include media("<desktop") {
@@ -39,15 +41,15 @@
   &__button_mobile {
     display: none;
     @include media("<desktop") {
-      width: 50px;
-      height: 30px;
+      width: 45px;
+      height: 25px;
       display: flex;
       flex-direction: column;
       align-items: stretch;
       justify-content: space-between;
     }
     span {
-      height: 4px;
+      height: 2px;
       background-color: #fff;
       transform-origin: 0;
       transition: 0.5s ease;

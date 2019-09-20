@@ -1,9 +1,26 @@
-.header {
-  position: relative;
+.page_top .header {
   background-color: transparent;
-  padding-top: 24px;
-
+}
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #202020;
+  padding-top: 18px;
+  transition: 0.3s ease;
   &__logo {
     align-self: center;
+    @include media('<tablet') {
+      height: 25px;
+    }
+    img {
+      height: 100%;
+    }
+  }
+  z-index: 10;
+  @include media('<desktop') {
+    background-color: #202020;
+    padding-top: 12px;
   }
 }
