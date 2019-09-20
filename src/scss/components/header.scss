@@ -11,6 +11,12 @@
   transition: 0.3s ease;
   &__logo {
     align-self: center;
+    @include media('<tablet') {
+      height: 25px;
+    }
+    img {
+      height: 100%;
+    }
   }
   z-index: 10;
   @include media('<desktop') {
