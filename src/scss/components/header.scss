@@ -1,5 +1,8 @@
 .page_top .header {
   background-color: transparent;
+  @include media("<desktop") {
+    background-color: #202020;
+  }
 }
 .header {
   position: fixed;
@@ -12,7 +15,7 @@
   &__logo {
     height: 60px;
     align-self: center;
-    @include media('<tablet') {
+    @include media("<tablet") {
       height: 25px;
     }
     img {
@@ -20,7 +23,7 @@
     }
   }
   z-index: 10;
-  @include media('<desktop') {
+  @include media("<desktop") {
     background-color: #202020;
     padding: 12px 0;
   }
