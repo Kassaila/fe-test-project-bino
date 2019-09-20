@@ -1,6 +1,9 @@
 .advanteges {
   &_section {
     padding: 110px 0 100px;
+    @include media('<tablet') {
+      padding: 90px 0 90px;
+    }
   }
   &__row {
     display: flex;
