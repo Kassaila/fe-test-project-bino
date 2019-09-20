@@ -1,7 +1,7 @@
 .advanteges {
   &_section {
     padding: 110px 0 100px;
-    @include media('<tablet') {
+    @include media("<tablet") {
       padding: 90px 0 90px;
     }
   }
@@ -9,7 +9,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    @include media('<widescreen') {
+    @include media("<widescreen") {
       justify-content: space-around;
     }
   }
@@ -29,12 +29,12 @@
         color: map-get($colors, "orange");
       }
     }
-    @include media('<widescreen') {
+    @include media("<widescreen") {
       width: 50%;
       max-width: 450px;
       margin-bottom: 40px;
     }
-    @include media('<tablet') {
+    @include media("<tablet") {
       width: 100%;
     }
   }
@@ -58,9 +58,7 @@
   }
   &__title {
     position: relative;
-    font-family: map-get($base, "base-font-sans-serif");
-    font-size: 18px;
-    font-weight: 600;
+    font: 600 18px map-get($base, "base-font-sans-serif");
     letter-spacing: 1.35px;
     padding-bottom: 19px;
     transition: 0.3s ease;
@@ -76,9 +74,7 @@
     }
   }
   &__text {
-    font-size: 12px;
-    line-height: 1.67;
-    font-weight: 300;
+    font: 300 12px/1.67 map-get($base, "base-font-family");
     letter-spacing: 0.9px;
     text-align: center;
   }
