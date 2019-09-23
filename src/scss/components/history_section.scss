@@ -2,6 +2,9 @@
   &_section {
     background-color: map-get($colors, "main-light");
     padding: 150px 0 140px;
+    @include media('<tablet') {
+      padding: 80px 0;
+    }
   }
   &__row {
     display: flex;

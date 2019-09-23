@@ -2,7 +2,7 @@
   &_section {
     padding: 110px 0 100px;
     @include media("<tablet") {
-      padding: 90px 0 90px;
+      padding: 60px 0;
     }
   }
   &__row {
@@ -32,10 +32,12 @@
     @include media("<widescreen") {
       width: 50%;
       max-width: 450px;
-      margin-bottom: 40px;
     }
     @include media("<tablet") {
       width: 100%;
+    }
+    &:not(:last-child) {
+      margin-bottom: 40px;
     }
   }
   &__icon_holder {
