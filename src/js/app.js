@@ -3,8 +3,9 @@
 // This file will be compiled into app.js and will not be minified.
 // Feel free with using ES6 here.
 import navMobile from './modules/nav_mobile';
-import welcomeSlider from './modules/welcome_slider.js';
+import welcomeSlider from './modules/welcome_slider';
 import pagePosition from './modules/init_position';
+import servicesSlider from './modules/services_slider';
 
 ($ => {
   // When DOM is ready
@@ -18,6 +19,8 @@ import pagePosition from './modules/init_position';
       scrTopHeight: 0.1,
       scrBottomHeight: 0.5,
     });
+    // services slider
+    servicesSlider.init();
     // gallery filters
     $('.works_gallery__filter').on('click', function () {
       const filter = $(this).attr('data-filter'),
