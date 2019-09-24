@@ -1,13 +1,19 @@
 .pricing-section {
   position: relative;
   padding: 156px 0 143px;
+  @include media("<tablet") {
+    padding: 80px 0;
+  }
   &__row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 65px 0 0;
-    @include media('<desktop') {
-        justify-content: space-around;
+    @include media("<desktop") {
+      justify-content: space-around;
+    }
+    @include media("<tablet") {
+      margin: 40px 0 0;
     }
   }
   &__block {
@@ -19,23 +25,15 @@
     background-color: #f4f5f9;
     padding: 50px;
     margin: 0 0 20px;
-    @include media('<desktop') {
-        width: 48%;
+    @include media("<desktop") {
+      width: 48%;
     }
-    @include media('<tablet') {
-        width: 65%;
+    @include media("<tablet") {
+      width: 65%;
+      padding: 20px;
     }
-    @include media('<phone') {
-        width: 100%;
-    }
-    &:hover {
-      &:before,
-      & .btn_orange {
-        background-color: map-get($colors, "orange");
-      }
-      & .pricing-section__number {
-          color: map-get($colors, "orange");
-      }
+    @include media("<phone") {
+      width: 100%;
     }
     &:before {
       content: "";
@@ -46,10 +44,18 @@
       height: 33.33%;
       background-color: #999;
       z-index: 0;
-      transition: 0.3s ease;
     }
     .btn_orange {
       background-color: #999;
+    }
+  }
+  &__block_recomend {
+    &:before,
+    & .btn_orange {
+      background-color: map-get($colors, "orange");
+    }
+    & .pricing-section__number {
+      color: map-get($colors, "orange");
     }
   }
   &__title {
@@ -59,6 +65,9 @@
     text-align: center;
     color: map-get($colors, "white");
     margin: 0 0 60px;
+    @include media("<tablet") {
+      margin: 0 0 30px;
+    }
   }
   &__price {
     position: relative;
@@ -70,8 +79,13 @@
     justify-content: center;
     background-color: map-get($colors, "white");
     border-radius: 50%;
-    margin: 0 0 35px;
+    margin: 0 0 40px;
     z-index: 2;
+    @include media("<tablet") {
+      width: 110px;
+      height: 110px;
+      margin: 0 0 20px;
+    }
     &:before {
       content: "";
       position: absolute;
@@ -81,26 +95,31 @@
       border-radius: 50%;
       opacity: 0.25;
       z-index: -1;
+      @include media("<tablet") {
+        width: 130px;
+        height: 130px;
+      }
     }
   }
   &__number {
     font: 700 39px/1 map-get($base, "base-font-family");
     color: #999;
     margin: 0;
-    transition: 0.3s ease;
   }
   &__description {
     font-size: 13px;
     margin: 0;
   }
   &__text {
+    @extend %listreset;
     margin: 0 0 30px;
-    & > * {
-      font-family: OpenSans;
-      font: 600 14px/2.86 map-get($base, "base-font-sans-serif");
-      line-height: 2.86;
+    li {
+      font: 600 14px/1 map-get($base, "base-font-sans-serif");
       text-align: center;
-      margin: 0;
+      margin: 0 0 25px;
+      @include media("<tablet") {
+        margin: 0 0 15px;
+      }
     }
   }
 }
