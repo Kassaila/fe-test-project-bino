@@ -6,6 +6,7 @@ import navMobile from './modules/nav_mobile';
 import welcomeSlider from './modules/welcome_slider';
 import pagePosition from './modules/init_position';
 import servicesSlider from './modules/services_slider';
+import worksGallery from './modules/works_gallery';
 
 ($ => {
   // When DOM is ready
@@ -17,9 +18,12 @@ import servicesSlider from './modules/services_slider';
     // page position
     pagePosition({
       scrTopHeight: 0.1,
-      scrBottomHeight: 0.5, 
+      scrBottomHeight: 0.5,
     });
     // services slider
     servicesSlider.init();
+    // gallery filters
+    worksGallery.init();
+    //end
   });
 })(jQuery);

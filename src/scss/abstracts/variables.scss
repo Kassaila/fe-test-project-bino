@@ -30,13 +30,15 @@ $base: (
   "base-link-color": #e74c3c,
   "base-font-size": 14px,
   "base-line-height": 2.07,
-  "base-font-family": unquote("SourceSansPro, Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  "base-font-family":
+    unquote("SourceSansPro, Arial, 'Helvetica Neue', Helvetica, sans-serif"),
   "base-min-width": 320px
 );
 
 // Vars for forms
 $forms: (
-  "form-font-family": unquote("OpenSans, Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  "form-font-family":
+    unquote("OpenSans, Arial, 'Helvetica Neue', Helvetica, sans-serif"),
   "form-element-padding": unquote("0.4em 0.7em"),
   "form-element-border-color": #999,
   "form-element-focus-border-color": #000,

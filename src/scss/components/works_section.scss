@@ -1,0 +1,123 @@
+.works_section {
+  padding: 135px 0 0;
+  @include media("<phone") {
+    padding: 80px 0 0;
+  }
+}
+.works_gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  @include media("<phone") {
+    margin-top: 40px;
+  }
+  &__filters_row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  &__filter {
+    @extend %btnreset;
+    position: relative;
+    font: 700 14px/1 map-get($base, "base-font-sans-serif");
+    color: #999;
+    padding: 0;
+    transition: 0.3s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:not(:last-child) {
+      margin-right: 25px;
+      &:after {
+        content: "/";
+        position: absolute;
+        right: -15px;
+        color: #999;
+        pointer-events: none;
+      }
+    }
+    &_active {
+      color: map-get($colors, "orange");
+    }
+  }
+  &__row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__block {
+    position: relative;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    padding: 12.5% 0;
+    @include media("<widescreen") {
+      width: 33.33%;
+      padding: 16.7% 0;
+    }
+    @include media("<desktop") {
+      width: 50%;
+      padding: 25% 0;
+    }
+    @include media("<phone") {
+      width: 100%;
+      padding: 50% 0;
+    }
+    &:hover .works_gallery__description {
+      opacity: 1;
+    }
+  }
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__description {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(map-get($colors, "orange"), 0.8);
+    opacity: 0;
+    padding: 50px;
+    transition: 0.5s ease;
+    @include media("<desktop") {
+      height: 50%;
+      opacity: 1;
+    }
+    @include media("<tablet") {
+      padding: 20px;
+    }
+  }
+  &__title {
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    color: map-get($colors, "white");
+    padding-top: 30px;
+    margin: auto 0 20px;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 44px;
+      height: 4px;
+      background-color: map-get($colors, "white");
+    }
+  }
+  &__text {
+    font: 14px/1 map-get($base, "base-font-sans-serif");
+    letter-spacing: 0.7px;
+    color: map-get($colors, "white");
+    margin-bottom: 0;
+  }
+}

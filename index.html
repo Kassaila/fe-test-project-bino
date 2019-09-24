@@ -1,367 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test project - dsymonov</title>
-    <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
-    <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test project - dsymonov</title>
+  <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
+  <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
+</head>
 
-  <body>
-    <main class="main_content">
-      <header class="header">
-        <div class="container">
-          <div class="row">
-            <a href="#" class="header__logo">
-              <img src="assets/images/logo.png" alt="Bino logo" />
-            </a>
-            <nav class="nav">
-              <button class="nav__button_mobile" type="button">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-              </button>
-              <ul class="nav__list">
-                <li><a href="#">home</a></li>
-                <li><a href="#">about us</a></li>
-                <li><a href="#">portfolio</a></li>
-                <li><a href="#">pricing</a></li>
-                <li><a href="#">team</a></li>
-                <li><a href="#">blog</a></li>
-                <li><a href="#">contact</a></li>
-              </ul>
-            </nav>
-
-          </div>
-        </div>
-      </header>
-      <section id="welcome_section" class="welcome_section">
-          <button class="figures_decor icon-anchor"></button>
-          <div class="welcome_slider">
-
-              <div class="welcome_slider__block">
-                  <picture>
-                      <source srcset="assets/images/welcome-1920-h-1440.jpg,
-                      assets/images/welcome-1920-h-1440@2x.jpg 2x" media="(min-width: 1281px) and (min-height: 1024px)">
-                      <source srcset="assets/images/welcome-1920.jpg,
-                      assets/images/welcome-1920@2x.jpg 2x" media="(min-width: 1281px)">
-                      <source srcset="assets/images/welcome-1280-h-1440.jpg,
-                      assets/images/welcome-1280-h-1440@2x.jpg 2x" media="(min-width: 981px) and (min-height: 980px)">
-                      <source srcset="assets/images/welcome-1280.jpg,
-                      assets/images/welcome-1280@2x.jpg 2x" media="(min-width: 981px)">
-                      <source srcset="assets/images/welcome-980-h-1024.jpg,
-                      assets/images/welcome-980-h-1024@2x.jpg 2x" media="(min-width: 769px) and (min-height: 900px)">
-                      <source srcset="assets/images/welcome-980.jpg,
-                      assets/images/welcome-980@2x.jpg 2x" media="(min-width: 769px)">
-                      <source srcset="assets/images/welcome-768-h-1024.jpg,
-                      assets/images/welcome-768-h-1024@2x.jpg 2x" media="(min-width: 415px) and (min-height: 800px)">
-                      <source srcset="assets/images/welcome-768.jpg,
-                      assets/images/welcome-768@2x.jpg 2x" media="(min-width: 415px)">
-                      <source srcset="assets/images/welcome-414.jpg,
-                      assets/images/welcome-414@2x.jpg 2x" media="(min-height: 900px)">
-                      <img class="welcome_slider__picture" src="assets/images/welcome-480.jpg"
-                          srcset="assets/images/welcome-480@2x.jpg 2x" alt="bino picture" />
-                  </picture>
-                  <div class="welcome_slider__content">
-                      <div class="container">
-                          <div class="column">
-                              <h1 class="welcome_slider__slogan">Our Clients Are Our First Priority</h1>
-                              <p class="welcome_slider__title">WELCOME to bino</p>
-                              <span class="block_decor__underline"></span>
-                              <div class="welcome_slider__text">
-                                  <p>
-                                      Lorem Ipsum is simply dummy text of the printing and typesetting
-                                      industry. Lorem Ipsum has been the industry's standard dummy text ever
-                                      since the 1500s, when an unknown printer took a galley of type and
-                                      scrambled it to make a type specimen book.</p>
-                              </div>
-                              <div class="btn_row">
-                                  <a href="#" class="btn btn_large btn_orange">GET STARTED NOW</a>
-                                  <a href="#" class="btn btn_large btn_transparent">LEARN MORE</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="welcome_slider__block">
-                  <picture>
-                      <source srcset="assets/images/welcome-1920-h-1440.jpg,
-                              assets/images/welcome-1920-h-1440@2x.jpg 2x"
-                          media="(min-width: 1281px) and (min-height: 1024px)">
-                      <source srcset="assets/images/welcome-1920.jpg,
-                              assets/images/welcome-1920@2x.jpg 2x" media="(min-width: 1281px)">
-                      <source srcset="assets/images/welcome-1280-h-1440.jpg,
-                              assets/images/welcome-1280-h-1440@2x.jpg 2x"
-                          media="(min-width: 981px) and (min-height: 980px)">
-                      <source srcset="assets/images/welcome-1280.jpg,
-                              assets/images/welcome-1280@2x.jpg 2x" media="(min-width: 981px)">
-                      <source srcset="assets/images/welcome-980-h-1024.jpg,
-                              assets/images/welcome-980-h-1024@2x.jpg 2x" media="(min-width: 769px) and (min-height: 900px)">
-                      <source srcset="assets/images/welcome-980.jpg,
-                              assets/images/welcome-980@2x.jpg 2x" media="(min-width: 769px)">
-                      <source srcset="assets/images/welcome-768-h-1024.jpg,
-                              assets/images/welcome-768-h-1024@2x.jpg 2x" media="(min-width: 415px) and (min-height: 800px)">
-                      <source srcset="assets/images/welcome-768.jpg,
-                              assets/images/welcome-768@2x.jpg 2x" media="(min-width: 415px)">
-                      <source srcset="assets/images/welcome-414.jpg,
-                              assets/images/welcome-414@2x.jpg 2x" media="(min-height: 900px)">
-                      <img class="welcome_slider__picture" src="assets/images/welcome-480.jpg"
-                          srcset="assets/images/welcome-480@2x.jpg 2x" alt="bino picture" />
-                  </picture>
-                  <div class="welcome_slider__content">
-                      <div class="container">
-                          <div class="column">
-                              <h1 class="welcome_slider__slogan">Our Clients Are Our First Priority</h1>
-                              <p class="welcome_slider__title">WELCOME 2</p>
-                              <span class="block_decor__underline"></span>
-                              <div class="welcome_slider__text">
-                                  <p>
-                                      Lorem Ipsum is simply dummy text of the printing and typesetting
-                                      industry. Lorem Ipsum has been the industry's standard dummy text ever
-                                      since the 1500s, when an unknown printer took a galley of type and
-                                      scrambled it to make a type specimen book.</p>
-                              </div>
-                              <div class="btn_row">
-                                  <a href="#" class="btn btn_large btn_orange">GET STARTED NOW</a>
-                                  <a href="#" class="btn btn_large btn_transparent">LEARN MORE</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="welcome_slider__block">
-                  <picture>
-                      <source srcset="assets/images/welcome-1920-h-1440.jpg,
-                              assets/images/welcome-1920-h-1440@2x.jpg 2x"
-                          media="(min-width: 1281px) and (min-height: 1024px)">
-                      <source srcset="assets/images/welcome-1920.jpg,
-                              assets/images/welcome-1920@2x.jpg 2x" media="(min-width: 1281px)">
-                      <source srcset="assets/images/welcome-1280-h-1440.jpg,
-                              assets/images/welcome-1280-h-1440@2x.jpg 2x"
-                          media="(min-width: 981px) and (min-height: 980px)">
-                      <source srcset="assets/images/welcome-1280.jpg,
-                              assets/images/welcome-1280@2x.jpg 2x" media="(min-width: 981px)">
-                      <source srcset="assets/images/welcome-980-h-1024.jpg,
-                              assets/images/welcome-980-h-1024@2x.jpg 2x" media="(min-width: 769px) and (min-height: 900px)">
-                      <source srcset="assets/images/welcome-980.jpg,
-                              assets/images/welcome-980@2x.jpg 2x" media="(min-width: 769px)">
-                      <source srcset="assets/images/welcome-768-h-1024.jpg,
-                              assets/images/welcome-768-h-1024@2x.jpg 2x" media="(min-width: 415px) and (min-height: 800px)">
-                      <source srcset="assets/images/welcome-768.jpg,
-                              assets/images/welcome-768@2x.jpg 2x" media="(min-width: 415px)">
-                      <source srcset="assets/images/welcome-414.jpg,
-                              assets/images/welcome-414@2x.jpg 2x" media="(min-height: 900px)">
-                      <img class="welcome_slider__picture" src="assets/images/welcome-480.jpg"
-                          srcset="assets/images/welcome-480@2x.jpg 2x" alt="bino picture" />
-                  </picture>
-                  <div class="welcome_slider__content">
-                      <div class="container">
-                          <div class="column">
-                              <h1 class="welcome_slider__slogan">Our Clients Are Our First Priority</h1>
-                              <p class="welcome_slider__title">WELCOME 3</p>
-                              <span class="block_decor__underline"></span>
-                              <div class="welcome_slider__text">
-                                  <p>
-                                      Lorem Ipsum is simply dummy text of the printing and typesetting
-                                      industry. Lorem Ipsum has been the industry's standard dummy text ever
-                                      since the 1500s, when an unknown printer took a galley of type and
-                                      scrambled it to make a type specimen book.</p>
-                              </div>
-                              <div class="btn_row">
-                                  <a href="#" class="btn btn_large btn_orange">GET STARTED NOW</a>
-                                  <a href="#" class="btn btn_large btn_transparent">LEARN MORE</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-      <section class="advanteges_section">
-          <div class="container">
-              <div class="advanteges__row">
-                  <div class="advanteges__block">
-                      <div class="advanteges__icon_holder">
-                          <img src="assets/images/ico-adv-1.png" alt="glasses">
-                      </div>
-                      <h3 class="advanteges__title">SLEEK DESIGN</h3>
-                      <p class="advanteges__text">Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem
-                          Ipsum has been the
-                          industry.</p>
-                  </div>
-                  <div class="advanteges__block">
-                      <div class="advanteges__icon_holder">
-                          <img src="assets/images/ico-adv-2.png" alt="heart">
-                      </div>
-                      <h3 class="advanteges__title">CLEAN CODE</h3>
-                      <p class="advanteges__text">Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem
-                          Ipsum has been the
-                          industry.</p>
-                  </div>
-                  <div class="advanteges__block">
-                      <div class="advanteges__icon_holder">
-                          <img src="assets/images/ico-adv-3.png" alt="lamp">
-                      </div>
-                      <h3 class="advanteges__title">CREATIVE IDEAS</h3>
-                      <p class="advanteges__text">Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem
-                          Ipsum has been the
-                          industry.</p>
-                  </div>
-                  <div class="advanteges__block">
-                      <div class="advanteges__icon_holder">
-                          <img src="assets/images/ico-adv-4.png" alt="message">
-                      </div>
-                      <h3 class="advanteges__title">FREE SUPPORT</h3>
-                      <p class="advanteges__text">Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem
-                          Ipsum has been the
-                          industry.</p>
-                  </div>
-              </div>
-          </div>
-      </section>
-      <section class="history_section">
-          <div class="container">
-              <div class="history__row">
-                  <img class="history__image" src="assets/images/monitor.png" alt="monitor">
-                  <div class="history__column">
-                      <h2 class="history__title">OUR HISTORY</h2>
-                      <div class="history__text">
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been
-                              the
-                              industry's standard dummy text ever since the 1500s, when an unk- nown printer took a galley of
-                              type
-                              and scrambled it to make a type specimen book.</p>
-                          <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                              essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                              containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-                              PageMaker including versions of Lorem Ipsum.</p>
-                      </div>
-                      <a href="#" class="btn btn_large btn_orange">BROWSE OUR WORK</a>
-                  </div>
-              </div>
-          </div>
-      </section>
-      <section class="services_section">
-          <div class="services__column">
-              <h2 class="services__title">OUR SERVICES</h2>
-              <div class="services_slider">
-
-                  <div class="services_slider__group">
-                      <div class="services_slider__block">
-                          <span class="services_slider__icon">
-                              <img src="assets/images/screen.svg" alt="web design">
-                          </span>
-                          <p class="services_slider__title">WEB DESIGN</p>
-                          <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
-                              typesetting
-                              industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
-                      </div>
-                      <div class="services_slider__block">
-                          <span class="services_slider__icon">
-                              <img src="assets/images/papers.svg" alt="print design">
-                          </span>
-                          <p class="services_slider__title">PRINT DESIGN</p>
-                          <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
-                              typesetting
-                              industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
-                      </div>
-                      <div class="services_slider__block">
-                          <span class="services_slider__icon">
-                              <img src="assets/images/camera.svg" alt="photography">
-                          </span>
-                          <p class="services_slider__title">PHOTOGRAPHY</p>
-                          <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
-                              typesetting
-                              industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
-                      </div>
-                  </div>
-
-                  <div class="services_slider__group">
-                      <div class="services_slider__block">
-                          <span class="services_slider__icon">
-                              <img src="assets/images/screen.svg" alt="web design">
-                          </span>
-                          <p class="services_slider__title">WEB DESIGN</p>
-                          <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
-                              typesetting
-                              industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
-                      </div>
-                      <div class="services_slider__block">
-                          <span class="services_slider__icon">
-                              <img src="assets/images/papers.svg" alt="print design">
-                          </span>
-                          <p class="services_slider__title">PRINT DESIGN</p>
-                          <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
-                              typesetting
-                              industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
-                      </div>
-                      <div class="services_slider__block">
-                          <span class="services_slider__icon">
-                              <img src="assets/images/camera.svg" alt="photography">
-                          </span>
-                          <p class="services_slider__title">PHOTOGRAPHY</p>
-                          <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
-                              typesetting
-                              industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
-                      </div>
-                  </div>
-
-                  <div class="services_slider__group">
-                      <div class="services_slider__block">
-                          <span class="services_slider__icon">
-                              <img src="assets/images/screen.svg" alt="web design">
-                          </span>
-                          <p class="services_slider__title">WEB DESIGN</p>
-                          <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
-                              typesetting
-                              industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
-                      </div>
-                      <div class="services_slider__block">
-                          <span class="services_slider__icon">
-                              <img src="assets/images/papers.svg" alt="print design">
-                          </span>
-                          <p class="services_slider__title">PRINT DESIGN</p>
-                          <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
-                              typesetting
-                              industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
-                      </div>
-                      <div class="services_slider__block">
-                          <span class="services_slider__icon">
-                              <img src="assets/images/camera.svg" alt="photography">
-                          </span>
-                          <p class="services_slider__title">PHOTOGRAPHY</p>
-                          <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
-                              typesetting
-                              industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <img class="services__background" src="assets/images/services_1.jpg" alt="our services">
-      </section>
-      <footer class="footer">
-        <div class="container">
-          <div class="row">
-            <ul class="social__list">
-              <li><a href="#" class="icon-facebook"><span class="sr-only">facebook</span></a></li>
-              <li><a href="#" class="icon-twitter"><span class="sr-only">twitter</span></a></li>
-              <li><a href="#" class="icon-rss"><span class="sr-only">rss</span></a></li>
-              <li><a href="#" class="icon-google-plus"><span class="sr-only">google-plus</span></a></li>
-              <li><a href="#" class="icon-linkedin"><span class="sr-only">linkedin</span></a></li>
-              <li><a href="#" class="icon-skype"><span class="sr-only">skype</span></a></li>
-              <li><a href="#" class="icon-vimeo"><span class="sr-only">vimeo</span></a></li>
-              <li><a href="#" class="icon-tumblr"><span class="sr-only">tumblr</span></a></li>
+<body>
+  <main class="main_content">
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <a href="#" class="header__logo">
+            <img src="assets/images/logo.png" alt="Bino logo" />
+          </a>
+          <nav class="nav">
+            <button class="nav__button_mobile" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav__list">
+              <li><a href="#">home</a></li>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">portfolio</a></li>
+              <li><a href="#">pricing</a></li>
+              <li><a href="#">team</a></li>
+              <li><a href="#">blog</a></li>
+              <li><a href="#">contact</a></li>
             </ul>
-            <p>Kazi Erfan © All Rights Reserved</p>
-          </div>
-        </div>
-      </footer>
+          </nav>
 
-    </main>
-    <script src="assets/js/vendor.min.js" defer></script>
-    <script src="assets/js/app.js" defer></script>
-  </body>
+        </div>
+      </div>
+    </header>
+    <section id="welcome_section" class="welcome_section">
+        <button class="figures_decor icon-anchor"></button>
+        <div class="welcome_slider">
+
+            <div class="welcome_slider__block">
+                <picture>
+                    <source srcset="assets/images/welcome-1920-h-1440.jpg,
+                    assets/images/welcome-1920-h-1440@2x.jpg 2x" media="(min-width: 1281px) and (min-height: 1024px)">
+                    <source srcset="assets/images/welcome-1920.jpg,
+                    assets/images/welcome-1920@2x.jpg 2x" media="(min-width: 1281px)">
+                    <source srcset="assets/images/welcome-1280-h-1440.jpg,
+                    assets/images/welcome-1280-h-1440@2x.jpg 2x" media="(min-width: 981px) and (min-height: 980px)">
+                    <source srcset="assets/images/welcome-1280.jpg,
+                    assets/images/welcome-1280@2x.jpg 2x" media="(min-width: 981px)">
+                    <source srcset="assets/images/welcome-980-h-1024.jpg,
+                    assets/images/welcome-980-h-1024@2x.jpg 2x" media="(min-width: 769px) and (min-height: 900px)">
+                    <source srcset="assets/images/welcome-980.jpg,
+                    assets/images/welcome-980@2x.jpg 2x" media="(min-width: 769px)">
+                    <source srcset="assets/images/welcome-768-h-1024.jpg,
+                    assets/images/welcome-768-h-1024@2x.jpg 2x" media="(min-width: 415px) and (min-height: 800px)">
+                    <source srcset="assets/images/welcome-768.jpg,
+                    assets/images/welcome-768@2x.jpg 2x" media="(min-width: 415px)">
+                    <source srcset="assets/images/welcome-414.jpg,
+                    assets/images/welcome-414@2x.jpg 2x" media="(min-height: 900px)">
+                    <img class="welcome_slider__picture" src="assets/images/welcome-480.jpg"
+                        srcset="assets/images/welcome-480@2x.jpg 2x" alt="bino picture" />
+                </picture>
+                <div class="welcome_slider__content">
+                    <div class="container">
+                        <div class="column">
+                            <h1 class="welcome_slider__slogan">Our Clients Are Our First Priority</h1>
+                            <p class="welcome_slider__title">WELCOME to bino</p>
+                            <span class="block_decor__underline"></span>
+                            <div class="welcome_slider__text">
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                    since the 1500s, when an unknown printer took a galley of type and
+                                    scrambled it to make a type specimen book.</p>
+                            </div>
+                            <div class="btn_row">
+                                <a href="#" class="btn btn_large btn_orange">GET STARTED NOW</a>
+                                <a href="#" class="btn btn_large btn_transparent">LEARN MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="welcome_slider__block">
+                <picture>
+                    <source srcset="assets/images/welcome-1920-h-1440.jpg,
+                            assets/images/welcome-1920-h-1440@2x.jpg 2x"
+                        media="(min-width: 1281px) and (min-height: 1024px)">
+                    <source srcset="assets/images/welcome-1920.jpg,
+                            assets/images/welcome-1920@2x.jpg 2x" media="(min-width: 1281px)">
+                    <source srcset="assets/images/welcome-1280-h-1440.jpg,
+                            assets/images/welcome-1280-h-1440@2x.jpg 2x"
+                        media="(min-width: 981px) and (min-height: 980px)">
+                    <source srcset="assets/images/welcome-1280.jpg,
+                            assets/images/welcome-1280@2x.jpg 2x" media="(min-width: 981px)">
+                    <source srcset="assets/images/welcome-980-h-1024.jpg,
+                            assets/images/welcome-980-h-1024@2x.jpg 2x" media="(min-width: 769px) and (min-height: 900px)">
+                    <source srcset="assets/images/welcome-980.jpg,
+                            assets/images/welcome-980@2x.jpg 2x" media="(min-width: 769px)">
+                    <source srcset="assets/images/welcome-768-h-1024.jpg,
+                            assets/images/welcome-768-h-1024@2x.jpg 2x" media="(min-width: 415px) and (min-height: 800px)">
+                    <source srcset="assets/images/welcome-768.jpg,
+                            assets/images/welcome-768@2x.jpg 2x" media="(min-width: 415px)">
+                    <source srcset="assets/images/welcome-414.jpg,
+                            assets/images/welcome-414@2x.jpg 2x" media="(min-height: 900px)">
+                    <img class="welcome_slider__picture" src="assets/images/welcome-480.jpg"
+                        srcset="assets/images/welcome-480@2x.jpg 2x" alt="bino picture" />
+                </picture>
+                <div class="welcome_slider__content">
+                    <div class="container">
+                        <div class="column">
+                            <h1 class="welcome_slider__slogan">Our Clients Are Our First Priority</h1>
+                            <p class="welcome_slider__title">WELCOME 2</p>
+                            <span class="block_decor__underline"></span>
+                            <div class="welcome_slider__text">
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                    since the 1500s, when an unknown printer took a galley of type and
+                                    scrambled it to make a type specimen book.</p>
+                            </div>
+                            <div class="btn_row">
+                                <a href="#" class="btn btn_large btn_orange">GET STARTED NOW</a>
+                                <a href="#" class="btn btn_large btn_transparent">LEARN MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="welcome_slider__block">
+                <picture>
+                    <source srcset="assets/images/welcome-1920-h-1440.jpg,
+                            assets/images/welcome-1920-h-1440@2x.jpg 2x"
+                        media="(min-width: 1281px) and (min-height: 1024px)">
+                    <source srcset="assets/images/welcome-1920.jpg,
+                            assets/images/welcome-1920@2x.jpg 2x" media="(min-width: 1281px)">
+                    <source srcset="assets/images/welcome-1280-h-1440.jpg,
+                            assets/images/welcome-1280-h-1440@2x.jpg 2x"
+                        media="(min-width: 981px) and (min-height: 980px)">
+                    <source srcset="assets/images/welcome-1280.jpg,
+                            assets/images/welcome-1280@2x.jpg 2x" media="(min-width: 981px)">
+                    <source srcset="assets/images/welcome-980-h-1024.jpg,
+                            assets/images/welcome-980-h-1024@2x.jpg 2x" media="(min-width: 769px) and (min-height: 900px)">
+                    <source srcset="assets/images/welcome-980.jpg,
+                            assets/images/welcome-980@2x.jpg 2x" media="(min-width: 769px)">
+                    <source srcset="assets/images/welcome-768-h-1024.jpg,
+                            assets/images/welcome-768-h-1024@2x.jpg 2x" media="(min-width: 415px) and (min-height: 800px)">
+                    <source srcset="assets/images/welcome-768.jpg,
+                            assets/images/welcome-768@2x.jpg 2x" media="(min-width: 415px)">
+                    <source srcset="assets/images/welcome-414.jpg,
+                            assets/images/welcome-414@2x.jpg 2x" media="(min-height: 900px)">
+                    <img class="welcome_slider__picture" src="assets/images/welcome-480.jpg"
+                        srcset="assets/images/welcome-480@2x.jpg 2x" alt="bino picture" />
+                </picture>
+                <div class="welcome_slider__content">
+                    <div class="container">
+                        <div class="column">
+                            <h1 class="welcome_slider__slogan">Our Clients Are Our First Priority</h1>
+                            <p class="welcome_slider__title">WELCOME 3</p>
+                            <span class="block_decor__underline"></span>
+                            <div class="welcome_slider__text">
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                    since the 1500s, when an unknown printer took a galley of type and
+                                    scrambled it to make a type specimen book.</p>
+                            </div>
+                            <div class="btn_row">
+                                <a href="#" class="btn btn_large btn_orange">GET STARTED NOW</a>
+                                <a href="#" class="btn btn_large btn_transparent">LEARN MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="advanteges_section">
+        <div class="container">
+            <div class="advanteges__row">
+                <div class="advanteges__block">
+                    <div class="advanteges__icon_holder">
+                        <img src="assets/images/ico-adv-1.png" alt="glasses">
+                    </div>
+                    <h3 class="advanteges__title">SLEEK DESIGN</h3>
+                    <p class="advanteges__text">Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem
+                        Ipsum has been the
+                        industry.</p>
+                </div>
+                <div class="advanteges__block">
+                    <div class="advanteges__icon_holder">
+                        <img src="assets/images/ico-adv-2.png" alt="heart">
+                    </div>
+                    <h3 class="advanteges__title">CLEAN CODE</h3>
+                    <p class="advanteges__text">Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem
+                        Ipsum has been the
+                        industry.</p>
+                </div>
+                <div class="advanteges__block">
+                    <div class="advanteges__icon_holder">
+                        <img src="assets/images/ico-adv-3.png" alt="lamp">
+                    </div>
+                    <h3 class="advanteges__title">CREATIVE IDEAS</h3>
+                    <p class="advanteges__text">Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem
+                        Ipsum has been the
+                        industry.</p>
+                </div>
+                <div class="advanteges__block">
+                    <div class="advanteges__icon_holder">
+                        <img src="assets/images/ico-adv-4.png" alt="message">
+                    </div>
+                    <h3 class="advanteges__title">FREE SUPPORT</h3>
+                    <p class="advanteges__text">Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem
+                        Ipsum has been the
+                        industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="history_section">
+        <div class="container">
+            <div class="history__row">
+                <img class="history__image" src="assets/images/monitor.png" alt="monitor">
+                <div class="history__column">
+                    <h2 class="history__title">OUR HISTORY</h2>
+                    <div class="history__text">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been
+                            the
+                            industry's standard dummy text ever since the 1500s, when an unk- nown printer took a galley of
+                            type
+                            and scrambled it to make a type specimen book.</p>
+                        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                            essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                            containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+                            PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                    <a href="#" class="btn btn_large btn_orange">BROWSE OUR WORK</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services_section">
+        <div class="services__column">
+            <h2 class="services__title">OUR SERVICES</h2>
+            <div class="services_slider">
+
+                <div class="services_slider__group">
+                    <div class="services_slider__block">
+                        <span class="services_slider__icon">
+                            <img src="assets/images/screen.svg" alt="web design">
+                        </span>
+                        <p class="services_slider__title">WEB DESIGN</p>
+                        <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting
+                            industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
+                    </div>
+                    <div class="services_slider__block">
+                        <span class="services_slider__icon">
+                            <img src="assets/images/papers.svg" alt="print design">
+                        </span>
+                        <p class="services_slider__title">PRINT DESIGN</p>
+                        <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting
+                            industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
+                    </div>
+                    <div class="services_slider__block">
+                        <span class="services_slider__icon">
+                            <img src="assets/images/camera.svg" alt="photography">
+                        </span>
+                        <p class="services_slider__title">PHOTOGRAPHY</p>
+                        <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting
+                            industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
+                    </div>
+                </div>
+
+                <div class="services_slider__group">
+                    <div class="services_slider__block">
+                        <span class="services_slider__icon">
+                            <img src="assets/images/screen.svg" alt="web design">
+                        </span>
+                        <p class="services_slider__title">WEB DESIGN</p>
+                        <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting
+                            industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
+                    </div>
+                    <div class="services_slider__block">
+                        <span class="services_slider__icon">
+                            <img src="assets/images/papers.svg" alt="print design">
+                        </span>
+                        <p class="services_slider__title">PRINT DESIGN</p>
+                        <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting
+                            industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
+                    </div>
+                    <div class="services_slider__block">
+                        <span class="services_slider__icon">
+                            <img src="assets/images/camera.svg" alt="photography">
+                        </span>
+                        <p class="services_slider__title">PHOTOGRAPHY</p>
+                        <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting
+                            industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
+                    </div>
+                </div>
+
+                <div class="services_slider__group">
+                    <div class="services_slider__block">
+                        <span class="services_slider__icon">
+                            <img src="assets/images/screen.svg" alt="web design">
+                        </span>
+                        <p class="services_slider__title">WEB DESIGN</p>
+                        <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting
+                            industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
+                    </div>
+                    <div class="services_slider__block">
+                        <span class="services_slider__icon">
+                            <img src="assets/images/papers.svg" alt="print design">
+                        </span>
+                        <p class="services_slider__title">PRINT DESIGN</p>
+                        <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting
+                            industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
+                    </div>
+                    <div class="services_slider__block">
+                        <span class="services_slider__icon">
+                            <img src="assets/images/camera.svg" alt="photography">
+                        </span>
+                        <p class="services_slider__title">PHOTOGRAPHY</p>
+                        <p class="services_slider__text">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting
+                            industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="services__background" src="assets/images/services_1.jpg" alt="our services">
+    </section>
+    <section class="works_section">
+        <div class="container">
+            <div class="block_decor">
+                <h2 class="block_decor__title">RECENT WORKS</h2>
+                <p class="block_decor__text">It has survived not only five centuries, but also the leap scrambled it to make
+                    a type.</p>
+                <span class="block_decor__underline"></span>
+            </div>
+        </div>
+        <div class="works_gallery">
+            <div class="works_gallery__filters_row">
+                <button class="works_gallery__filter" data-filter="all" type="button">all</button>
+                <button class="works_gallery__filter" data-filter="print" type="button">print design</button>
+                <button class="works_gallery__filter" data-filter="animation" type="button">animation</button>
+                <button class="works_gallery__filter" data-filter="art" type="button">art</button>
+                <button class="works_gallery__filter" data-filter="web" type="button">web design</button>
+                <button class="works_gallery__filter" data-filter="photo" type="button">photography</button>
+                <button class="works_gallery__filter" data-filter="video" ype="button">video</button>
+            </div>
+            <div class="works_gallery__row">
+                <a class="works_gallery__block" data-filter="web" href="#">
+                    <img class="works_gallery__image" src="assets/images/gallery_1.jpg" alt="work">
+                    <div class="works_gallery__description">
+                        <h3 class="works_gallery__title">T-SHIRT DESIGN</h3>
+                        <p class="works_gallery__text">art / t-shirt</p>
+                    </div>
+                </a>
+                <a class="works_gallery__block" data-filter="print" href="#">
+                    <img class="works_gallery__image" src="assets/images/gallery_2.jpg" alt="work">
+                    <div class="works_gallery__description">
+                        <h3 class="works_gallery__title">T-SHIRT DESIGN</h3>
+                        <p class="works_gallery__text">art / t-shirt</p>
+                    </div>
+                </a>
+                <a class="works_gallery__block" data-filter="animation" href="#">
+                    <img class="works_gallery__image" src="assets/images/gallery_1.jpg" alt="work">
+                    <div class="works_gallery__description">
+                        <h3 class="works_gallery__title">T-SHIRT DESIGN</h3>
+                        <p class="works_gallery__text">art / t-shirt</p>
+                    </div>
+                </a>
+                <a class="works_gallery__block" data-filter="art" href="#">
+                    <img class="works_gallery__image" src="assets/images/gallery_2.jpg" alt="work">
+                    <div class="works_gallery__description">
+                        <h3 class="works_gallery__title">T-SHIRT DESIGN</h3>
+                        <p class="works_gallery__text">art / t-shirt</p>
+                    </div>
+                </a>
+                <a class="works_gallery__block" data-filter="photo" href="#">
+                    <img class="works_gallery__image" src="assets/images/gallery_1.jpg" alt="work">
+                    <div class="works_gallery__description">
+                        <h3 class="works_gallery__title">T-SHIRT DESIGN</h3>
+                        <p class="works_gallery__text">art / t-shirt</p>
+                    </div>
+                </a>
+                <a class="works_gallery__block" data-filter="video" href="#">
+                    <img class="works_gallery__image" src="assets/images/gallery_2.jpg" alt="work">
+                    <div class="works_gallery__description">
+                        <h3 class="works_gallery__title">T-SHIRT DESIGN</h3>
+                        <p class="works_gallery__text">art / t-shirt</p>
+                    </div>
+                </a>
+                <a class="works_gallery__block" data-filter="web" href="#">
+                    <img class="works_gallery__image" src="assets/images/gallery_1.jpg" alt="work">
+                    <div class="works_gallery__description">
+                        <h3 class="works_gallery__title">T-SHIRT DESIGN</h3>
+                        <p class="works_gallery__text">art / t-shirt</p>
+                    </div>
+                </a>
+                <a class="works_gallery__block" data-filter="photo" href="#">
+                    <img class="works_gallery__image" src="assets/images/gallery_2.jpg" alt="work">
+                    <div class="works_gallery__description">
+                        <h3 class="works_gallery__title">T-SHIRT DESIGN</h3>
+                        <p class="works_gallery__text">art / t-shirt</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <ul class="social__list">
+            <li><a href="#" class="icon-facebook"><span class="sr-only">facebook</span></a></li>
+            <li><a href="#" class="icon-twitter"><span class="sr-only">twitter</span></a></li>
+            <li><a href="#" class="icon-rss"><span class="sr-only">rss</span></a></li>
+            <li><a href="#" class="icon-google-plus"><span class="sr-only">google-plus</span></a></li>
+            <li><a href="#" class="icon-linkedin"><span class="sr-only">linkedin</span></a></li>
+            <li><a href="#" class="icon-skype"><span class="sr-only">skype</span></a></li>
+            <li><a href="#" class="icon-vimeo"><span class="sr-only">vimeo</span></a></li>
+            <li><a href="#" class="icon-tumblr"><span class="sr-only">tumblr</span></a></li>
+          </ul>
+          <p>Kazi Erfan © All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+  <script src="assets/js/vendor.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+
 </html>
