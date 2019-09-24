@@ -7,6 +7,7 @@ import welcomeSlider from './modules/welcome_slider';
 import pagePosition from './modules/init_position';
 import servicesSlider from './modules/services_slider';
 import worksGallery from './modules/works_gallery';
+import studySlider from './modules/study_slider';
 
 ($ => {
   // When DOM is ready
@@ -24,6 +25,8 @@ import worksGallery from './modules/works_gallery';
     servicesSlider.init();
     // gallery filters
     worksGallery.init();
+    // study slider
+    studySlider.init();
     //end
   });
 })(jQuery);
