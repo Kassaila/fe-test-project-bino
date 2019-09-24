@@ -49,8 +49,8 @@
       width: 20%;
     }
     @include media("<tablet") {
-        width: 33.33%;
-      }
+      width: 33.33%;
+    }
     @include media("<phone") {
       width: 50%;
     }
