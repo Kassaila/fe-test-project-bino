@@ -1,6 +1,7 @@
 .btn {
   display: block;
   text-decoration: none;
+  text-transform: uppercase;
   text-align: center;
   color: map-get($colors, "white");
   box-shadow: 0px 2px 4.8px 0.3px rgba(#000, 0.25);
@@ -24,8 +25,10 @@
     }
   }
   &_small {
-    min-width: 225px;
-    padding: 10px;
+    min-width: 145px;
+    font: 600 12px/1 map-get($base, "base-font-sans-serif");
+    letter-spacing: 0.12px;
+    padding: 18px;
   }
   &_orange {
     background-color: map-get($colors, "orange");
