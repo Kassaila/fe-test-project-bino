@@ -6,6 +6,7 @@ import navMobile from './modules/nav_mobile';
 import welcomeSlider from './modules/welcome_slider';
 import pagePosition from './modules/init_position';
 import servicesSlider from './modules/services_slider';
+import worksGallery from './modules/works_gallery';
 
 ($ => {
   // When DOM is ready
@@ -22,20 +23,7 @@ import servicesSlider from './modules/services_slider';
     // services slider
     servicesSlider.init();
     // gallery filters
-    $('.works_gallery__filter').on('click', function () {
-      const filter = $(this).attr('data-filter'),
-        $gallery = $('.works_gallery__row'),
-        ACTIVE_CLASS = 'active';
-
-      $(this).addClass(ACTIVE_CLASS).siblings('.works_gallery__filter').removeClass(ACTIVE_CLASS);
-
-      if (filter === 'all') {
-        $gallery.children('.works_gallery__block').animate({ opacity: 'show' }, 0);
-      } else {
-        $gallery.children(`[data-filter="${filter}"]`).animate({ opacity: 'show' }, 0);
-        $gallery.children('.works_gallery__block').not(`[data-filter="${filter}"]`).animate({ opacity: 'hide' }, 0);
-      }
-    });
+    worksGallery.init();
     //end
   });
 })(jQuery);
