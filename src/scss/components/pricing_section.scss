@@ -1,0 +1,106 @@
+.pricing-section {
+  position: relative;
+  padding: 156px 0 143px;
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 65px 0 0;
+    @include media('<desktop') {
+        justify-content: space-around;
+    }
+  }
+  &__block {
+    position: relative;
+    width: 32.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f5f9;
+    padding: 50px;
+    margin: 0 0 20px;
+    @include media('<desktop') {
+        width: 48%;
+    }
+    @include media('<tablet') {
+        width: 65%;
+    }
+    @include media('<phone') {
+        width: 100%;
+    }
+    &:hover {
+      &:before,
+      & .btn_orange {
+        background-color: map-get($colors, "orange");
+      }
+      & .pricing-section__number {
+          color: map-get($colors, "orange");
+      }
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 33.33%;
+      background-color: #999;
+      z-index: 0;
+      transition: 0.3s ease;
+    }
+    .btn_orange {
+      background-color: #999;
+    }
+  }
+  &__title {
+    position: relative;
+    font: 600 24px/1 map-get($base, "base-font-sans-serif");
+    letter-spacing: 1.8px;
+    text-align: center;
+    color: map-get($colors, "white");
+    margin: 0 0 60px;
+  }
+  &__price {
+    position: relative;
+    width: 154px;
+    height: 154px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: map-get($colors, "white");
+    border-radius: 50%;
+    margin: 0 0 35px;
+    z-index: 2;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 174px;
+      height: 174px;
+      background-color: map-get($colors, "main-light");
+      border-radius: 50%;
+      opacity: 0.25;
+      z-index: -1;
+    }
+  }
+  &__number {
+    font: 700 39px/1 map-get($base, "base-font-family");
+    color: #999;
+    margin: 0;
+    transition: 0.3s ease;
+  }
+  &__description {
+    font-size: 13px;
+    margin: 0;
+  }
+  &__text {
+    margin: 0 0 30px;
+    & > * {
+      font-family: OpenSans;
+      font: 600 14px/2.86 map-get($base, "base-font-sans-serif");
+      line-height: 2.86;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}
