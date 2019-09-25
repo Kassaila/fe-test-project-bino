@@ -37,15 +37,15 @@
     &:hover {
       background-color: map-get($colors, "orange");
       box-shadow: none;
-      & .integrations-section__logo {
+      & img {
         filter: grayscale(0%);
         opacity: 1;
       }
     }
-  }
-  &__logo {
-    filter: grayscale(100%);
-    opacity: 0.25;
-    transition: 0.5s ease;
+    img {
+      filter: grayscale(100%);
+      opacity: 0.25;
+      transition: 0.5s ease;
+    }
   }
 }
