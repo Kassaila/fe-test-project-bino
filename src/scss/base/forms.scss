@@ -9,27 +9,28 @@ fieldset {
   border-style: none;
 }
 
-input[type='text'],
-input[type='tel'],
-input[type='email'],
-input[type='search'],
-input[type='password'],
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
 textarea {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   box-sizing: border-box;
-  border:0;
-  border-bottom: 1px solid map-get($forms, 'form-element-border-color');
-  padding: map-get($forms, 'form-element-padding');
-  font-family: map-get($forms, 'form-font-family');
-  color: map-get($forms, 'text-color');
+  border: 0;
+  border-bottom: 1px solid
+    rgba(map-get($forms, "form-element-border-color"), 0.25);
+  padding: map-get($forms, "form-element-padding");
+  font-family: map-get($forms, "form-font-family");
+  color: map-get($forms, "text-color");
 
   &:focus {
-    border-color: map-get($forms, 'form-element-focus-border-color');
+    border-color: map-get($forms, "form-element-focus-border-color");
   }
 
   @include placeholder {
-    color: map-get($forms, 'placeholder-color');
+    color: map-get($forms, "placeholder-color");
   }
 }
 
@@ -43,12 +44,12 @@ textarea {
 }
 
 button,
-input[type='button'],
-input[type='reset'],
-input[type='file'],
-input[type='submit'] {
+input[type="button"],
+input[type="reset"],
+input[type="file"],
+input[type="submit"] {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   cursor: pointer;
-  font-family: map-get($forms, 'form-font-family');
+  font-family: map-get($forms, "form-font-family");
 }
