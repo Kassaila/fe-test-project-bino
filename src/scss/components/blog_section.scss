@@ -11,17 +11,14 @@
     @include media("<widescreen") {
       width: 100%;
     }
-    &_right {
-      .blog-section__content:before {
-        left: -28px;
-        border-right: 30px solid map-get($colors, "orange");
-      }
-    }
-    &_left {
+    &:nth-child(4n-1),
+    &:nth-child(4n) {
       flex-direction: row-reverse;
       .blog-section__content:before {
         right: -28px;
+        left: auto;
         border-left: 30px solid map-get($colors, "orange");
+        border-right: none;
       }
     }
     &:nth-child(even) {
@@ -68,14 +65,17 @@
         }
       }
     }
-    img {
+    picture {
       width: 50%;
       height: 100%;
-      object-fit: cover;
       @include media("<tablet") {
         width: 100%;
-        height: auto;
       }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
   &__content {
@@ -94,6 +94,8 @@
       content: "";
       position: absolute;
       top: 50%;
+      left: -28px;
+      border-right: 30px solid map-get($colors, "orange");
       border-top: 40px solid transparent;
       border-bottom: 40px solid transparent;
       transform: translateY(-50%);
