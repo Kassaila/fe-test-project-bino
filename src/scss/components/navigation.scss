@@ -34,7 +34,8 @@
     border: 1px solid transparent;
     padding: 22px 0;
     transition: 0.3s ease;
-    &:hover {
+    &:hover,
+    &.active {
       color: map-get($colors, "orange");
       border-bottom: 1px solid map-get($colors, "orange");
     }

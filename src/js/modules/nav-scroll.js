@@ -21,6 +21,42 @@ const navScroll = () => {
         }
     }
 
+    const arrAnchors = () => {
+        const $anchors = $('.nav__list [data-anchor]'),
+            arr = [];
+
+        $anchors.each(function (i, el) {
+            let anchorId = $(el).attr('data-anchor'),
+                elHeight = $(`${anchorId}`).innerHeight(),
+                elTop = $(`${anchorId}`).offset().top;
+
+            arr[i] = {
+                anchorId,
+                elHeight,
+                elTop
+            }
+        });
+
+        return arr;
+    }
+
+    const navHighlight = (arr) => {
+        let winTop = $win.scrollTop();
+
+        arr.forEach(function (el, i) {
+            if (el.elTop < winTop && winTop < el.elHeight + el.elTop && !$(`[data-anchor="${el.anchorId}"]`).hasClass('active')) {
+                $(`[data-anchor]`).removeClass('active');
+                $(`[data-anchor="${el.anchorId}"]`).addClass('active');
+            }
+        });
+    }
+
+    const highlight = () => {
+        let arr = arrAnchors();
+
+        $win.resize(() => arr = arrAnchors());
+    }
+
     const init = () => {
         $scrollClass.on('click', function () {
             let anchorId = $(this).attr('data-anchor');
