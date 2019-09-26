@@ -1,16 +1,17 @@
 const worksGallery = () => {
     const $gallery = $('.works_gallery__row'),
+        $filterRow = $('.works_gallery__filters_row'),
         BTN_FILTER = '.works_gallery__filter',
         ACTIVE_CLASS = 'works_gallery__filter_active',
-        GALLERY_BLOCK = '.works_gallery__block';
+        GALLERY_BLOCK = '.works_gallery__block',
+        DEFAULT_FILTER_VAL = 'all';
 
     if (!$gallery) return;
 
-    function filteriingGallery() {
-        const filterVal = $(this).attr('data-filter'),
-            filterEl = `[data-filter="${filterVal}"]`;
+    function filteriingGallery(filterVal) {
+        const filterEl = `[data-filter="${filterVal}"]`;
 
-        $(this).addClass(ACTIVE_CLASS).siblings(BTN_FILTER).removeClass(ACTIVE_CLASS);
+        $filterRow.children(filterEl).addClass(ACTIVE_CLASS).siblings(BTN_FILTER).removeClass(ACTIVE_CLASS);
 
         if (filterVal === 'all') {
             $gallery.children(GALLERY_BLOCK).animate({ opacity: 'show' }, 0);
@@ -21,8 +22,12 @@ const worksGallery = () => {
     }
 
     const init = () => {
-        $(window).on('load', () => $('[data-filter="all"]').trigger('click'));
-        $(BTN_FILTER).on('click', filteriingGallery);
+        filteriingGallery(DEFAULT_FILTER_VAL);
+        $(BTN_FILTER).on('click', function () {
+            const clickFilterVal = $(this).attr('data-filter');
+
+            filteriingGallery(clickFilterVal);
+        });
     }
 
     return {
