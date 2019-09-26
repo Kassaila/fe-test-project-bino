@@ -15,9 +15,9 @@ import navScroll from './modules/nav-scroll';
   // When DOM is ready
   $(() => {
     // navigation mobile
-    navMobile();
+    navMobile.init();
     // welcome slider
-    welcomeSlider();
+    welcomeSlider.init();
     // page position
     pagePosition.init({
       scrTopHeight: 0.1,

@@ -6,23 +6,31 @@ const navMobile = () => {
     $navLink = $nav.find('.scroll-to'),
     ACTIVE_CLASS = 'active';
 
-  // nav mobile button click
-  $navButton.on('click', function () {
-    if (!$(this).hasClass(ACTIVE_CLASS)) {
-      $(this).addClass(ACTIVE_CLASS);
-      $nav.animate({ opacity: 'toggle', height: 'toggle' });
-    } else {
-      $(this).removeClass(ACTIVE_CLASS);
-      $nav.animate({ opacity: 'toggle', height: 'toggle' });
-    }
-  });
-  // anchor link click
-  $navLink.on('click', function () {
-    if ($navButton.hasClass(ACTIVE_CLASS)) {
-      $navButton.removeClass(ACTIVE_CLASS);
-      $nav.animate({ opacity: 'toggle', height: 'toggle' });
-    }
-  });
+  const init = () => {
+
+    $navButton.on('click', function () {
+      if (!$(this).hasClass(ACTIVE_CLASS)) {
+        $(this).addClass(ACTIVE_CLASS);
+        $nav.animate({ opacity: 'toggle', height: 'toggle' });
+      } else {
+        $(this).removeClass(ACTIVE_CLASS);
+        $nav.animate({ opacity: 'toggle', height: 'toggle' });
+      }
+    });
+
+    $navLink.on('click', function () {
+      if ($navButton.hasClass(ACTIVE_CLASS)) {
+        $navButton.removeClass(ACTIVE_CLASS);
+        $nav.animate({ opacity: 'toggle', height: 'toggle' });
+      }
+    });
+
+  }
+
+  return {
+    init,
+  }
+
 }
 
-export default navMobile;
+export default navMobile();
