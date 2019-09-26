@@ -3,7 +3,7 @@ const navMobile = () => {
 
   const $nav = $('.nav__list'),
     $navButton = $('.nav__button_mobile'),
-    $navLink = $nav.find('a'),
+    $navLink = $nav.find('.scroll-to'),
     ACTIVE_CLASS = 'active';
 
   // nav mobile button click

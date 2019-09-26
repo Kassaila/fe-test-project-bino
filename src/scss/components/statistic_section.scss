@@ -36,7 +36,7 @@
     align-items: flex-start;
     justify-content: space-between;
     @include media("<desktop") {
-      justify-content: space-around;
+      justify-content: center;
     }
   }
   &__block {

@@ -9,6 +9,7 @@ import servicesSlider from './modules/services_slider';
 import worksGallery from './modules/works_gallery';
 import studySlider from './modules/study_slider';
 import formValidation from './modules/form-validation';
+import navScroll from './modules/nav-scroll';
 
 ($ => {
   // When DOM is ready
@@ -18,9 +19,9 @@ import formValidation from './modules/form-validation';
     // welcome slider
     welcomeSlider();
     // page position
-    pagePosition({
+    pagePosition.init({
       scrTopHeight: 0.1,
-      scrBottomHeight: 0.5,
+      scrBottomHeight: 0.5
     });
     // services slider
     servicesSlider.init();
@@ -30,6 +31,8 @@ import formValidation from './modules/form-validation';
     studySlider.init();
     // form validation
     formValidation.init();
+    // nav scroll
+    navScroll.init();
     //end
   });
 })(jQuery);

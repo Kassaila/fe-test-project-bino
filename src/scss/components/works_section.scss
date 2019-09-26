@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 70px;
+  margin-top: 65px;
   @include media("<phone") {
     margin-top: 40px;
   }
@@ -17,16 +17,20 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
+    padding: 0 15px;
+    margin-bottom: 40px;
   }
   &__filter {
     @extend %btnreset;
     position: relative;
     font: 700 14px/1 map-get($base, "base-font-sans-serif");
+    text-transform: uppercase;
     color: #999;
     padding: 0;
+    margin-bottom: 10px;
     transition: 0.3s ease;
     &:hover {
+      color: map-get($colors, "orange");
       opacity: 0.8;
     }
     &:not(:last-child) {
@@ -84,6 +88,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     background-color: rgba(map-get($colors, "orange"), 0.8);
     opacity: 0;
     padding: 50px;
@@ -104,6 +109,13 @@
     color: map-get($colors, "white");
     padding-top: 30px;
     margin: auto 0 20px;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      &:after {
+        width: 100%;
+      }
+    }
     &:after {
       content: "";
       position: absolute;
@@ -112,6 +124,7 @@
       width: 44px;
       height: 4px;
       background-color: map-get($colors, "white");
+      transition: 0.3s ease;
     }
   }
   &__text {

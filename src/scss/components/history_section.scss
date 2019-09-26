@@ -2,7 +2,7 @@
   &_section {
     background-color: map-get($colors, "main-light");
     padding: 150px 0 140px;
-    @include media('<tablet') {
+    @include media("<tablet") {
       padding: 80px 0;
     }
   }
@@ -32,10 +32,10 @@
   }
   &__title {
     position: relative;
-    font: 700 36px map-get($base, "base-font-family");
+    font: 700 36px/1 map-get($base, "base-font-family");
     letter-spacing: 3.6px;
     padding-left: 35px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     @include media("<tablet") {
       font-size: 24px;
       padding-left: 25px;
@@ -54,7 +54,10 @@
   &__text {
     line-height: 2.07;
     color: #999;
-    margin-bottom: 45px;
+    margin-bottom: 20px;
+    & > *:not(:last-child) {
+      margin-bottom: 30px;
+    }
     @include media("<tablet") {
       margin-bottom: 30px;
     }

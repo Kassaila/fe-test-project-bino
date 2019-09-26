@@ -23,21 +23,22 @@
                 <span></span>
             </button>
             <ul class="nav__list">
-              <li><a href="#">home</a></li>
-              <li><a href="#">about us</a></li>
-              <li><a href="#">portfolio</a></li>
-              <li><a href="#">pricing</a></li>
-              <li><a href="#">team</a></li>
-              <li><a href="#">blog</a></li>
-              <li><a href="#">contact</a></li>
+              <li><button data-anchor="#welcome_section" class="scroll-to" type="button">home</button></li>
+              <li><button data-anchor="#history_section" class="scroll-to" type="button">about us</button></li>
+              <li><button data-anchor="#works_section" class="scroll-to" type="button">portfolio</button></li>
+              <li><button data-anchor="#pricing-section" class="scroll-to" type="button">pricing</button></li>
+              <li><button data-anchor="#services_section" class="scroll-to" type="button">team</button></li>
+              <li><button data-anchor="#blog-section" class="scroll-to" type="button">blog</button></li>
+              <li><button data-anchor="#form-section" class="scroll-to" type="button">contact</button></li>
             </ul>
           </nav>
 
         </div>
       </div>
     </header>
+    <button data-anchor="#welcome_section" class="btn-scrollup scroll-to" type="button"></button>
     <section id="welcome_section" class="welcome_section">
-        <button class="figures_decor icon-anchor"></button>
+        <button data-anchor="#advanteges_section" class="figures_decor icon-anchor scroll-to" type="button"></button>
         <div class="welcome_slider">
 
             <div class="welcome_slider__block">
@@ -180,7 +181,7 @@
             </div>
         </div>
     </section>
-    <section class="advanteges_section">
+    <section id="advanteges_section" class="advanteges_section">
         <div class="container">
             <div class="advanteges__row">
                 <div class="advanteges__block">
@@ -222,7 +223,7 @@
             </div>
         </div>
     </section>
-    <section class="history_section">
+    <section id="history_section" class="history_section">
         <div class="container">
             <div class="history__row">
                 <img class="history__image" src="assets/images/monitor.png" alt="monitor">
@@ -244,7 +245,7 @@
             </div>
         </div>
     </section>
-    <section class="services_section">
+    <section id="services_section" class="services_section">
         <div class="services__column">
             <h2 class="services__title">OUR SERVICES</h2>
             <div class="services_slider">
@@ -342,7 +343,7 @@
         </div>
         <img class="services__background" src="assets/images/services_1.jpg" alt="our services">
     </section>
-    <section class="works_section">
+    <section id="works_section" class="works_section">
         <div class="container">
             <div class="block_decor">
                 <h2 class="block_decor__title">RECENT WORKS</h2>
@@ -362,62 +363,62 @@
                 <button class="works_gallery__filter" data-filter="video" ype="button">video</button>
             </div>
             <div class="works_gallery__row">
-                <a class="works_gallery__block" data-filter="web" href="#">
+                <div class="works_gallery__block" data-filter="web" href="#">
                     <img class="works_gallery__image" src="assets/images/gallery_1.jpg" alt="work">
                     <div class="works_gallery__description">
-                        <h3 class="works_gallery__title">T-SHIRT DESIGN</h3>
-                        <p class="works_gallery__text">art / t-shirt</p>
+                        <a href="#" class="works_gallery__title">T-SHIRT DESIGN</a>
+                        <a href="#" class="works_gallery__text">art / t-shirt</a>
                     </div>
-                </a>
-                <a class="works_gallery__block" data-filter="print" href="#">
+                </div>
+                <div class="works_gallery__block" data-filter="print" href="#">
                     <img class="works_gallery__image" src="assets/images/gallery_2.jpg" alt="work">
                     <div class="works_gallery__description">
-                        <h3 class="works_gallery__title">T-SHIRT DESIGN</h3>
-                        <p class="works_gallery__text">art / t-shirt</p>
+                        <a href="#" class="works_gallery__title">T-SHIRT DESIGN</a>
+                        <a href="#" class="works_gallery__text">art / t-shirt</a>
                     </div>
-                </a>
-                <a class="works_gallery__block" data-filter="animation" href="#">
+                </div>
+                <div class="works_gallery__block" data-filter="animation" href="#">
                     <img class="works_gallery__image" src="assets/images/gallery_1.jpg" alt="work">
                     <div class="works_gallery__description">
-                        <h3 class="works_gallery__title">T-SHIRT DESIGN</h3>
-                        <p class="works_gallery__text">art / t-shirt</p>
+                        <a href="#" class="works_gallery__title">T-SHIRT DESIGN</a>
+                        <a href="#" class="works_gallery__text">art / t-shirt</a>
                     </div>
-                </a>
-                <a class="works_gallery__block" data-filter="art" href="#">
+                </div>
+                <div class="works_gallery__block" data-filter="art" href="#">
                     <img class="works_gallery__image" src="assets/images/gallery_2.jpg" alt="work">
                     <div class="works_gallery__description">
-                        <h3 class="works_gallery__title">T-SHIRT DESIGN</h3>
-                        <p class="works_gallery__text">art / t-shirt</p>
+                        <a href="#" class="works_gallery__title">T-SHIRT DESIGN</a>
+                        <a href="#" class="works_gallery__text">art / t-shirt</a>
                     </div>
-                </a>
-                <a class="works_gallery__block" data-filter="photo" href="#">
+                </div>
+                <div class="works_gallery__block" data-filter="photo" href="#">
                     <img class="works_gallery__image" src="assets/images/gallery_1.jpg" alt="work">
                     <div class="works_gallery__description">
-                        <h3 class="works_gallery__title">T-SHIRT DESIGN</h3>
-                        <p class="works_gallery__text">art / t-shirt</p>
+                        <a href="#" class="works_gallery__title">T-SHIRT DESIGN</a>
+                        <a href="#" class="works_gallery__text">art / t-shirt</a>
                     </div>
-                </a>
-                <a class="works_gallery__block" data-filter="video" href="#">
+                </div>
+                <div class="works_gallery__block" data-filter="video" href="#">
                     <img class="works_gallery__image" src="assets/images/gallery_2.jpg" alt="work">
                     <div class="works_gallery__description">
-                        <h3 class="works_gallery__title">T-SHIRT DESIGN</h3>
-                        <p class="works_gallery__text">art / t-shirt</p>
+                        <a href="#" class="works_gallery__title">T-SHIRT DESIGN</a>
+                        <a href="#" class="works_gallery__text">art / t-shirt</a>
                     </div>
-                </a>
-                <a class="works_gallery__block" data-filter="web" href="#">
+                </div>
+                <div class="works_gallery__block" data-filter="web" href="#">
                     <img class="works_gallery__image" src="assets/images/gallery_1.jpg" alt="work">
                     <div class="works_gallery__description">
-                        <h3 class="works_gallery__title">T-SHIRT DESIGN</h3>
-                        <p class="works_gallery__text">art / t-shirt</p>
+                        <a href="#" class="works_gallery__title">T-SHIRT DESIGN</a>
+                        <a href="#" class="works_gallery__text">art / t-shirt</a>
                     </div>
-                </a>
-                <a class="works_gallery__block" data-filter="photo" href="#">
+                </div>
+                <div class="works_gallery__block" data-filter="photo" href="#">
                     <img class="works_gallery__image" src="assets/images/gallery_2.jpg" alt="work">
                     <div class="works_gallery__description">
-                        <h3 class="works_gallery__title">T-SHIRT DESIGN</h3>
-                        <p class="works_gallery__text">art / t-shirt</p>
+                        <a href="#" class="works_gallery__title">T-SHIRT DESIGN</a>
+                        <a href="#" class="works_gallery__text">art / t-shirt</a>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>
@@ -521,7 +522,7 @@
             </div>
         </div>
     </section>
-    <section class="pricing-section">
+    <section id="pricing-section" class="pricing-section">
         <div class="container">
             <div class="block_decor">
                 <h2 class="block_decor__title">OUR PRICING</h2>
@@ -618,7 +619,7 @@
             </div>
         </div>
     </section>
-    <section class="blog-section">
+    <section id="blog-section" class="blog-section">
         <div class="container">
             <div class="block_decor">
                 <h2 class="block_decor__title">OUR BLOG</h2>
@@ -635,8 +636,8 @@
                     <img src="assets/images/blog-1-595.jpg" alt="">
                 </picture>
                 <div class="blog-section__content">
-                    <span class="blog-section__category">art / t-shirt</span>
-                    <h4 class="blog-section__title">T-SHIRT DESIGN</h4>
+                    <a href="#" class="blog-section__category">art / t-shirt</a>
+                    <a href="#" class="blog-section__title">T-SHIRT DESIGN</a>
                     <p class="blog-section__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer
                         took a galley of type a
@@ -651,8 +652,8 @@
                     <img src="assets/images/blog-1-595.jpg" alt="">
                 </picture>
                 <div class="blog-section__content">
-                    <span class="blog-section__category">art / t-shirt</span>
-                    <h4 class="blog-section__title">T-SHIRT DESIGN</h4>
+                    <a href="#" class="blog-section__category">art / t-shirt</a>
+                    <a href="#" class="blog-section__title">T-SHIRT DESIGN</a>
                     <p class="blog-section__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer
                         took a galley of type a
@@ -667,8 +668,8 @@
                     <img src="assets/images/blog-1-595.jpg" alt="">
                 </picture>
                 <div class="blog-section__content">
-                    <span class="blog-section__category">art / t-shirt</span>
-                    <h4 class="blog-section__title">T-SHIRT DESIGN</h4>
+                    <a href="#" class="blog-section__category">art / t-shirt</a>
+                    <a href="#" class="blog-section__title">T-SHIRT DESIGN</a>
                     <p class="blog-section__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer
                         took a galley of type a
@@ -683,8 +684,8 @@
                     <img src="assets/images/blog-1-595.jpg" alt="">
                 </picture>
                 <div class="blog-section__content">
-                    <span class="blog-section__category">art / t-shirt</span>
-                    <h4 class="blog-section__title">T-SHIRT DESIGN</h4>
+                    <a href="#" class="blog-section__category">art / t-shirt</a>
+                    <a href="#" class="blog-section__title">T-SHIRT DESIGN</a>
                     <p class="blog-section__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer
                         took a galley of type a
@@ -694,7 +695,7 @@
             </div>
         </div>
     </section>
-    <section class="form-section">
+    <section id="form-section" class="form-section">
         <div class="container">
             <div class="block_decor">
                 <h2 class="block_decor__title">kEEP IN TOUCH</h2>
