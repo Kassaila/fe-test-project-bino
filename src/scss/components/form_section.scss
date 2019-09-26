@@ -1,0 +1,97 @@
+.form-section {
+  background-color: map-get($colors, "main-light");
+  padding: 150px 0;
+  @include media("<tablet") {
+    padding: 80px 0;
+  }
+  .block_decor__title {
+    letter-spacing: normal;
+    text-shadow: 0px 1px 0 #ffffff;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 70px 0 0;
+    @include media("<phone") {
+      margin: 40px 0 0;
+    }
+  }
+  &__contacts {
+    width: 478px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: map-get($colors, "white");
+    border-radius: 2px;
+    box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.1);
+    padding: 100px 90px;
+    margin-right: 28px;
+    @include media("<widescreen") {
+      width: auto;
+      flex: 1;
+      padding: 50px 40px;
+    }
+    @include media("<tablet") {
+      width: 100%;
+      flex: none;
+      margin: 0 0 20px;
+    }
+  }
+  &__title {
+    font: 600 24px/1 map-get($base, "base-font-family");
+    text-transform: uppercase;
+    color: map-get($colors, "orange");
+    margin: 0 0 20px;
+    &:not(:first-child) {
+      margin: 65px 0 20px;
+      @include media("<tablet") {
+        margin: 40px 0 20px;
+      }
+    }
+  }
+  &__text {
+    font: 18px/1.33 map-get($base, "base-font-sans-serif");
+    color: #999;
+    text-decoration: none;
+  }
+  .form-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: map-get($colors, "white");
+    border-radius: 2px;
+    box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.1);
+    padding: 100px;
+    @include media("<widescreen") {
+      padding: 50px 40px;
+    }
+    @include media("<tablet") {
+      width: 100%;
+      flex: none;
+    }
+    &__input {
+      align-self: stretch;
+      padding: 0 0 15px;
+      margin: 0 0 28px;
+    }
+    &__textarea {
+      align-self: stretch;
+      height: 115px;
+      line-height: 1.71;
+      resize: none;
+      padding: 0 0 15px;
+      margin: 0 0 30px;
+    }
+    &__textarea:focus,
+    &__input:focus {
+      outline: 1px solid rgba(#999, 0.2);
+    }
+    label.error {
+      position: relative;
+      top: -32px;
+      height: 0;
+      color: map-get($colors, "orange");
+    }
+  }
+}

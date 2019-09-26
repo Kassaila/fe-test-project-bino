@@ -8,6 +8,7 @@ import pagePosition from './modules/init_position';
 import servicesSlider from './modules/services_slider';
 import worksGallery from './modules/works_gallery';
 import studySlider from './modules/study_slider';
+import formValidation from './modules/form-validation';
 
 ($ => {
   // When DOM is ready
@@ -27,6 +28,8 @@ import studySlider from './modules/study_slider';
     worksGallery.init();
     // study slider
     studySlider.init();
+    // form validation
+    formValidation.init();
     //end
   });
 })(jQuery);
