@@ -249,7 +249,7 @@
    */
   gulp.task('default', gulp.series(
     cfg.task.cleanBuild,
-    gulp.parallel(
+    gulp.series(
       cfg.task.buildCustomJs,
       cfg.task.buildJsVendors,
       cfg.task.buildSass,
