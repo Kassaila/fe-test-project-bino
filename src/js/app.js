@@ -32,7 +32,8 @@ import navScroll from './modules/nav-scroll';
     // form validation
     formValidation.init();
     // nav scroll
-    navScroll.init();
+    navScroll.scrollTo();
+    navScroll.highlight();
     //end
   });
 })(jQuery);
