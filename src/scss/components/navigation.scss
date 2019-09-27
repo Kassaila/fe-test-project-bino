@@ -6,7 +6,7 @@
     display: flex;
     list-style: none;
     padding: 0;
-    @include media("<desktop") {
+    @include media('<desktop') {
       position: absolute;
       top: 100%;
       right: 0;
@@ -20,34 +20,34 @@
       flex-direction: column;
       align-items: stretch;
       margin-left: 53px;
-      @include media("<desktop") {
+      @include media('<desktop') {
         margin-left: 0;
       }
     }
   }
   .scroll-to {
     @extend %btnreset;
-    font-family: map-get($base, "base-font-sans-serif");
+    font-family: map-get($base, 'base-font-sans-serif');
     font-weight: 700;
-    color: map-get($colors, "main-dark");
+    color: map-get($colors, 'main-dark');
     text-transform: uppercase;
     border: 1px solid transparent;
     padding: 16px 0;
     transition: 0.3s ease;
     &:hover {
-      color: map-get($colors, "orange");
+      color: map-get($colors, 'orange');
     }
     &.active {
-      color: map-get($colors, "orange");
-      border-bottom: 1px solid map-get($colors, "orange");
+      color: map-get($colors, 'orange');
+      border-bottom: 1px solid map-get($colors, 'orange');
     }
-    @include media("<desktop") {
+    @include media('<desktop') {
       text-align: center;
     }
   }
   &__button_mobile {
     display: none;
-    @include media("<desktop") {
+    @include media('<desktop') {
       width: 45px;
       height: 25px;
       display: flex;

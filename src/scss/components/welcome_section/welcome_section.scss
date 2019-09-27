@@ -3,13 +3,13 @@
 
   &:before,
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 40px;
     border-top: 60px solid transparent;
     border-bottom: 60px solid #fff;
     z-index: 2;
-    @include media("<desktop") {
+    @include media('<desktop') {
       bottom: 20px;
       border-top: 3vh solid transparent;
       border-bottom: 3vh solid #fff;
@@ -44,7 +44,7 @@
   border-radius: 50%;
   z-index: 3;
   transition: 0.3s ease;
-  @include media("<desktop") {
+  @include media('<desktop') {
     bottom: 20px;
     width: 34px;
     height: 34px;
@@ -61,7 +61,7 @@
     }
   }
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     width: 74px;
     height: 74px;
@@ -69,7 +69,7 @@
     opacity: 0.25;
     border-radius: 50%;
     z-index: -1;
-    @include media("<desktop") {
+    @include media('<desktop') {
       width: 44px;
       height: 44px;
     }

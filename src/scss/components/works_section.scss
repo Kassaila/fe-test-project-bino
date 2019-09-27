@@ -1,6 +1,6 @@
 .works_section {
   padding: 135px 0 0;
-  @include media("<phone") {
+  @include media('<phone') {
     padding: 80px 0 0;
   }
 }
@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 65px;
-  @include media("<phone") {
+  @include media('<phone') {
     margin-top: 40px;
   }
   &__filters_row {
@@ -23,20 +23,20 @@
   &__filter {
     @extend %btnreset;
     position: relative;
-    font: 700 14px/1 map-get($base, "base-font-sans-serif");
+    font: 700 14px/1 map-get($base, 'base-font-sans-serif');
     text-transform: uppercase;
     color: #999;
     padding: 0;
     margin-bottom: 10px;
     transition: 0.3s ease;
     &:hover {
-      color: map-get($colors, "orange");
+      color: map-get($colors, 'orange');
       opacity: 0.8;
     }
     &:not(:last-child) {
       margin-right: 25px;
       &:after {
-        content: "/";
+        content: '/';
         position: absolute;
         right: -15px;
         color: #999;
@@ -44,7 +44,7 @@
       }
     }
     &_active {
-      color: map-get($colors, "orange");
+      color: map-get($colors, 'orange');
     }
   }
   &__row {
@@ -58,15 +58,15 @@
     display: flex;
     align-items: center;
     padding: 12.5% 0;
-    @include media("<widescreen") {
+    @include media('<widescreen') {
       width: 33.33%;
       padding: 16.7% 0;
     }
-    @include media("<desktop") {
+    @include media('<desktop') {
       width: 50%;
       padding: 25% 0;
     }
-    @include media("<phone") {
+    @include media('<phone') {
       width: 100%;
       padding: 50% 0;
     }
@@ -89,15 +89,15 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: rgba(map-get($colors, "orange"), 0.8);
+    background-color: rgba(map-get($colors, 'orange'), 0.8);
     opacity: 0;
     padding: 50px;
     transition: 0.5s ease;
-    @include media("<desktop") {
+    @include media('<desktop') {
       height: 50%;
       opacity: 1;
     }
-    @include media("<tablet") {
+    @include media('<tablet') {
       padding: 20px;
     }
   }
@@ -106,7 +106,7 @@
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 1.2px;
-    color: map-get($colors, "white");
+    color: map-get($colors, 'white');
     padding-top: 30px;
     margin: auto 0 20px;
     &:hover,
@@ -117,20 +117,20 @@
       }
     }
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
       top: 0;
       width: 44px;
       height: 4px;
-      background-color: map-get($colors, "white");
+      background-color: map-get($colors, 'white');
       transition: 0.3s ease;
     }
   }
   &__text {
-    font: 14px/1 map-get($base, "base-font-sans-serif");
+    font: 14px/1 map-get($base, 'base-font-sans-serif');
     letter-spacing: 0.7px;
-    color: map-get($colors, "white");
+    color: map-get($colors, 'white');
     margin-bottom: 0;
   }
 }

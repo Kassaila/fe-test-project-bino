@@ -1,15 +1,15 @@
 @font-face {
-  font-family: "icomoon";
-  src: url("../../assets/fonts/icons_font/icomoon.woff?nzo0bb") format("woff");
+  font-family: 'icomoon';
+  src: url('../../assets/fonts/icons_font/icomoon.woff?nzo0bb') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^='icon-'],
+[class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
+  font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -23,35 +23,35 @@
 }
 
 .icon-facebook:before {
-  content: "\e900";
+  content: '\e900';
 }
 .icon-google-plus:before {
-  content: "\e901";
+  content: '\e901';
 }
 .icon-linkedin:before {
-  content: "\e902";
+  content: '\e902';
 }
 .icon-rss:before {
-  content: "\e903";
+  content: '\e903';
 }
 .icon-skype:before {
-  content: "\e904";
+  content: '\e904';
 }
 .icon-tumblr:before {
-  content: "\e905";
+  content: '\e905';
 }
 .icon-twitter:before {
-  content: "\e906";
+  content: '\e906';
 }
 .icon-vimeo:before {
-  content: "\e907";
+  content: '\e907';
 }
 .icon-chevron-right:before {
-  content: "\e908";
+  content: '\e908';
 }
 .icon-chevron-left:before {
-  content: "\e909";
+  content: '\e909';
 }
 .icon-anchor:before {
-  content: "\e90a";
+  content: '\e90a';
 }

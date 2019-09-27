@@ -12,7 +12,7 @@
   &__block {
     display: flex;
     width: 50%;
-    @include media("<widescreen") {
+    @include media('<widescreen') {
       width: 100%;
     }
     &:nth-child(4n-1),
@@ -22,50 +22,50 @@
         right: -28px;
         left: auto;
         border-width: 40px 0 40px 30px;
-        border-color: transparent map-get($colors, "orange");
+        border-color: transparent map-get($colors, 'orange');
       }
     }
     &:nth-child(even) {
-      @include media("<widescreen") {
+      @include media('<widescreen') {
         flex-direction: row-reverse;
       }
-      @include media("<tablet") {
+      @include media('<tablet') {
         flex-direction: column;
       }
       .blog-section__content:before {
-        @include media("<widescreen") {
+        @include media('<widescreen') {
           left: auto;
           right: -28px;
           border-width: 40px 0 40px 30px;
-          border-color: transparent map-get($colors, "orange");
+          border-color: transparent map-get($colors, 'orange');
         }
-        @include media("<tablet") {
+        @include media('<tablet') {
           left: 50%;
           right: auto;
           border-width: 0 40px 30px;
-          border-color: map-get($colors, "orange") transparent;
+          border-color: map-get($colors, 'orange') transparent;
         }
       }
     }
     &:nth-child(odd) {
-      @include media("<widescreen") {
+      @include media('<widescreen') {
         flex-direction: row;
       }
-      @include media("<tablet") {
+      @include media('<tablet') {
         flex-direction: column;
       }
       .blog-section__content:before {
-        @include media("<widescreen") {
+        @include media('<widescreen') {
           right: auto;
           left: -28px;
           border-width: 40px 30px 40px 0;
-          border-color: transparent map-get($colors, "orange");
+          border-color: transparent map-get($colors, 'orange');
         }
-        @include media("<tablet") {
+        @include media('<tablet') {
           left: 50%;
           right: auto;
           border-width: 0 40px 30px;
-          border-color: map-get($colors, "orange") transparent;
+          border-color: map-get($colors, 'orange') transparent;
         }
       }
     }
@@ -73,7 +73,7 @@
   &__image-holder {
     width: 50%;
     height: 100%;
-    @include media("<tablet") {
+    @include media('<tablet') {
       width: 100%;
     }
     img {
@@ -88,34 +88,34 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: map-get($colors, "orange");
+    background-color: map-get($colors, 'orange');
     padding: 70px 45px 60px;
-    @include media("<tablet") {
+    @include media('<tablet') {
       width: 100%;
       padding: 30px 15px;
     }
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
       left: -28px;
       border-width: 40px 30px 40px 0;
-      border-color: transparent map-get($colors, "orange");
+      border-color: transparent map-get($colors, 'orange');
       border-style: solid;
       transform: translateY(-50%);
-      @include media("<tablet") {
+      @include media('<tablet') {
         top: -28px;
         border-width: 0 40px 30px;
-        border-color: map-get($colors, "orange") transparent;
+        border-color: map-get($colors, 'orange') transparent;
         transform: translateX(-50%);
       }
     }
   }
   &__title {
     position: relative;
-    font: 600 24px/1 map-get($base, "base-font-family");
+    font: 600 24px/1 map-get($base, 'base-font-family');
     letter-spacing: 1.2px;
-    color: map-get($colors, "white");
+    color: map-get($colors, 'white');
     padding: 0 0 20px;
     margin: 0 0 40px;
     &:hover,
@@ -126,29 +126,29 @@
       }
     }
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0;
       left: 0;
       width: 44px;
       height: 4px;
-      background-color: map-get($colors, "white");
+      background-color: map-get($colors, 'white');
       transition: 0.3s ease;
     }
   }
   &__category {
-    font: 14px/1 map-get($base, "base-font-sans-serif");
+    font: 14px/1 map-get($base, 'base-font-sans-serif');
     letter-spacing: 0.7px;
-    color: map-get($colors, "white");
+    color: map-get($colors, 'white');
     margin: 0 0 28px;
   }
   &__text {
-    font: 16px/1.88 map-get($base, "base-font-sans-serif");
-    color: map-get($colors, "white");
+    font: 16px/1.88 map-get($base, 'base-font-sans-serif');
+    color: map-get($colors, 'white');
   }
   &__link {
-    font: 600 italic 18px/1.33 map-get($base, "base-font-sans-serif");
-    color: map-get($colors, "white");
+    font: 600 italic 18px/1.33 map-get($base, 'base-font-sans-serif');
+    color: map-get($colors, 'white');
     margin: auto 0 0;
     transition: 0.3s ease;
     &:hover,

@@ -1,14 +1,14 @@
 .statistic-section {
   position: relative;
   padding: 157px 0 110px;
-  @include media("<desktop") {
+  @include media('<desktop') {
     padding: 100px 0 80px;
   }
-  @include media("<tablet") {
+  @include media('<tablet') {
     padding: 80px 0;
   }
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
@@ -35,7 +35,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    @include media("<desktop") {
+    @include media('<desktop') {
       justify-content: center;
     }
   }
@@ -45,13 +45,13 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
-    @include media("<desktop") {
+    @include media('<desktop') {
       width: 20%;
     }
-    @include media("<tablet") {
+    @include media('<tablet') {
       width: 33.33%;
     }
-    @include media("<phone") {
+    @include media('<phone') {
       width: 50%;
     }
   }
@@ -61,26 +61,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 1px map-get($colors, "white");
+    border: solid 1px map-get($colors, 'white');
     border-radius: 50%;
     margin-bottom: 45px;
-    @include media("<desktop") {
+    @include media('<desktop') {
       width: 80px;
       height: 80px;
       margin-bottom: 20px;
     }
-    @include media("<phone") {
+    @include media('<phone') {
       width: 60px;
       height: 60px;
       margin-bottom: 10px;
     }
   }
   &__number {
-    font: 700 30px/1 map-get($base, "base-font-family");
+    font: 700 30px/1 map-get($base, 'base-font-family');
     letter-spacing: 1.5px;
-    color: map-get($colors, "main-light");
+    color: map-get($colors, 'main-light');
     margin-bottom: 5px;
-    @include media("<tablet") {
+    @include media('<tablet') {
       font-size: 24px;
     }
   }
@@ -89,9 +89,9 @@
     line-height: 1.2;
     letter-spacing: 0.9px;
     text-align: center;
-    color: map-get($colors, "main-light");
+    color: map-get($colors, 'main-light');
     margin: 0;
-    @include media("<tablet") {
+    @include media('<tablet') {
       font-size: 14px;
     }
   }

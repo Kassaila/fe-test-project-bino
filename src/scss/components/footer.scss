@@ -4,7 +4,7 @@
   margin-top: auto;
   .row {
     align-items: center;
-    @include media("<tablet") {
+    @include media('<tablet') {
       justify-content: space-around;
     }
   }
@@ -22,10 +22,10 @@
     a {
       font-size: 19px;
       text-decoration: none;
-      color: map-get($base, "base-text-color");
+      color: map-get($base, 'base-text-color');
       transition: 0.3s ease;
       &:hover {
-        color: map-get($colors, "orange");
+        color: map-get($colors, 'orange');
         text-decoration: none;
       }
       &:focus {
@@ -34,10 +34,10 @@
     }
   }
   p {
-    font-family: map-get($base, "base-font-sans-serif");
+    font-family: map-get($base, 'base-font-sans-serif');
     font-weight: 600;
     margin: 0 0 0 auto;
-    @include media("<tablet") {
+    @include media('<tablet') {
       margin: 10px 0 0;
     }
   }

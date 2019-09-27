@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   &__title {
-    font: 700 36px/1 map-get($base, "base-font-family");
+    font: 700 36px/1 map-get($base, 'base-font-family');
     letter-spacing: 3.6px;
     text-transform: uppercase;
     text-align: center;
@@ -25,12 +25,12 @@
     align-self: center;
     width: 8px;
     height: 8px;
-    background-color: map-get($colors, "orange");
+    background-color: map-get($colors, 'orange');
     border-radius: 50%;
     margin-top: auto;
     &:before,
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
