@@ -1,7 +1,7 @@
 const studySlider = () => {
   const $slider = $('.study-slider');
 
-  if (!$slider) return;
+  if (!$slider) return false;
 
   const init = () => {
     $slider.slick({

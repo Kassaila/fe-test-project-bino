@@ -1,7 +1,7 @@
 const formValidation = () => {
   const $touchForm = $('#touch-form');
 
-  if (!$touchForm) return;
+  if (!$touchForm) return false;
 
   const init = () => {
     $touchForm.validate({

@@ -1,7 +1,7 @@
 const servicesSlider = () => {
   const $slider = $('.services_slider');
 
-  if (!$slider) return;
+  if (!$slider) return false;
 
   const init = () => {
     $slider.slick({

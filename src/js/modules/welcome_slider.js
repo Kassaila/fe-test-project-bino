@@ -1,7 +1,7 @@
 const welcomeSlider = () => {
   const $slider = $('.welcome_slider');
 
-  if (!$slider) return;
+  if (!$slider) return false;
 
   const init = () => {
     $('.welcome_slider').slick({

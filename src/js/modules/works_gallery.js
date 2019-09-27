@@ -6,7 +6,7 @@ const worksGallery = () => {
   const GALLERY_BLOCK = '.works_gallery__block';
   const DEFAULT_FILTER_VAL = 'all';
 
-  if (!$gallery) return;
+  if (!$gallery) return false;
 
   function filteriingGallery(filterVal) {
     const filterEl = `[data-filter="${filterVal}"]`;
