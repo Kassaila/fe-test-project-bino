@@ -23,11 +23,11 @@ const welcomeSlider = () => {
         },
       ],
     });
-  }
+  };
 
   return {
-      init,
-  }
+    init,
+  };
 };
 
 export default welcomeSlider();

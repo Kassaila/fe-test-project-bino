@@ -11,7 +11,7 @@ import studySlider from './modules/study_slider';
 import formValidation from './modules/form-validation';
 import navScroll from './modules/nav-scroll';
 
-($ => {
+(($) => {
   // When DOM is ready
   $(() => {
     // navigation mobile
@@ -21,7 +21,7 @@ import navScroll from './modules/nav-scroll';
     // page position
     pagePosition.init({
       scrTopHeight: 0.1,
-      scrBottomHeight: 0.5
+      scrBottomHeight: 0.5,
     });
     // services slider
     servicesSlider.init();
@@ -34,6 +34,6 @@ import navScroll from './modules/nav-scroll';
     // nav scroll
     navScroll.scrollTo();
     navScroll.highlight();
-    //end
+    // end
   });
 })(jQuery);

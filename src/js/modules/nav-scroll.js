@@ -1,83 +1,98 @@
 const navScroll = () => {
-    const $scrollClass = $('.scroll-to'),
-        scrollDelay = 500,
-        $win = $(window),
-        $header = $('.header');
+  const $scrollClass = $('.scroll-to');
+  const scrollDelay = 300;
+  const $win = $(window);
+  const $header = $('.header');
 
-    const _scrollToAnchor = (target) => {
-        let winHeight = $win.height(),
-            $headerHeight = $header.innerHeight(),
-            anchorVal = $(target).offset().top - $headerHeight + 1,
-            timeRate = Math.round(Math.abs($win.scrollTop() - anchorVal) / winHeight);
+  const scrollToAnchor = (target) => {
+    const winHeight = $win.height();
+    const headerHeight = $header.innerHeight();
+    const anchorVal = $(target).offset().top - headerHeight + 1;
+    let timeRate = Math.round(Math.abs($win.scrollTop() - anchorVal) / winHeight);
 
-        timeRate = timeRate > 0 ? timeRate : 1;
+    timeRate = timeRate > 0 ? timeRate : 1;
 
-        if (winHeight * 0.1 < Math.abs($win.scrollTop() - anchorVal)) {
-            $('html, body').stop().animate({
-                scrollTop: anchorVal
-            }, scrollDelay * timeRate);
-
-            return scrollDelay * timeRate;
-        }
+    if (winHeight * 0.1 < Math.abs($win.scrollTop() - anchorVal)) {
+      $('html, body')
+        .stop()
+        .animate(
+          {
+            scrollTop: anchorVal,
+          },
+          scrollDelay * timeRate,
+        );
     }
+    return scrollDelay * timeRate;
+  };
 
-    const _arrAnchors = () => {
-        const $anchors = $('.nav__list [data-anchor]'),
-            arr = [];
+  const arrAnchors = () => {
+    const $anchors = $('.nav__list [data-anchor]');
+    const arr = [];
 
-        $anchors.each(function (i, el) {
-            let anchorId = $(el).attr('data-anchor'),
-                elHeight = $(`${anchorId}`).innerHeight(),
-                elTop = $(`${anchorId}`).offset().top;
+    $anchors.each((i, el) => {
+      const anchorId = $(el).attr('data-anchor');
+      const elHeight = $(`${anchorId}`).innerHeight();
+      const elTop = $(`${anchorId}`).offset().top;
 
-            arr[i] = {
-                anchorId,
-                elHeight,
-                elTop
-            }
-        });
+      arr[i] = {
+        anchorId,
+        elHeight,
+        elTop,
+      };
+    });
 
-        return arr;
-    }
+    return arr;
+  };
 
-    const _navHighlight = (arr) => {
-        let winTop = $win.scrollTop() + $header.innerHeight();
+  const navHighlight = (arr, headerHeight) => {
+    const winTop = $win.scrollTop() + headerHeight;
 
-        arr.forEach(function (el, i) {
-            let $dataId = $(`[data-anchor="${el.anchorId}"]`);
+    arr.forEach((el) => {
+      const $dataId = $(`[data-anchor="${el.anchorId}"]`);
 
-            if (el.elTop < winTop && winTop < (el.elHeight + el.elTop) && !$dataId.hasClass('active')) {
-                $(`[data-anchor]`).removeClass('active');
-                $dataId.addClass('active');
-            }
-        });
-    }
+      if (
+        el.elTop < winTop
+        && winTop < el.elHeight + el.elTop
+        && !$dataId.hasClass('active')
+      ) {
+        $('[data-anchor]').removeClass('active');
+        $dataId.addClass('active');
+      } else if (
+        ($dataId.hasClass('active') && winTop > el.elHeight + el.elTop)
+        || ($dataId.hasClass('active') && el.elTop > winTop)
+      ) {
+        $dataId.removeClass('active');
+      }
+    });
+  };
 
-    const highlight = () => {
-        let arr = _arrAnchors();
+  const highlight = () => {
+    let arr = arrAnchors();
+    let headerHeight = $header.innerHeight();
 
-        _navHighlight(arr);
+    navHighlight(arr, headerHeight);
 
-        $win.resize(() => {
-            arr = _arrAnchors();
-            _navHighlight(arr);
-        });
+    $win.on('scroll', () => navHighlight(arr, headerHeight));
 
-        $win.on('scroll', () => _navHighlight(arr));
-    }
+    $win.on('resize', () => {
+      arr = arrAnchors();
+      headerHeight = $header.innerHeight();
+      navHighlight(arr, headerHeight);
+    });
+  };
 
-    const scrollTo = () => {
-        $scrollClass.on('click', function () {
-            let anchorId = $(this).attr('data-anchor');
+  const scrollTo = () => {
+    $scrollClass.on('click', (e) => {
+      const anchorId = $(e.target).attr('data-anchor');
 
-            _scrollToAnchor(anchorId);
-        });
-    }
+      scrollToAnchor(anchorId);
+    });
+  };
 
-    return {
-        scrollTo,
-        highlight,
-    }
+  return {
+    scrollTo,
+    highlight,
+  };
 };
 
 export default navScroll();
