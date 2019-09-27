@@ -70,10 +70,7 @@
     transform-origin: 100%;
     transform: translateY(3px) rotateZ(58deg);
   }
-  @include media('<phone') {
-    right: 15px;
-    bottom: 20px;
-    width: 35px;
-    height: 35px;
+  @include media('<desktop') {
+    display: none;
   }
 }

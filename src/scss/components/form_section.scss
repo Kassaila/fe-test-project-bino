@@ -47,12 +47,22 @@
       @include media('<tablet') {
         margin: 40px 0 20px;
       }
+      @include media('<phone') {
+        margin: 20px 0 10px;
+      }
+    }
+    @include media('<phone') {
+      font-size: 20px;
+      margin: 0 0 10px;
     }
   }
   &__text {
     font: 18px/1.33 map-get($base, 'base-font-sans-serif');
     color: #999;
     text-decoration: none;
+    @include media('<phone') {
+      font-size: 16px;
+    }
   }
   .form-block {
     flex: 1;

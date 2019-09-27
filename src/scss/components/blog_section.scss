@@ -1,5 +1,8 @@
 .blog-section {
   padding: 110px 0 0;
+  @include media('<phone') {
+    padding: 80px 0 0;
+  }
   .block_decor__title {
     letter-spacing: normal;
     text-shadow: 0px 1px 0 #ffffff;
@@ -134,6 +137,9 @@
       height: 4px;
       background-color: map-get($colors, 'white');
       transition: 0.3s ease;
+    }
+    @include media('<phone') {
+      margin: 0 0 20px;
     }
   }
   &__category {
