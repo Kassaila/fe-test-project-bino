@@ -47,6 +47,8 @@
   }
   &__button_mobile {
     display: none;
+    @extend %btnreset;
+    padding: 0;
     @include media('<desktop') {
       width: 45px;
       height: 25px;
@@ -63,13 +65,13 @@
     }
     &.active {
       span:first-child {
-        transform: rotateZ(38deg);
+        transform: rotateZ(32deg);
       }
       span:nth-child(2) {
         opacity: 0;
       }
       span:last-child {
-        transform: rotateZ(-38deg);
+        transform: rotateZ(-32deg);
       }
     }
   }

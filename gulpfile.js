@@ -249,17 +249,17 @@
    */
   gulp.task('default', gulp.series(
     cfg.task.cleanBuild,
-    gulp.series(
+    gulp.parallel(
       cfg.task.buildCustomJs,
       cfg.task.buildJsVendors,
       cfg.task.buildSass,
       cfg.task.buildSassFiles,
       cfg.task.buildStylesVendors,
       cfg.task.fileInclude,
-      cfg.task.htmlHint,
       cfg.task.esLint,
       cfg.task.imageMin
     ),
+    cfg.task.htmlHint,
     cfg.task.copyFolders,
     gulp.parallel(
       cfg.task.browserSync,

@@ -5,14 +5,12 @@ const navMobile = () => {
   const ACTIVE_CLASS = 'active';
 
   const init = () => {
-    $navButton.on('click', (e) => {
-      const $target = $(e.target);
-
-      if (!$target.hasClass(ACTIVE_CLASS)) {
-        $target.addClass(ACTIVE_CLASS);
+    $navButton.on('click', () => {
+      if (!$navButton.hasClass(ACTIVE_CLASS)) {
+        $navButton.addClass(ACTIVE_CLASS);
         $nav.animate({ opacity: 'toggle', height: 'toggle' });
       } else {
-        $target.removeClass(ACTIVE_CLASS);
+        $navButton.removeClass(ACTIVE_CLASS);
         $nav.animate({ opacity: 'toggle', height: 'toggle' });
       }
       return true;
