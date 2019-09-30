@@ -1,0 +1,81 @@
+.welcome_section {
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid #fff;
+    z-index: 2;
+    @include media('<desktop') {
+      bottom: 20px;
+      border-top: 3vh solid transparent;
+      border-bottom: 3vh solid #fff;
+    }
+  }
+  &:before {
+    left: 0;
+    border-right: 25vw solid transparent;
+    border-left: 25vw solid #fff;
+  }
+  &:after {
+    right: 0;
+    border-right: 25vw solid #fff;
+    border-left: 25vw solid transparent;
+  }
+}
+.figures_decor {
+  @extend %btnreset;
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 31px;
+  text-decoration: none;
+  color: map-get($colors, 'orange');
+  transform: translate(-50%, 50%);
+  background-color: #f4f5f9;
+  border-radius: 50%;
+  z-index: 3;
+  @include animate(all , 0.3s, ease);
+  @include media('<desktop') {
+    bottom: 20px;
+    width: 34px;
+    height: 34px;
+    font-size: 21px;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    &:after {
+      transform: scale(1.1);
+    }
+    &:before {
+      transform: rotateY(360deg);
+    }
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width: 74px;
+    height: 74px;
+    background-color: #fff;
+    opacity: 0.25;
+    border-radius: 50%;
+    z-index: -1;
+    @include media('<desktop') {
+      width: 44px;
+      height: 44px;
+    }
+  }
+  &:after,
+  &:before {
+    @include animate(all , 0.5s, ease);
+  }
+}

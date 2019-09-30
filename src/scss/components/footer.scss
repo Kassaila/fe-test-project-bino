@@ -1,0 +1,44 @@
+.footer {
+  background-color: #202020;
+  padding: 31px 0 20px;
+  margin-top: auto;
+  .row {
+    align-items: center;
+    @include media('<tablet') {
+      justify-content: space-around;
+    }
+  }
+  .social__list {
+    @extend %listreset;
+
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      line-height: 1;
+      &:not(:last-child) {
+        margin-right: 21px;
+      }
+    }
+    a {
+      font-size: 19px;
+      text-decoration: none;
+      color: map-get($base, 'base-text-color');
+      @include animate(color , 0.3s, ease);
+      &:hover {
+        color: map-get($colors, 'orange');
+        text-decoration: none;
+      }
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+  p {
+    font-family: map-get($base, 'base-font-sans-serif');
+    font-weight: 600;
+    margin: 0 0 0 auto;
+    @include media('<tablet') {
+      margin: 10px 0 0;
+    }
+  }
+}

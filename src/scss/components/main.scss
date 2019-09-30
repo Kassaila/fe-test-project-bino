@@ -1,3 +1,19 @@
 // This is the main with imports from components folder.
 
-@import 'starter-box';
+@import "header",
+        "navigation",
+        "footer",
+        "welcome_section/main",
+        "buttons",
+        "decorations",
+        "advanteges_section",
+        "history_section",
+        "services_section",        
+        "works_section",
+        "study_section",
+        "statistic_section",
+        "pricing_section",
+        "integrations_section",
+        "blog_section",
+        "form_section",
+        "start-section";

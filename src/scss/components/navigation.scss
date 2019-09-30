@@ -1,0 +1,96 @@
+.nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    @include media('<desktop') {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      display: none;
+      background-color: #202020;
+      padding: 0 0 10px;
+      margin: 0;
+    }
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      margin-left: 53px;
+      @include media('<desktop') {
+        margin-left: 0;
+      }
+    }
+  }
+  .scroll-to {
+    @extend %btnreset;
+    font-family: map-get($base, 'base-font-sans-serif');
+    font-weight: 700;
+    color: map-get($colors, 'main-light');
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 13px 0;
+    @include animate(all , 0.3s, ease);
+    &:hover {
+      color: map-get($colors, 'orange');
+    }
+    &.active {
+      color: map-get($colors, 'orange');
+      border-bottom: 1px solid map-get($colors, 'orange');
+    }
+    @include media('<desktop') {
+      text-align: center;
+    }
+  }
+  &__button_mobile {
+    position: relative;
+    display: none;
+    @extend %btnreset;
+    padding: 0;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      transform-origin: 0;
+      @include animate(all , 0.5s, ease);
+    }
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: 0;
+    }
+    @include media('<desktop') {
+      width: 45px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+    }
+    span {
+      height: 2px;
+      background-color: #fff;
+      transform-origin: 0;
+      @include animate(opacity, 0.3s, ease);
+    }
+    &.active {
+      &:before {
+        transform: rotateZ(31deg);
+      }
+      span {
+        opacity: 0;
+      }
+      &:after {
+        transform: rotateZ(-31deg);
+      }
+    }
+  }
+}

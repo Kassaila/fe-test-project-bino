@@ -1,0 +1,41 @@
+.btn {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: map-get($colors, 'white');
+  box-shadow: 0px 2px 4.8px 0.3px rgba(#000, 0.25);
+  border-radius: 2px;
+  @include animate(opacity, 0.3s, ease);
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    text-decoration: none;
+  }
+  &_large {
+    min-width: 225px;
+    font-family: map-get($base, 'base-font-sans-serif');
+    font-weight: 700;
+    letter-spacing: 0.14px;
+    padding: 13px;
+    @include media('<tablet') {
+      min-width: 200px;
+      font-size: 12px;
+      padding: 10px;
+    }
+  }
+  &_small {
+    min-width: 145px;
+    font: 600 12px/1 map-get($base, 'base-font-sans-serif');
+    letter-spacing: 0.12px;
+    padding: 18px;
+  }
+  &_orange {
+    background-color: map-get($colors, 'orange');
+  }
+  &_transparent {
+    background-color: transparent;
+    border: 1px solid map-get($colors, 'white');
+    padding: 11px 13px;
+  }
+}

@@ -1,0 +1,48 @@
+.block_decor {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    font: 700 36px/1 map-get($base, 'base-font-family');
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #6a6a6a;
+    margin-bottom: 16px;
+    @include media('<phone') {
+      font-size: 24px;
+    }
+  }
+  &__text {
+    font-family: map-get($base, 'base-font-sans-serif');
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__underline {
+    position: relative;
+    display: block;
+    align-self: center;
+    width: 8px;
+    height: 8px;
+    background-color: map-get($colors, 'orange');
+    border-radius: 50%;
+    margin-top: auto;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 80px;
+      height: 1px;
+      background-color: #999;
+    }
+    &:before {
+      left: -94px;
+    }
+    &:after {
+      right: -94px;
+    }
+  }
+}

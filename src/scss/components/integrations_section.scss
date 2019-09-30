@@ -1,0 +1,54 @@
+.integrations-section {
+  background-color: map-get($colors, 'main-light');
+  padding: 145px 0 115px;
+  @include media('<tablet') {
+    padding: 80px 0;
+  }
+  .block_decor__title {
+    letter-spacing: normal;
+    text-shadow: 0px 1px 0 #ffffff;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 65px 0 0;
+    @include media('<tablet') {
+      margin: 40px 0 0;
+    }
+  }
+  &__block {
+    width: 210px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: map-get($colors, 'white');
+    box-shadow: 0px 1px 3px 0 rgba(31, 31, 31, 0.09);
+    padding: 10px;
+    margin: 0 0 30px;
+    @include animate(all , 0.5s, ease);
+    @include media('<widescreen') {
+      width: 19%;
+    }
+    @include media('<tablet') {
+      width: 49%;
+    }
+    @include media('<phone') {
+      width: 48%;
+    }
+    &:hover {
+      background-color: map-get($colors, 'orange');
+      box-shadow: none;
+      & img {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+    }
+    img {
+      filter: grayscale(100%);
+      opacity: 0.25;
+      @include animate(all , 0.5s, ease);
+    }
+  }
+}

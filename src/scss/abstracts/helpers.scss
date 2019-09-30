@@ -1,6 +1,18 @@
 // This is the most used helpers.
 //
 // You can remove or add your own helpers in this file.
+%btnreset {
+    border: none;
+    background-color: transparent;
+    font: inherit;
+}
+%linkreset {
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
 
 %listreset {
   margin: 0;

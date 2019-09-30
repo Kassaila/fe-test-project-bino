@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  @@include('../partials/head/head.html')
+@@include('../partials/head/head.html')
 
 <body>
-  <div id="wrapper">
-    @@include('../partials/components/entry-section.html')
-    @@include('../partials/components/starter-box.html',  {
-      "title": "JustCoded",
-      "intro-text": "Web Starter Kit"
-    })
+  <div class="main_content">
+    @@include('../partials/components/header.html')
+    @@include('../partials/components/welcome_section.html')
+    @@include('../partials/components/advanteges_section.html')
+    @@include('../partials/components/history_section.html')
+    @@include('../partials/components/services_section.html')
+    @@include('../partials/components/works_section.html')
+    @@include('../partials/components/study_section.html')
+    @@include('../partials/components/statistic_section.html')
+    @@include('../partials/components/pricing_section.html')
+    @@include('../partials/components/integrations_section.html')
+    @@include('../partials/components/blog_section.html')
+    @@include('../partials/components/form_section.html')
+    @@include('../partials/components/start-section.html')
+    @@include('../partials/components/footer.html')
   </div>
-
   <script src="assets/js/vendor.min.js" defer></script>
   <script src="assets/js/app.js" defer></script>
 </body>
+
 </html>
