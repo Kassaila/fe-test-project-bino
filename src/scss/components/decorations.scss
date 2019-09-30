@@ -35,9 +35,8 @@
       top: 50%;
       transform: translateY(-50%);
       width: 80px;
-      height: 2px;
-      background-color: transparent;
-      border-bottom: 1px solid #999;
+      height: 1px;
+      background-color: #999;
     }
     &:before {
       left: -94px;

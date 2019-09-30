@@ -114,7 +114,7 @@
   }
   &__text {
     @extend %listreset;
-    margin: 0 0 25px;
+    margin: 0 0 26px;
     li {
       font: 600 14px/1 map-get($base, 'base-font-sans-serif');
       text-align: center;

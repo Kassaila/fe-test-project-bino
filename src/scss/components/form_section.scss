@@ -41,9 +41,9 @@
     font: 600 24px/1 map-get($base, 'base-font-family');
     text-transform: uppercase;
     color: map-get($colors, 'orange');
-    margin: 0 0 20px;
+    margin: 0 0 22px;
     &:not(:first-child) {
-      margin: 65px 0 20px;
+      margin: 63px 0 22px;
       @include media('<tablet') {
         margin: 40px 0 20px;
       }
@@ -95,7 +95,7 @@
     }
     &__textarea:focus,
     &__input:focus {
-      outline: 1px solid rgba(#999, 0.2);
+      outline: none;
     }
     label.error {
       position: relative;
@@ -109,6 +109,7 @@
     }
     .btn_large {
       min-width: 157px;
+      padding: 14px 13px;
     }
   }
 }

@@ -91,15 +91,15 @@
       text-transform: uppercase;
       text-align: center;
       color: #6a6a6a;
-      padding-bottom: 30px;
-      margin-bottom: 25px;
+      padding-bottom: 26px;
+      margin-bottom: 24px;
       &:after {
         content: '';
         position: absolute;
         bottom: 0;
         left: 50%;
         width: 40px;
-        height: 2px;
+        height: 1px;
         background-color: #6a6a6a;
         transform: translateX(-50%);
       }
@@ -108,7 +108,7 @@
       font: 300 14px/1.71 map-get($base, 'base-font-family');
       letter-spacing: 1.05px;
       text-align: center;
-      margin-bottom: 42px;
+      margin-bottom: 45px;
     }
 
     .slick-dots {

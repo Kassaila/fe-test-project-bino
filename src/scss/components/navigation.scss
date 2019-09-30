@@ -30,10 +30,10 @@
     @extend %btnreset;
     font-family: map-get($base, 'base-font-sans-serif');
     font-weight: 700;
-    color: map-get($colors, 'main-dark');
+    color: map-get($colors, 'main-light');
     text-transform: uppercase;
     border: 1px solid transparent;
-    padding: 16px 0;
+    padding: 13px 0;
     @include animate(all , 0.3s, ease);
     &:hover {
       color: map-get($colors, 'orange');

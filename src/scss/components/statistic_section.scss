@@ -79,7 +79,7 @@
     font: 700 30px/1 map-get($base, 'base-font-family');
     letter-spacing: 1.5px;
     color: map-get($colors, 'main-light');
-    margin-bottom: 5px;
+    margin-bottom: 7px;
     @include media('<tablet') {
       font-size: 24px;
     }
