@@ -13,6 +13,7 @@
       width: 100%;
       display: none;
       background-color: #202020;
+      padding: 0 0 10px;
       margin: 0;
     }
     li {
@@ -46,16 +47,33 @@
     }
   }
   &__button_mobile {
+    position: relative;
     display: none;
     @extend %btnreset;
     padding: 0;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      transform-origin: 0;
+      transition: 0.5s ease;
+    }
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: 0;
+    }
     @include media('<desktop') {
       width: 45px;
       height: 25px;
       display: flex;
       flex-direction: column;
       align-items: stretch;
-      justify-content: space-between;
+      justify-content: center;
     }
     span {
       height: 2px;
@@ -64,14 +82,14 @@
       transition: 0.5s ease;
     }
     &.active {
-      span:first-child {
-        transform: rotateZ(32deg);
+      &:before {
+        transform: rotateZ(31deg);
       }
-      span:nth-child(2) {
+      span {
         opacity: 0;
       }
-      span:last-child {
-        transform: rotateZ(-32deg);
+      &:after {
+        transform: rotateZ(-31deg);
       }
     }
   }

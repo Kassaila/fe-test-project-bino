@@ -14,26 +14,24 @@ import navScroll from './modules/nav-scroll';
 (($) => {
   // When DOM is ready
   $(() => {
-    // navigation mobile
     navMobile.init();
-    // welcome slider
+
     welcomeSlider.init();
-    // page position
+
     pagePosition.init({
       scrTopHeight: 0.1,
       scrBottomHeight: 0.5,
     });
-    // services slider
+
     servicesSlider.init();
-    // gallery filters
+
     worksGallery.init();
-    // study slider
+
     studySlider.init();
-    // form validation
+
     formValidation.init();
-    // nav scroll
+
     navScroll.scrollTo();
     navScroll.highlight();
-    // end
   });
 })(jQuery);

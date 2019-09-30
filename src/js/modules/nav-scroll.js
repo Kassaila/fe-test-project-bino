@@ -85,7 +85,9 @@ const navScroll = () => {
     $scrollClass.on('click', (e) => {
       const anchorId = $(e.target).attr('data-anchor');
 
-      scrollToAnchor(anchorId);
+      if (!anchorId) return false;
+
+      return scrollToAnchor(anchorId);
     });
   };
 

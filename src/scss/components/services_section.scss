@@ -118,8 +118,7 @@
       }
     }
     &__title {
-      font: 600 18px map-get($base, 'base-font-sans-serif');
-      line-height: 1.61;
+      font: 600 18px/1.61 map-get($base, 'base-font-sans-serif');
       text-align: right;
       text-transform: uppercase;
       color: map-get($colors, 'orange');
@@ -133,7 +132,7 @@
         text-align: center;
       }
     }
-    &__icon {
+    &__icon-holder {
       position: absolute;
       right: 4px;
       top: 50%;

@@ -62,6 +62,7 @@
     position: relative;
     font: 600 18px map-get($base, 'base-font-sans-serif');
     letter-spacing: 1.35px;
+    text-transform: uppercase;
     padding-bottom: 19px;
     transition: 0.3s ease;
     &:after {
