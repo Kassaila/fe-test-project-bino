@@ -30,6 +30,7 @@ textarea {
   }
 
   @include placeholder {
+    font-weight: 600;
     color: map-get($forms, 'placeholder-color');
   }
 }

@@ -108,7 +108,7 @@
       font: 300 14px/1.71 map-get($base, 'base-font-family');
       letter-spacing: 1.05px;
       text-align: center;
-      margin-bottom: 45px;
+      margin-bottom: 42px;
     }
 
     .slick-dots {
@@ -139,7 +139,7 @@
         background-color: #f4f5f9;
         border-radius: 50%;
         cursor: pointer;
-        transition: 0.3s ease;
+        @include animate(all , 0.3s, ease);
         &:not(:first-child) {
           margin-left: 8px;
         }

@@ -23,7 +23,7 @@
       font-size: 19px;
       text-decoration: none;
       color: map-get($base, 'base-text-color');
-      transition: 0.3s ease;
+      @include animate(color , 0.3s, ease);
       &:hover {
         color: map-get($colors, 'orange');
         text-decoration: none;

@@ -1,6 +1,6 @@
 .advanteges {
   &_section {
-    padding: 110px 0 40px;
+    padding: 90px 0 50px;
     @include media('<tablet') {
       padding: 60px 0;
     }
@@ -47,7 +47,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     &:before {
       content: '';
       position: absolute;
@@ -55,7 +55,7 @@
       height: 100%;
       border-radius: 2px;
       border: solid 1px rgba(#999, 0.25);
-      transition: 0.3s ease;
+      @include animate(all , 0.3s, ease);
     }
   }
   &__title {
@@ -63,8 +63,8 @@
     font: 600 18px map-get($base, 'base-font-sans-serif');
     letter-spacing: 1.35px;
     text-transform: uppercase;
-    padding-bottom: 19px;
-    transition: 0.3s ease;
+    padding-bottom: 16px;
+    @include animate(color, 0.3s, ease);
     &:after {
       content: '';
       position: absolute;

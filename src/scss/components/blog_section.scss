@@ -22,9 +22,9 @@
     &:nth-child(4n) {
       flex-direction: row-reverse;
       .blog-section__content:before {
-        right: -28px;
+        right: -27px;
         left: auto;
-        border-width: 40px 0 40px 30px;
+        border-width: 35px 0 35px 28px;
         border-color: transparent map-get($colors, 'orange');
       }
     }
@@ -38,14 +38,14 @@
       .blog-section__content:before {
         @include media('<widescreen') {
           left: auto;
-          right: -28px;
-          border-width: 40px 0 40px 30px;
+          right: -27px;
+          border-width: 35px 0 35px 28px;
           border-color: transparent map-get($colors, 'orange');
         }
         @include media('<tablet') {
           left: 50%;
           right: auto;
-          border-width: 0 40px 30px;
+          border-width: 0 35px 28px;
           border-color: map-get($colors, 'orange') transparent;
         }
       }
@@ -60,14 +60,14 @@
       .blog-section__content:before {
         @include media('<widescreen') {
           right: auto;
-          left: -28px;
-          border-width: 40px 30px 40px 0;
+          left: -27px;
+          border-width: 35px 28px 35px 0;
           border-color: transparent map-get($colors, 'orange');
         }
         @include media('<tablet') {
           left: 50%;
           right: auto;
-          border-width: 0 40px 30px;
+          border-width: 0 35px 28px;
           border-color: map-get($colors, 'orange') transparent;
         }
       }
@@ -101,14 +101,14 @@
       content: '';
       position: absolute;
       top: 50%;
-      left: -28px;
-      border-width: 40px 30px 40px 0;
+      left: -27px;
+      border-width: 35px 28px 35px 0;
       border-color: transparent map-get($colors, 'orange');
       border-style: solid;
       transform: translateY(-50%);
       @include media('<tablet') {
-        top: -28px;
-        border-width: 0 40px 30px;
+        top: -27px;
+        border-width: 0 35px 28px;
         border-color: map-get($colors, 'orange') transparent;
         transform: translateX(-50%);
       }
@@ -136,7 +136,7 @@
       width: 44px;
       height: 4px;
       background-color: map-get($colors, 'white');
-      transition: 0.3s ease;
+      @include animate(all , 0.3s, ease);
     }
     @include media('<phone') {
       margin: 0 0 20px;
@@ -155,8 +155,8 @@
   &__link {
     font: 600 italic 18px/1.33 map-get($base, 'base-font-sans-serif');
     color: map-get($colors, 'white');
-    margin: auto 0 0;
-    transition: 0.3s ease;
+    margin: auto 0 10px;
+    @include animate(all , 0.3s, ease);
     &:hover,
     &:focus {
       text-decoration: none;
