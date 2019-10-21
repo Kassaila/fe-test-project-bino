@@ -13,11 +13,11 @@
     <header class="header">
       <div class="container">
         <div class="row">
-          <a href="#" class="header__logo">
-            <img src="assets/images/logo.png" alt="Bino logo" />
+          <a href="#" class="header__logo" aria-label="Main page">
+            <img src="assets/images/logo.png" alt="Bino logo"/>
           </a>
           <nav class="nav" aria-label="Main navigation">
-            <button class="nav__button_mobile" aria-label="Navigtion mobile button" type="button">
+            <button class="nav__button_mobile" aria-label="Mobile button" type="button">
               <span></span>
             </button>
             <ul class="nav__list">
@@ -33,9 +33,9 @@
         </div>
       </div>
     </header>
-    <button data-anchor="#welcome_section" class="btn-scrollup scroll-to" type="button"></button>
+    <button data-anchor="#welcome_section" class="btn-scrollup scroll-to" aria-label="Scroll to page top" type="button"></button>
     <section id="welcome_section" class="welcome_section">
-      <button data-anchor="#advanteges_section" class="figures_decor icon-anchor scroll-to" type="button"></button>
+      <button data-anchor="#advanteges_section" class="figures_decor icon-anchor scroll-to" aria-label="Next screen" type="button"></button>
       <div class="welcome_slider">
 
         <div class="welcome_slider__block">
@@ -64,8 +64,8 @@
           <div class="welcome_slider__content">
             <div class="container">
               <div class="column">
-                <h2 class="welcome_slider__slogan">Our Clients Are Our First Priority</h2>
-                <p class="welcome_slider__title">WELCOME to bino</p>
+                <h1 class="welcome_slider__slogan">Our Clients Are Our First Priority</h1>
+                <h2 class="welcome_slider__title">WELCOME to bino</h2>
                 <span class="block_decor__underline"></span>
                 <div class="welcome_slider__text">
                   <p>
@@ -111,8 +111,8 @@
           <div class="welcome_slider__content">
             <div class="container">
               <div class="column">
-                <h2 class="welcome_slider__slogan">Our Clients Are Our First Priority</h2>
-                <p class="welcome_slider__title">WELCOME 2</p>
+                <h1 class="welcome_slider__slogan">Our Clients Are Our First Priority</h1>
+                <h2 class="welcome_slider__title">WELCOME 2</h2>
                 <span class="block_decor__underline"></span>
                 <div class="welcome_slider__text">
                   <p>
@@ -158,8 +158,8 @@
           <div class="welcome_slider__content">
             <div class="container">
               <div class="column">
-                <h2 class="welcome_slider__slogan">Our Clients Are Our First Priority</h2>
-                <p class="welcome_slider__title">WELCOME 3</p>
+                <h1 class="welcome_slider__slogan">Our Clients Are Our First Priority</h1>
+                <h2 class="welcome_slider__title">WELCOME 3</h2>
                 <span class="block_decor__underline"></span>
                 <div class="welcome_slider__text">
                   <p>
@@ -351,13 +351,13 @@
       </div>
       <div class="works_gallery">
         <div class="works_gallery__filters_row">
-          <button class="works_gallery__filter" data-filter="all" type="button">all</button>
-          <button class="works_gallery__filter" data-filter="print" type="button">print design</button>
-          <button class="works_gallery__filter" data-filter="animation" type="button">animation</button>
-          <button class="works_gallery__filter" data-filter="art" type="button">art</button>
-          <button class="works_gallery__filter" data-filter="web" type="button">web design</button>
-          <button class="works_gallery__filter" data-filter="photo" type="button">photography</button>
-          <button class="works_gallery__filter" data-filter="video" type="button">video</button>
+          <button class="works_gallery__filter" data-filter="all" aria-label="gallery filter - all" type="button">all</button>
+          <button class="works_gallery__filter" data-filter="print" aria-label="gallery filter - print design" type="button">print design</button>
+          <button class="works_gallery__filter" data-filter="animation" aria-label="gallery filter - animation" type="button">animation</button>
+          <button class="works_gallery__filter" data-filter="art" aria-label="gallery filter - art" type="button">art</button>
+          <button class="works_gallery__filter" data-filter="web" aria-label="gallery filter - web design" type="button">web design</button>
+          <button class="works_gallery__filter" data-filter="photo" aria-label="gallery filter - photography" type="button">photography</button>
+          <button class="works_gallery__filter" data-filter="video" aria-label="gallery filter - video" type="button">video</button>
         </div>
         <div class="works_gallery__row">
           <div class="works_gallery__block" data-filter="web">
@@ -711,10 +711,14 @@
             <a href="mailto:contactus@email.com" class="form-section__text">contactus@email.com</a>
           </div>
           <form id="touch-form" class="form-block">
-            <input class="form-block__input" name="name" type="text" placeholder="Name">
-            <input class="form-block__input" name="email" type="email" placeholder="Email">
-            <input class="form-block__input" name="subject" type="text" placeholder="Subject">
-            <textarea class="form-block__textarea" name="textarea" placeholder="Message"></textarea>
+            <label class="form-block__label" for="input-name">Name</label>
+            <input class="form-block__input" id="input-name" name="name" type="text" placeholder="Name">
+            <label class="form-block__label" for="input-email">Email</label>
+            <input class="form-block__input" id="input-email" name="email" type="email" placeholder="Email">
+            <label class="form-block__label" for="input-subject">Subject</label>
+            <input class="form-block__input" id="input-subject" name="subject" type="text" placeholder="Subject">
+            <label class="form-block__label" for="input-message">Message</label>
+            <textarea class="form-block__textarea" id="input-message" name="textarea" placeholder="Message"></textarea>
             <button class="btn btn_large btn_orange" type="submit">SEND MESSAGE</button>
           </form>
         </div>

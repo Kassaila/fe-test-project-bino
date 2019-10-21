@@ -5,7 +5,7 @@
   width: 100%;
   background-color: #202020;
   padding: 18px 0 13px;
-  @include animate(all , 0.3s, ease);
+  @include animate(all, 0.3s, ease);
   z-index: 10;
   &__logo {
     height: 52px;
@@ -30,39 +30,37 @@
 }
 .btn-scrollup {
   @extend %btnreset;
+  @include animate(opacity, 0.5s, ease);
+  @include hide-text;
   position: fixed;
   right: 52px;
   bottom: 64px;
   width: 53px;
   height: 53px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  color: transparent;
   background-color: map-get($colors, 'orange');
   border-radius: 50%;
   box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.25);
-  @include animate(opacity , 0.5s, ease);
   z-index: 5;
   &:hover {
     opacity: 0.8;
     box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.25);
   }
-  &:before,
   &:after {
     content: '';
     position: absolute;
+    top: 50%;
+    left: 50%;
     width: 10px;
-    height: 2px;
-    border-radius: 1px;
-    background-color: map-get($colors, 'white');
-  }
-  &:before {
-    transform-origin: 0%;
-    transform: translateY(3px) rotateZ(-58deg);
+    height: 10px;
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    border-color: map-get($colors, 'white') map-get($colors, 'white')
+      transparent transparent;
   }
   &:after {
-    transform-origin: 100%;
-    transform: translateY(3px) rotateZ(58deg);
+    transform: translate(-50%, -50%) rotateZ(-45deg);
   }
   @include media('<desktop') {
     display: none;

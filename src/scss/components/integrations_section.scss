@@ -37,6 +37,7 @@
     @include media('<phone') {
       width: 48%;
     }
+    &:focus,
     &:hover {
       background-color: map-get($colors, 'orange');
       box-shadow: none;

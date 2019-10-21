@@ -47,19 +47,19 @@
     }
   }
   &__button_mobile {
+    @extend %btnreset;
     position: relative;
     display: none;
-    @extend %btnreset;
     padding: 0;
     &:before,
     &:after {
+      @include animate(all , 0.5s, ease);
       content: '';
       position: absolute;
       width: 100%;
       height: 2px;
       background-color: #fff;
       transform-origin: 0;
-      @include animate(all , 0.5s, ease);
     }
     &:before {
       top: 0;
@@ -76,10 +76,12 @@
       justify-content: center;
     }
     span {
+      @include animate(opacity, 0.3s, ease);
+      @include hide-text;
       height: 2px;
+      color: transparent;
       background-color: #fff;
       transform-origin: 0;
-      @include animate(opacity, 0.3s, ease);
     }
     &.active {
       &:before {

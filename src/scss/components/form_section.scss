@@ -80,18 +80,34 @@
       width: 100%;
       flex: none;
     }
+    &__label {
+      @include hide-text;
+      position: relative;
+      top: 0px;
+      left: 3px;
+      height: 0;
+      font: 16px/1 map-get($base, 'base-font-family');
+      z-index: 0;
+    }
     &__input {
+      position: relative;
       align-self: stretch;
       padding: 0 0 15px 3px;
       margin: 0 0 28px;
+      background-color: transparent;
+      z-index: 1;
     }
     &__textarea {
       align-self: stretch;
       height: 115px;
       line-height: 1.71;
       resize: none;
+      background-color: #fff;
       padding: 0 0 15px 3px;
       margin: 0 0 30px;
+      &:placeholder-shown {
+        background-color: transparent;
+      }
     }
     &__textarea:focus,
     &__input:focus {

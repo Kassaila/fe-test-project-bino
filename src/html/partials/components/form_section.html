@@ -18,10 +18,14 @@
         <a href="mailto:contactus@email.com" class="form-section__text">contactus@email.com</a>
       </div>
       <form id="touch-form" class="form-block">
-        <input class="form-block__input" name="name" type="text" placeholder="Name">
-        <input class="form-block__input" name="email" type="email" placeholder="Email">
-        <input class="form-block__input" name="subject" type="text" placeholder="Subject">
-        <textarea class="form-block__textarea" name="textarea" placeholder="Message"></textarea>
+        <label class="form-block__label" for="input-name">Name</label>
+        <input class="form-block__input" id="input-name" name="name" type="text" placeholder="Name">
+        <label class="form-block__label" for="input-email">Email</label>
+        <input class="form-block__input" id="input-email" name="email" type="email" placeholder="Email">
+        <label class="form-block__label" for="input-subject">Subject</label>
+        <input class="form-block__input" id="input-subject" name="subject" type="text" placeholder="Subject">
+        <label class="form-block__label" for="input-message">Message</label>
+        <textarea class="form-block__textarea" id="input-message" name="textarea" placeholder="Message"></textarea>
         <button class="btn btn_large btn_orange" type="submit">SEND MESSAGE</button>
       </form>
     </div>

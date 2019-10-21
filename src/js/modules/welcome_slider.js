@@ -10,9 +10,9 @@ const welcomeSlider = () => {
       slidesToShow: 1,
       adaptiveHeight: true,
       prevArrow:
-        '<button type="button" class="slick-prev"><span class="icon-chevron-left"></span></button>',
+        '<button class="slick-prev" aria-label="Prev slide" type="button"><span class="icon-chevron-left"></span></button>',
       nextArrow:
-        '<button type="button" class="slick-next"><span class="icon-chevron-right"></span></button>',
+        '<button class="slick-next" aria-label="Next slide" type="button"><span class="icon-chevron-right"></span></button>',
       responsive: [
         {
           breakpoint: 980,
