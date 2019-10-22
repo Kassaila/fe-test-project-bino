@@ -17,7 +17,7 @@
             <img src="assets/images/logo.png" alt="Bino logo"/>
           </a>
           <nav class="nav" aria-label="Main navigation">
-            <button class="nav__button_mobile" aria-label="Mobile button" type="button">
+            <button class="nav__button_mobile" aria-label="Mobile button" aria-expanded="true" type="button">
               <span></span>
             </button>
             <ul class="nav__list">
@@ -33,13 +33,11 @@
         </div>
       </div>
     </header>
-    <button data-anchor="#welcome_section" class="btn-scrollup scroll-to" aria-label="Scroll to page top" type="button"></button>
     <section id="welcome_section" class="welcome_section">
-      <button data-anchor="#advanteges_section" class="figures_decor icon-anchor scroll-to" aria-label="Next screen" type="button"></button>
-      <div class="welcome_slider">
+      <div class="welcome_slider" tabindex="0" role="slider" aria-label="Welcome to Bino">
 
         <div class="welcome_slider__block">
-          <picture>
+          <picture aria-hidden="true">
             <source srcset="assets/images/welcome-1920-h-1440.jpg,
                     assets/images/welcome-1920-h-1440@2x.jpg 2x" media="(min-width: 1281px) and (min-height: 1024px)">
             <source srcset="assets/images/welcome-1920.jpg,
@@ -84,7 +82,7 @@
         </div>
 
         <div class="welcome_slider__block">
-          <picture>
+          <picture aria-hidden="true">
             <source srcset="assets/images/welcome-1920-h-1440.jpg,
                             assets/images/welcome-1920-h-1440@2x.jpg 2x"
               media="(min-width: 1281px) and (min-height: 1024px)">
@@ -131,7 +129,7 @@
         </div>
 
         <div class="welcome_slider__block">
-          <picture>
+          <picture aria-hidden="true">
             <source srcset="assets/images/welcome-1920-h-1440.jpg,
                             assets/images/welcome-1920-h-1440@2x.jpg 2x"
               media="(min-width: 1281px) and (min-height: 1024px)">
@@ -177,6 +175,8 @@
           </div>
         </div>
       </div>
+      <button data-anchor="#advanteges_section" class="figures_decor icon-anchor scroll-to" aria-label="Next screen"
+        type="button"></button>
     </section>
     <section id="advanteges_section" class="advanteges_section">
       <div class="container">
@@ -245,7 +245,7 @@
     <section id="services_section" class="services_section">
       <div class="services__column">
         <h2 class="services__title">OUR SERVICES</h2>
-        <div class="services_slider">
+        <div class="services_slider" tabindex="0" role="slider" aria-label="Our services">
 
           <div class="services_slider__group">
             <div class="services_slider__block">
@@ -350,66 +350,73 @@
         </div>
       </div>
       <div class="works_gallery">
-        <div class="works_gallery__filters_row">
-          <button class="works_gallery__filter" data-filter="all" aria-label="gallery filter - all" type="button">all</button>
-          <button class="works_gallery__filter" data-filter="print" aria-label="gallery filter - print design" type="button">print design</button>
-          <button class="works_gallery__filter" data-filter="animation" aria-label="gallery filter - animation" type="button">animation</button>
-          <button class="works_gallery__filter" data-filter="art" aria-label="gallery filter - art" type="button">art</button>
-          <button class="works_gallery__filter" data-filter="web" aria-label="gallery filter - web design" type="button">web design</button>
-          <button class="works_gallery__filter" data-filter="photo" aria-label="gallery filter - photography" type="button">photography</button>
-          <button class="works_gallery__filter" data-filter="video" aria-label="gallery filter - video" type="button">video</button>
-        </div>
+        <ul class="works_gallery__filters_row" aria-label="Gallery filters">
+          <li><button class="works_gallery__filter" data-filter="all" role="tab" aria-selected="false"
+              type="button">all</button></li>
+          <li><button class="works_gallery__filter" data-filter="print" role="tab" aria-selected="false" type="button">print
+              design</button></li>
+          <li><button class="works_gallery__filter" data-filter="animation" role="tab" aria-selected="false"
+              type="button">animation</button></li>
+          <li><button class="works_gallery__filter" data-filter="art" role="tab" aria-selected="false"
+              type="button">art</button></li>
+          <li><button class="works_gallery__filter" data-filter="web" role="tab" aria-selected="false" type="button">web
+              design</button></li>
+          <li><button class="works_gallery__filter" data-filter="photo" role="tab" aria-selected="false"
+              type="button">photography</button></li>
+          <li><button class="works_gallery__filter" data-filter="video" role="tab" aria-selected="false"
+              type="button">video</button></li>
+        </ul>
         <div class="works_gallery__row">
-          <div class="works_gallery__block" data-filter="web">
+          <div class="works_gallery__block" data-filter="web" role="tabpanel" aria-hidden="true">
             <img class="works_gallery__image" src="assets/images/gallery_1.jpg" alt="work">
             <div class="works_gallery__description">
               <a href="#" class="works_gallery__title">T-SHIRT DESIGN</a>
               <a href="#" class="works_gallery__text">art / t-shirt</a>
             </div>
           </div>
-          <div class="works_gallery__block" data-filter="print">
+          <div class="works_gallery__block" data-filter="print" role="tabpanel" aria-hidden="true">
             <img class="works_gallery__image" src="assets/images/gallery_2.jpg" alt="work">
             <div class="works_gallery__description">
               <a href="#" class="works_gallery__title">T-SHIRT DESIGN</a>
               <a href="#" class="works_gallery__text">art / t-shirt</a>
             </div>
           </div>
-          <div class="works_gallery__block" data-filter="animation">
+          <div class="works_gallery__block" data-filter="animation" role="tabpanel" aria-hidden="true">
             <img class="works_gallery__image" src="assets/images/gallery_1.jpg" alt="work">
             <div class="works_gallery__description">
               <a href="#" class="works_gallery__title">T-SHIRT DESIGN</a>
               <a href="#" class="works_gallery__text">art / t-shirt</a>
             </div>
           </div>
-          <div class="works_gallery__block" data-filter="art">
+          <div class="works_gallery__block" data-filter="art" role="tabpanel" aria-hidden="true">
             <img class="works_gallery__image" src="assets/images/gallery_2.jpg" alt="work">
             <div class="works_gallery__description">
               <a href="#" class="works_gallery__title">T-SHIRT DESIGN</a>
               <a href="#" class="works_gallery__text">art / t-shirt</a>
             </div>
           </div>
-          <div class="works_gallery__block" data-filter="photo">
+          <div class="works_gallery__block" data-filter="photo" role="tabpanel" aria-hidden="true">
             <img class="works_gallery__image" src="assets/images/gallery_1.jpg" alt="work">
             <div class="works_gallery__description">
               <a href="#" class="works_gallery__title">T-SHIRT DESIGN</a>
               <a href="#" class="works_gallery__text">art / t-shirt</a>
             </div>
           </div>
-          <div class="works_gallery__block" data-filter="video">
+          <div class="works_gallery__block" data-filter="video" role="tabpanel" aria-hidden="true">
             <img class="works_gallery__image" src="assets/images/gallery_2.jpg" alt="work">
             <div class="works_gallery__description">
               <a href="#" class="works_gallery__title">T-SHIRT DESIGN</a>
               <a href="#" class="works_gallery__text">art / t-shirt</a>
             </div>
           </div>
-          <div class="works_gallery__block" data-filter="web">
+          <div class="works_gallery__block" data-filter="web" role="tabpanel" aria-hidden="true">
             <img class="works_gallery__image" src="assets/images/gallery_1.jpg" alt="work">
             <div class="works_gallery__description">
               <a href="#" class="works_gallery__title">T-SHIRT DESIGN</a>
               <a href="#" class="works_gallery__text">art / t-shirt</a>
             </div>
           </div>
-          <div class="works_gallery__block" data-filter="photo">
+          <div class="works_gallery__block" data-filter="photo" role="tabpanel" aria-hidden="true">
             <img class="works_gallery__image" src="assets/images/gallery_2.jpg" alt="work">
             <div class="works_gallery__description">
               <a href="#" class="works_gallery__title">T-SHIRT DESIGN</a>
@@ -428,13 +435,13 @@
             <span class="block_decor__underline"></span>
           </div>
           <div class="study-section__row">
-            <picture>
+            <picture aria-hidden="true">
               <source srcset="assets/images/case_study-768.jpg" media="(max-width: 768px)">
               <img class="study-section__background" src="assets/images/case_study.jpg" alt="work place">
             </picture>
             <div class="study-slider">
               <div class="study-slider__block">
-                <div class="study-slider__icon-holder">
+                <div class="study-slider__icon-holder" aria-hidden="true">
                   <img class="study-slider__icon" src="assets/images/ico-study-1.png" alt="lamp">
                 </div>
                 <h2 class="study-slider__title">aCCUMULATE CREATIVE IDEAS</h2>
@@ -445,7 +452,7 @@
                 <a href="#" class="btn btn_small btn_orange">read more</a>
               </div>
               <div class="study-slider__block">
-                <div class="study-slider__icon-holder">
+                <div class="study-slider__icon-holder" aria-hidden="true">
                   <img class="study-slider__icon" src="assets/images/ico-study-1.png" alt="lamp">
                 </div>
                 <h2 class="study-slider__title">aCCUMULATE CREATIVE IDEAS</h2>
@@ -456,7 +463,7 @@
                 <a href="#" class="btn btn_small btn_orange">read more</a>
               </div>
               <div class="study-slider__block">
-                <div class="study-slider__icon-holder">
+                <div class="study-slider__icon-holder" aria-hidden="true">
                   <img class="study-slider__icon" src="assets/images/ico-study-1.png" alt="lamp">
                 </div>
                 <h2 class="study-slider__title">aCCUMULATE CREATIVE IDEAS</h2>
@@ -539,7 +546,7 @@
               <li>International Support System</li>
               <li>Social Media Tracking</li>
             </ul>
-            <a href="#" class="btn btn_small btn_orange">CHOOSE PLAN</a>
+            <a href="#" class="btn btn_small btn_orange" aria-label="starter plan">CHOOSE PLAN</a>
           </div>
           <div class="pricing-section__block pricing-section__block_recomend">
             <h3 class="pricing-section__title">PREMIUM</h3>
@@ -553,7 +560,7 @@
               <li>International Support System</li>
               <li>Social Media Tracking</li>
             </ul>
-            <a href="#" class="btn btn_small btn_orange">CHOOSE PLAN</a>
+            <a href="#" class="btn btn_small btn_orange" aria-label="premium plan">CHOOSE PLAN</a>
           </div>
           <div class="pricing-section__block">
             <h3 class="pricing-section__title">BUSINESS</h3>
@@ -567,7 +574,7 @@
               <li>International Support System</li>
               <li>Social Media Tracking</li>
             </ul>
-            <a href="#" class="btn btn_small btn_orange">CHOOSE PLAN</a>
+            <a href="#" class="btn btn_small btn_orange" aria-label="business plan">CHOOSE PLAN</a>
           </div>
         </div>
       </div>
@@ -700,9 +707,9 @@
           <span class="block_decor__underline"></span>
         </div>
         <div class="form-section__row">
-          <div class="form-section__contacts">
+          <div class="form-section__contacts" tabindex="0" aria-label="contacts">
             <h4 class="form-section__title">OUR ADDRESS</h4>
-            <address class="form-section__text">House #13, Streat road, Sydney
+            <address class="form-section__text" tabindex="0">House #13, Streat road, Sydney
               2310 Australia</address>
             <h4 class="form-section__title">CALL US</h4>
             <a href="tel:+8801681091425" class="form-section__text">+ 880 168 109 1425</a>
@@ -710,15 +717,15 @@
             <h4 class="form-section__title">EMAIL US</h4>
             <a href="mailto:contactus@email.com" class="form-section__text">contactus@email.com</a>
           </div>
-          <form id="touch-form" class="form-block">
+          <form id="touch-form" class="form-block" tabindex="0" aria-label="touch form">
             <label class="form-block__label" for="input-name">Name</label>
-            <input class="form-block__input" id="input-name" name="name" type="text" placeholder="Name">
+            <input class="form-block__input" id="input-name" name="name" type="text" placeholder="Name" aria-required="true">
             <label class="form-block__label" for="input-email">Email</label>
-            <input class="form-block__input" id="input-email" name="email" type="email" placeholder="Email">
+            <input class="form-block__input" id="input-email" name="email" type="email" placeholder="Email" aria-required="true">
             <label class="form-block__label" for="input-subject">Subject</label>
-            <input class="form-block__input" id="input-subject" name="subject" type="text" placeholder="Subject">
+            <input class="form-block__input" id="input-subject" name="subject" type="text" placeholder="Subject" aria-required="true">
             <label class="form-block__label" for="input-message">Message</label>
-            <textarea class="form-block__textarea" id="input-message" name="textarea" placeholder="Message"></textarea>
+            <textarea class="form-block__textarea" id="input-message" name="textarea" placeholder="Message" aria-required="true"></textarea>
             <button class="btn btn_large btn_orange" type="submit">SEND MESSAGE</button>
           </form>
         </div>
@@ -757,6 +764,7 @@
         </div>
       </div>
     </footer>
+    <button data-anchor="#welcome_section" class="btn-scrollup scroll-to" aria-label="Scroll to page top" type="button"></button>
   </div>
   <script src="assets/js/vendor.min.js" defer></script>
   <script src="assets/js/app.js" defer></script>

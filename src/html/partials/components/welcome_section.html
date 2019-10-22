@@ -1,9 +1,8 @@
 <section id="welcome_section" class="welcome_section">
-  <button data-anchor="#advanteges_section" class="figures_decor icon-anchor scroll-to" aria-label="Next screen" type="button"></button>
-  <div class="welcome_slider">
+  <div class="welcome_slider" tabindex="0" role="slider" aria-label="Welcome to Bino">
 
     <div class="welcome_slider__block">
-      <picture>
+      <picture aria-hidden="true">
         <source srcset="assets/images/welcome-1920-h-1440.jpg,
                 assets/images/welcome-1920-h-1440@2x.jpg 2x" media="(min-width: 1281px) and (min-height: 1024px)">
         <source srcset="assets/images/welcome-1920.jpg,
@@ -48,7 +47,7 @@
     </div>
 
     <div class="welcome_slider__block">
-      <picture>
+      <picture aria-hidden="true">
         <source srcset="assets/images/welcome-1920-h-1440.jpg,
                         assets/images/welcome-1920-h-1440@2x.jpg 2x"
           media="(min-width: 1281px) and (min-height: 1024px)">
@@ -95,7 +94,7 @@
     </div>
 
     <div class="welcome_slider__block">
-      <picture>
+      <picture aria-hidden="true">
         <source srcset="assets/images/welcome-1920-h-1440.jpg,
                         assets/images/welcome-1920-h-1440@2x.jpg 2x"
           media="(min-width: 1281px) and (min-height: 1024px)">
@@ -141,4 +140,6 @@
       </div>
     </div>
   </div>
+  <button data-anchor="#advanteges_section" class="figures_decor icon-anchor scroll-to" aria-label="Next screen"
+    type="button"></button>
 </section>

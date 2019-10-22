@@ -13,16 +13,29 @@
     margin-top: 40px;
   }
   &__filters_row {
+    @extend %listreset;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     padding: 0 15px;
     margin-bottom: 40px;
+    li {
+      position: relative;
+      &:not(:last-child) {
+        margin-right: 40px;
+        &:after {
+          content: '/';
+          position: absolute;
+          right: -20px;
+          color: #999;
+          pointer-events: none;
+        }
+      }
+    }
   }
   &__filter {
     @extend %btnreset;
-    position: relative;
     font: 14px/1 map-get($base, 'base-font-sans-serif');
     text-transform: uppercase;
     color: #999;
@@ -32,16 +45,6 @@
     &:hover {
       color: map-get($colors, 'orange');
       opacity: 0.8;
-    }
-    &:not(:last-child) {
-      margin-right: 40px;
-      &:after {
-        content: '/';
-        position: absolute;
-        right: -20px;
-        color: #999;
-        pointer-events: none;
-      }
     }
     &_active {
       color: map-get($colors, 'orange');

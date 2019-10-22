@@ -7,9 +7,9 @@
       <span class="block_decor__underline"></span>
     </div>
     <div class="form-section__row">
-      <div class="form-section__contacts">
+      <div class="form-section__contacts" tabindex="0" aria-label="contacts">
         <h4 class="form-section__title">OUR ADDRESS</h4>
-        <address class="form-section__text">House #13, Streat road, Sydney
+        <address class="form-section__text" tabindex="0">House #13, Streat road, Sydney
           2310 Australia</address>
         <h4 class="form-section__title">CALL US</h4>
         <a href="tel:+8801681091425" class="form-section__text">+ 880 168 109 1425</a>
@@ -17,15 +17,15 @@
         <h4 class="form-section__title">EMAIL US</h4>
         <a href="mailto:contactus@email.com" class="form-section__text">contactus@email.com</a>
       </div>
-      <form id="touch-form" class="form-block">
+      <form id="touch-form" class="form-block" tabindex="0" aria-label="touch form">
         <label class="form-block__label" for="input-name">Name</label>
-        <input class="form-block__input" id="input-name" name="name" type="text" placeholder="Name">
+        <input class="form-block__input" id="input-name" name="name" type="text" placeholder="Name" aria-required="true">
         <label class="form-block__label" for="input-email">Email</label>
-        <input class="form-block__input" id="input-email" name="email" type="email" placeholder="Email">
+        <input class="form-block__input" id="input-email" name="email" type="email" placeholder="Email" aria-required="true">
         <label class="form-block__label" for="input-subject">Subject</label>
-        <input class="form-block__input" id="input-subject" name="subject" type="text" placeholder="Subject">
+        <input class="form-block__input" id="input-subject" name="subject" type="text" placeholder="Subject" aria-required="true">
         <label class="form-block__label" for="input-message">Message</label>
-        <textarea class="form-block__textarea" id="input-message" name="textarea" placeholder="Message"></textarea>
+        <textarea class="form-block__textarea" id="input-message" name="textarea" placeholder="Message" aria-required="true"></textarea>
         <button class="btn btn_large btn_orange" type="submit">SEND MESSAGE</button>
       </form>
     </div>
