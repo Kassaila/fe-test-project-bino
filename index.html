@@ -36,8 +36,7 @@
       </div>
     </header>
     <section id="welcome_section" class="welcome_section">
-      <div class="welcome_slider" tabindex="0" role="slider" aria-label="Welcome to Bino">
-
+      <div class="welcome_slider">
         <div class="welcome_slider__block">
           <picture aria-hidden="true">
             <source srcset="assets/images/welcome-1920-h-1440.jpg,
@@ -182,6 +181,7 @@
     </section>
     <section id="advanteges_section" class="advanteges_section">
       <div class="container">
+        <h2 class="sr-only">Our advanteges</h2>
         <div class="advanteges__row">
           <div class="advanteges__block">
             <div class="advanteges__icon_holder">
@@ -247,7 +247,7 @@
     <section id="services_section" class="services_section">
       <div class="services__column">
         <h2 class="services__title">OUR SERVICES</h2>
-        <div class="services_slider" tabindex="0" role="slider" aria-label="Our services">
+        <div class="services_slider">
 
           <div class="services_slider__group">
             <div class="services_slider__block">
@@ -353,22 +353,17 @@
       </div>
       <div class="works_gallery">
         <ul class="works_gallery__filters_row" aria-label="Gallery filters">
-          <li><button class="works_gallery__filter" data-filter="all" role="tab" aria-selected="false"
-              type="button">all</button></li>
-          <li><button class="works_gallery__filter" data-filter="print" role="tab" aria-selected="false" type="button">print
+          <li><button class="works_gallery__filter" data-filter="all" type="button">all</button></li>
+          <li><button class="works_gallery__filter" data-filter="print" type="button">print
               design</button></li>
-          <li><button class="works_gallery__filter" data-filter="animation" role="tab" aria-selected="false"
-              type="button">animation</button></li>
-          <li><button class="works_gallery__filter" data-filter="art" role="tab" aria-selected="false"
-              type="button">art</button></li>
-          <li><button class="works_gallery__filter" data-filter="web" role="tab" aria-selected="false" type="button">web
+          <li><button class="works_gallery__filter" data-filter="animation" type="button">animation</button></li>
+          <li><button class="works_gallery__filter" data-filter="art" type="button">art</button></li>
+          <li><button class="works_gallery__filter" data-filter="web" type="button">web
               design</button></li>
-          <li><button class="works_gallery__filter" data-filter="photo" role="tab" aria-selected="false"
-              type="button">photography</button></li>
-          <li><button class="works_gallery__filter" data-filter="video" role="tab" aria-selected="false"
-              type="button">video</button></li>
+          <li><button class="works_gallery__filter" data-filter="photo" type="button">photography</button></li>
+          <li><button class="works_gallery__filter" data-filter="video" type="button">video</button></li>
         </ul>
-        <div class="works_gallery__row">
+        <div class="works_gallery__row" aria-live="polite">
           <div class="works_gallery__block" data-filter="web" role="tabpanel" aria-hidden="true">
             <img class="works_gallery__image" src="assets/images/gallery_1.jpg" alt="work">
             <div class="works_gallery__description">
@@ -488,6 +483,7 @@
         <img class="statistic-section__background" src="assets/images/stat-1920.jpg" alt="people">
       </picture>
       <div class="container">
+        <h2 class="sr-only">Our statistic</h2>
         <div class="statistic-section__row">
           <div class="statistic-section__block">
             <div class="statistic-section__icon-holder">
@@ -709,7 +705,7 @@
           <span class="block_decor__underline"></span>
         </div>
         <div class="form-section__row">
-          <div class="form-section__contacts" tabindex="0" aria-label="contacts">
+          <div class="form-section__contacts" aria-label="Contacts">
             <h3 class="form-section__title">OUR ADDRESS</h3>
             <address class="form-section__text" tabindex="0">House #13, Streat road, Sydney
               2310 Australia</address>
@@ -719,7 +715,7 @@
             <h3 class="form-section__title">EMAIL US</h3>
             <a href="mailto:contactus@email.com" class="form-section__text">contactus@email.com</a>
           </div>
-          <form id="touch-form" class="form-block" tabindex="0" aria-label="touch form">
+          <form id="touch-form" class="form-block" aria-label="Touch form">
             <label class="form-block__label" for="input-name">Name</label>
             <input class="form-block__input" id="input-name" name="name" type="text" placeholder="Name"
               aria-required="true">

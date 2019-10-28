@@ -11,12 +11,10 @@ const worksGallery = () => {
 
     $filterRow
       .find(BTN_FILTER)
-      .attr('aria-selected', false)
       .removeClass(ACTIVE_CLASS);
 
     $filterRow
       .find(filterEl)
-      .attr('aria-selected', true)
       .addClass(ACTIVE_CLASS);
 
     if (filterVal === 'all') {
