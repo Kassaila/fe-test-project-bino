@@ -24,6 +24,8 @@ const welcomeSlider = () => {
     $slider.on('afterChange', function () {
       $(this).find('.slick-current').focus();
     });
+
+    $('.to-content').on('click', () => $slider.focus());
   };
 
   const init = () => {
