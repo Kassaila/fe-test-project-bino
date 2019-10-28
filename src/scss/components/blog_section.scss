@@ -3,6 +3,9 @@
   @include media('<phone') {
     padding: 80px 0 0;
   }
+  @include media('print') {
+    display: none;
+  }
   .block_decor__title {
     letter-spacing: normal;
     text-shadow: 0px 1px 0 #ffffff;

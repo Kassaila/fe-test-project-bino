@@ -1,4 +1,5 @@
 const studySlider = () => {
+  const $win = $(window);
   const $slider = $('.study-slider');
   const option = {
     arrows: false,
@@ -12,6 +13,14 @@ const studySlider = () => {
   const _addEventListeners = () => {
     $slider.on('afterChange', function () {
       $(this).find('.slick-current').focus();
+    });
+
+    $win.on('beforeprint', () => {
+      $slider.slick('unslick');
+    });
+
+    $win.on('afterprint', () => {
+      $slider.slick(option);
     });
   };
 

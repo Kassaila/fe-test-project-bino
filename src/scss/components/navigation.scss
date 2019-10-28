@@ -2,6 +2,9 @@
   margin-left: auto;
   display: flex;
   align-items: center;
+  @include media('print') {
+   display: none;
+  }
   &__list {
     display: flex;
     list-style: none;

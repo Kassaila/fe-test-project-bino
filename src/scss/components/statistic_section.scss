@@ -7,6 +7,9 @@
   @include media('<tablet') {
     padding: 80px 0;
   }
+  @include media('print') {
+    display: none;
+  }
   &:before {
     content: '';
     position: absolute;

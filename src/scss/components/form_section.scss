@@ -80,6 +80,9 @@
       width: 100%;
       flex: none;
     }
+    @include media('print') {
+      display: none;
+    }
     &__label {
       @include hide-text;
       position: relative;

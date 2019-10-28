@@ -1,4 +1,5 @@
 const welcomeSlider = () => {
+  const $win = $(window);
   const $slider = $('.welcome_slider');
   const option = {
     infinite: false,
@@ -25,7 +26,15 @@ const welcomeSlider = () => {
       $(this).find('.slick-current').focus();
     });
 
-    $('.to-content').on('click', () => $slider.focus());
+    $win.on('beforeprint', () => {
+      $slider.slick('unslick');
+    });
+
+    $win.on('afterprint', () => {
+      $slider.slick(option);
+    });
+
+    $('.to-content').on('click', () => $('.slick-current').focus());
   };
 
   const init = () => {
