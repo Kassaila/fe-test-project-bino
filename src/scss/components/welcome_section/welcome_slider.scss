@@ -157,6 +157,7 @@
     }
   }
   .slick-arrow {
+    @include animate(opacity, 0.3s, ease);
     @extend %btnreset;
     position: absolute;
     top: 44%;
@@ -170,7 +171,6 @@
     color: map-get($colors, 'white');
     background-color: map-get($colors, 'orange');
     border-radius: 2px;
-    @include animate(all, 0.3s, ease);
     z-index: 5;
     &:not(.slick-disabled):hover {
       opacity: 0.8;
@@ -211,12 +211,12 @@
       clip: rect(0, 0, 0, 0);
     }
     li {
+      @include animate(background-color, 0.3s, ease);
       width: 12px;
       height: 12px;
       background-color: #f4f5f9;
       border-radius: 50%;
       cursor: pointer;
-      @include animate(all, 0.3s, ease);
       &:not(:first-child) {
         margin-left: 8px;
       }

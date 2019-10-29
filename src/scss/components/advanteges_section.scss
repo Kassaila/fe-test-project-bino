@@ -46,7 +46,9 @@
     @include media('print') {
       page-break-inside: avoid;
       max-width: none;
+      width: 100%;
       display: block;
+      padding: 0;
     }
     &:not(:last-child) {
       margin-bottom: 40px;

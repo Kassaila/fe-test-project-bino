@@ -68,6 +68,8 @@
       padding: 30px 15px 60px;
     }
     @include media('print') {
+      width: auto;
+      height: auto;
       background-color: transparent;
       box-shadow: none;
       padding: 0;

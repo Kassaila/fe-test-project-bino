@@ -46,7 +46,7 @@
 }
 .btn-scrollup {
   @extend %btnreset;
-  @include animate(opacity, 0.5s, ease);
+  @include animate(opacity box-shadow, 0.5s, ease);
   position: fixed;
   right: 52px;
   bottom: 64px;
