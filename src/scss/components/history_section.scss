@@ -6,6 +6,7 @@
       padding: 80px 0;
     }
     @include media('print') {
+      page-break-inside: avoid;
       position: relative;
       background-color: transparent;
       padding: 0;
@@ -17,12 +18,18 @@
     @include media('<widescreen') {
       flex-direction: column;
     }
+    @include media('print') {
+      display: block;
+    }
   }
   &__image {
     margin-right: 80px;
     @include media('<widescreen') {
       width: auto;
       margin: 0 auto 50px;
+    }
+    @include media('print') {
+      margin: 0 auto 40px;
     }
   }
   &__column {
@@ -35,6 +42,10 @@
     }
     @include media('<tablet') {
       width: 100%;
+    }
+    @include media('print') {
+      width: 100%;
+      display: block;
     }
   }
   &__title {
@@ -49,7 +60,10 @@
       margin-bottom: 30px;
     }
     @include media('print') {
+      font-size: 36px;
       color: #000;
+      padding-left: 0;
+      margin-bottom: 20px;
     }
     &:before {
       content: '';
@@ -59,6 +73,9 @@
       width: 6px;
       height: 100%;
       background-color: map-get($colors, 'orange');
+      @include media('print') {
+      display: none;
+      }
     }
   }
   &__text {
@@ -69,10 +86,14 @@
       margin-bottom: 30px;
     }
     @include media('print') {
+      line-height: 1.5;
       color: #000;
     }
     *:not(:last-child) {
       margin-bottom: 30px;
+      @include media('print') {
+        margin-bottom: 20px;
+      }
     }
   }
 }

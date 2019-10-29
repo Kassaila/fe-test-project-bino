@@ -7,6 +7,8 @@
     }
     @include media('print') {
       background-color: transparent;
+      margin-top: 40px;
+      padding: 0;
     }
     &__row {
       position: relative;
@@ -22,6 +24,11 @@
         justify-content: center;
         padding: 0;
         margin: 40px 0 0;
+      }
+      @include media('print') {
+        display: block;
+        padding: 0;
+        margin: 0;
       }
     }
     &__background {
@@ -63,11 +70,16 @@
     @include media('print') {
       background-color: transparent;
       box-shadow: none;
+      padding: 0;
     }
     .study-slider__block {
       display: flex;
       flex-direction: column;
       align-items: center;
+      @include media('print') {
+        page-break-inside: avoid;
+        display: block;
+      }
     }
     &__icon-holder {
       position: relative;
@@ -107,7 +119,10 @@
       padding-bottom: 26px;
       margin-bottom: 24px;
       @include media('print') {
+        text-align: left;
         color: #000;
+        padding-bottom: 0;
+        margin-bottom: 10px;
       }
       &:after {
         content: '';
@@ -118,6 +133,9 @@
         height: 1px;
         background-color: #6a6a6a;
         transform: translateX(-50%);
+        @include media('print') {
+          display: none;
+        }
       }
     }
     &__text {
@@ -126,7 +144,10 @@
       text-align: center;
       margin-bottom: 45px;
       @include media('print') {
+        line-height: 1.5;
+        text-align: left;
         color: #000;
+        margin-bottom: 20px;
       }
     }
     .btn {

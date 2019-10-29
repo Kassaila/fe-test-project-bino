@@ -4,6 +4,12 @@
   @include media('<tablet') {
     padding: 80px 0;
   }
+  @include media('print') {
+    page-break-inside: avoid;
+    background-color: transparent;
+    padding: 0;
+    margin-top: 40px;
+  }
   .block_decor__title {
     letter-spacing: normal;
     text-shadow: 0px 1px 0 #ffffff;
@@ -14,6 +20,10 @@
     margin: 65px 0 0;
     @include media('<phone') {
       margin: 40px 0 0;
+    }
+    @include media('print') {
+      display: block;
+      margin: 20px 0 0;
     }
   }
   &__contacts {
@@ -36,6 +46,11 @@
       flex: none;
       margin: 0 0 20px;
     }
+    @include media('print') {
+      display: block;
+      box-shadow: none;
+      padding: 0;
+    }
   }
   &__title {
     font: 600 24px/1 map-get($base, 'base-font-family');
@@ -50,9 +65,16 @@
       @include media('<phone') {
         margin: 20px 0 10px;
       }
+      @include media('print') {
+        margin: 20px 0 10px;
+      }
     }
     @include media('<phone') {
       font-size: 20px;
+      margin: 0 0 10px;
+    }
+    @include media('print') {
+      color: #000;
       margin: 0 0 10px;
     }
   }
@@ -62,6 +84,10 @@
     text-decoration: none;
     @include media('<phone') {
       font-size: 16px;
+    }
+    @include media('print') {
+      display: block;
+      color: #000;
     }
   }
   .form-block {
