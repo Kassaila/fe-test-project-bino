@@ -94,7 +94,6 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     background-color: map-get($colors, 'white');
     border-radius: 2px;
     box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.1);
@@ -109,25 +108,16 @@
     @include media('print') {
       display: none;
     }
-    &__label {
-      @include hide-text;
-      position: relative;
-      top: 0px;
-      left: 3px;
-      height: 0;
-      font: 16px/1 map-get($base, 'base-font-family');
-      z-index: 0;
-    }
     &__input {
       position: relative;
-      align-self: stretch;
+      width: 100%;
       padding: 0 0 15px 3px;
       margin: 0 0 28px;
       background-color: transparent;
       z-index: 1;
     }
     &__textarea {
-      align-self: stretch;
+      width: 100%;
       height: 115px;
       line-height: 1.71;
       resize: none;
@@ -149,6 +139,7 @@
       color: map-get($colors, 'orange');
     }
     .btn {
+      align-self: flex-start;
       border: none;
       margin-top: auto;
     }
