@@ -2,6 +2,7 @@ const welcomeSlider = () => {
   const $win = $(window);
   const $slider = $('.welcome_slider');
   const option = {
+    accessibility: true,
     infinite: false,
     speed: 800,
     slidesToShow: 1,
@@ -21,9 +22,37 @@ const welcomeSlider = () => {
     ],
   };
 
+  const _isFocusable = () => {
+    const $slideElements = $slider.find('.slick-current *');
+
+    for (let i = 0; i < $slideElements.length; i += 1) {
+      $slideElements[i].focus();
+      if ($slideElements[i] === document.activeElement) break;
+    }
+  };
+
+  const _dotsFocus = () => {
+    setTimeout(() => {
+      $slider.find('.slick-dots button').attr('tabindex', 0);
+    }, 100);
+  };
+
+  const _currSlideBlur = () => {
+    setTimeout(() => {
+      $slider.find('.slick-current').attr('tabindex', -1);
+    }, 100);
+  };
+
   const _addEventListeners = () => {
-    $slider.on('afterChange', function () {
-      $(this).find('.slick-current').focus();
+    $slider.on('init', () => {
+      _dotsFocus();
+      _currSlideBlur();
+    });
+
+    $slider.on('afterChange', () => {
+      _isFocusable();
+      _dotsFocus();
+      _currSlideBlur();
     });
 
     $win.on('beforeprint', () => {
@@ -34,15 +63,15 @@ const welcomeSlider = () => {
       $slider.slick(option);
     });
 
-    $('.to-content').on('click', () => $('.slick-current').focus());
+    $('.to-content').on('click', () => $slider.find('.slick-current').focus());
   };
 
   const init = () => {
     if (!$slider.length) return false;
 
-    $slider.slick(option);
-
     _addEventListeners();
+
+    $slider.slick(option);
 
     return true;
   };
