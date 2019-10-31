@@ -133,6 +133,7 @@
       max-width: 686px;
       padding-right: 116px;
       margin: 10px 0 55px;
+      outline: none;
       @include media('<widescreen') {
         max-width: none;
       }

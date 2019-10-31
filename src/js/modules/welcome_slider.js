@@ -63,7 +63,7 @@ const welcomeSlider = () => {
       $slider.slick(option);
     });
 
-    $('.to-content').on('click', () => $slider.find('.slick-current').focus());
+    $('.to-content').on('click', () => _isFocusable());
   };
 
   const init = () => {
