@@ -245,13 +245,13 @@
         padding: 0;
       }
       li {
+        @include animate(background-color opacity, 0.3s, ease);
         width: 1px;
         height: 34px;
         background-color: #999;
         border-radius: 1px;
         opacity: 0.25;
         cursor: pointer;
-        @include animate(all, 0.3s, ease);
         @include media('<phone') {
           width: 34px;
           height: 1px;

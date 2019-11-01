@@ -184,12 +184,12 @@
         padding: 0;
       }
       li {
+        @include animate(background-color, 0.3s, ease);
         width: 12px;
         height: 12px;
         background-color: #f4f5f9;
         border-radius: 50%;
         cursor: pointer;
-        @include animate(all, 0.3s, ease);
         &:not(:first-child) {
           margin-left: 8px;
         }

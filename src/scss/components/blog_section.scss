@@ -132,6 +132,7 @@
       }
     }
     &:before {
+      @include animate(width, 0.3s, ease);
       content: '';
       position: absolute;
       bottom: 0;
@@ -139,7 +140,6 @@
       width: 44px;
       height: 4px;
       background-color: map-get($colors, 'white');
-      @include animate(all , 0.3s, ease);
     }
     @include media('<phone') {
       margin: 0 0 20px;
@@ -156,10 +156,10 @@
     color: map-get($colors, 'white');
   }
   &__link {
+    @include animate(opacity, 0.3s, ease);
     font: 600 italic 18px/1.33 map-get($base, 'base-font-sans-serif');
     color: map-get($colors, 'white');
     margin: auto 0 10px;
-    @include animate(all , 0.3s, ease);
     &:hover,
     &:focus {
       text-decoration: none;

@@ -30,6 +30,7 @@
     }
   }
   .scroll-to {
+    @include animate(color, 0.3s, ease);
     @extend %btnreset;
     font-family: map-get($base, 'base-font-sans-serif');
     font-weight: 700;
@@ -37,7 +38,6 @@
     text-transform: uppercase;
     border: 1px solid transparent;
     padding: 13px 0;
-    @include animate(all , 0.3s, ease);
     &:hover {
       color: map-get($colors, 'orange');
     }
@@ -56,7 +56,7 @@
     padding: 0;
     &:before,
     &:after {
-      @include animate(all , 0.5s, ease);
+      @include animate(transform, 0.5s, ease);
       content: '';
       position: absolute;
       width: 100%;

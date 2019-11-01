@@ -39,12 +39,12 @@
   }
   &__filter {
     @extend %btnreset;
+    @include animate(color opacity, 0.3s, ease);
     font: 14px/1 map-get($base, 'base-font-sans-serif');
     text-transform: uppercase;
     color: #999;
     padding: 0;
     margin-bottom: 10px;
-    @include animate(all, 0.3s, ease);
     &:hover {
       color: map-get($colors, 'orange');
       opacity: 0.8;
@@ -88,7 +88,7 @@
     object-fit: cover;
   }
   &__description {
-    @include animate(all, 0.5s, ease);
+    @include animate(opacity, 0.5s, ease);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -127,6 +127,7 @@
       }
     }
     &:after {
+      @include animate(width, 0.3s, ease);
       content: '';
       position: absolute;
       left: 0;
@@ -134,7 +135,6 @@
       width: 44px;
       height: 4px;
       background-color: map-get($colors, 'white');
-      @include animate(all, 0.3s, ease);
     }
     @include media('<phone') {
       padding-top: 10px;

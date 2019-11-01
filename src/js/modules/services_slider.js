@@ -22,13 +22,25 @@ const servicesSlider = () => {
     ],
   };
 
-  const _isFocusable = () => {
-    const $slideElements = $slider.find('.slick-current *');
+  const _arrowsInit = () => {
+    setTimeout(() => {
+      const $arrowPrev = $slider.find('.slick-prev');
+      const $arrowNext = $slider.find('.slick-next');
 
-    for (let i = 0; i < $slideElements.length; i += 1) {
-      $slideElements[i].focus();
-      if ($slideElements[i] === document.activeElement) break;
-    }
+      $arrowNext.prependTo($slider);
+      $arrowPrev.prependTo($slider);
+      if ($arrowNext.lenth > 1) $arrowNext[1].remove();
+      if ($arrowPrev.lenth > 1) $arrowPrev[1].remove();
+    }, 100);
+  };
+
+  const _dotsInit = () => {
+    setTimeout(() => {
+      const $dots = $slider.find('.slick-dots');
+
+      $dots.prependTo($slider);
+      if ($dots.lenth > 1) $dots[1].remove();
+    }, 100);
   };
 
   const _dotsFocus = () => {
@@ -45,12 +57,13 @@ const servicesSlider = () => {
 
   const _addEventListeners = () => {
     $slider.on('init', () => {
+      _arrowsInit();
+      _dotsInit();
       _dotsFocus();
       _currSlideBlur();
     });
 
     $slider.on('afterChange', () => {
-      _isFocusable();
       _dotsFocus();
       _currSlideBlur();
     });
