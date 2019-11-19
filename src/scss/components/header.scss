@@ -1,25 +1,36 @@
 .header {
+  @include animate(background-color, 0.3s, ease);
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   background-color: #202020;
   padding: 18px 0 13px;
-  @include animate(all , 0.3s, ease);
   z-index: 10;
+  @include media('<desktop') {
+    background-color: #202020;
+    padding: 12px 0;
+  }
+  @include media('print') {
+    position: relative;
+    border: 30px solid #000;
+    padding: 0;
+  }
   &__logo {
     height: 52px;
     align-self: center;
     @include media('<tablet') {
       height: 25px;
     }
+    @include media('print') {
+      position: absolute;
+      left: 50%;
+      height: 52px;
+      transform: translateX(-50%);
+    }
     img {
       height: 100%;
     }
-  }
-  @include media('<desktop') {
-    background-color: #202020;
-    padding: 12px 0;
   }
   .page_top & {
     background-color: transparent;
@@ -27,48 +38,22 @@
       background-color: #202020;
     }
   }
-}
-.btn-scrollup {
-  @extend %btnreset;
-  position: fixed;
-  right: 52px;
-  bottom: 64px;
-  width: 53px;
-  height: 53px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: map-get($colors, 'orange');
-  border-radius: 50%;
-  box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.25);
-  @include animate(opacity , 0.5s, ease);
-  z-index: 5;
-  &:hover {
-    opacity: 0.8;
-    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.25);
-  }
-  &:before,
-  &:after {
-    content: '';
+  .to-content {
+    @include animate(opacity transform);
+    @extend %btnreset;
     position: absolute;
-    width: 10px;
-    height: 2px;
-    border-radius: 1px;
-    background-color: map-get($colors, 'white');
-  }
-  &:before {
-    transform-origin: 0%;
-    transform: translateY(3px) rotateZ(-58deg);
-  }
-  &:after {
-    transform-origin: 100%;
-    transform: translateY(3px) rotateZ(58deg);
-  }
-  @include media('<desktop') {
-    display: none;
-  }
-  .page_top & {
+    top: 0;
+    left: 0;
+    background-color: map-get($colors, 'orange');
     opacity: 0;
-    pointer-events: none;
+    z-index: -1;
+    &:focus {
+      opacity: 1;
+      transform: translateY(150%);
+      z-index: 1;
+    }
+    @include media('<desktop') {
+      display: none;
+    }
   }
 }

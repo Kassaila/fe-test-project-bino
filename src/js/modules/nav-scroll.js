@@ -4,7 +4,7 @@ const navScroll = () => {
   const $win = $(window);
   const $header = $('.header');
 
-  const scrollToAnchor = (target) => {
+  const _scrollToAnchor = (target) => {
     const winHeight = $win.height();
     const headerHeight = $header.innerHeight();
     const anchorVal = $(target).offset().top - headerHeight + 1;
@@ -25,7 +25,7 @@ const navScroll = () => {
     return scrollDelay * timeRate;
   };
 
-  const arrAnchors = () => {
+  const _arrAnchors = () => {
     const $anchors = $('.nav__list [data-anchor]');
     const arr = [];
 
@@ -44,7 +44,7 @@ const navScroll = () => {
     return arr;
   };
 
-  const navHighlight = (arr, headerHeight) => {
+  const _navHighlight = (arr, headerHeight) => {
     const winTop = $win.scrollTop() + headerHeight;
 
     arr.forEach((el) => {
@@ -67,17 +67,23 @@ const navScroll = () => {
   };
 
   const highlight = () => {
-    let arr = arrAnchors();
+    let arr = _arrAnchors();
     let headerHeight = $header.innerHeight();
 
-    navHighlight(arr, headerHeight);
+    _navHighlight(arr, headerHeight);
 
-    $win.on('scroll', () => navHighlight(arr, headerHeight));
+    $win.on('scroll', () => _navHighlight(arr, headerHeight));
 
     $win.on('resize', () => {
-      arr = arrAnchors();
+      arr = _arrAnchors();
       headerHeight = $header.innerHeight();
-      navHighlight(arr, headerHeight);
+      _navHighlight(arr, headerHeight);
+    });
+
+    $('.works_gallery__filter').on('click', () => {
+      arr = _arrAnchors();
+      headerHeight = $header.innerHeight();
+      _navHighlight(arr, headerHeight);
     });
   };
 
@@ -87,7 +93,7 @@ const navScroll = () => {
 
       if (!anchorId) return false;
 
-      return scrollToAnchor(anchorId);
+      return _scrollToAnchor(anchorId);
     });
   };
 

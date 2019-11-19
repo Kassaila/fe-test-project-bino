@@ -26,13 +26,11 @@
 (() => {
   'use strict';
 
-  const cfg         = require('./gulp-config.js'),
-        gulp        = require('gulp'),
-        del         = require('del'),
-        path        = require('path'),
-        notifier    = require('node-notifier'),
-        gutil       = require('gulp-util'),
-        browserSync = require('browser-sync').create();
+  const cfg = require('./gulp-config.js');
+  const gulp = require('gulp');
+  const del = require('del');
+  const path = require('path');
+  const browserSync = require('browser-sync').create();
 
   /**
    * Require gulp task from file
@@ -87,20 +85,6 @@
   }
 
   /**
-   * Show error in console
-   * @param  {String} preffix Title of the error
-   * @param  {String} err     Error message
-   */
-  function showError(preffix, err) {
-    gutil.log(gutil.colors.white.bgRed(' ' + preffix + ' '), gutil.colors.white.bgBlue(' ' + err.message + ' '));
-    notifier.notify({
-      title: preffix,
-      message: err.message
-    });
-    this.emit('end');
-  }
-
-  /**
    * template HTML
    */
   requireTask(`${cfg.task.fileInclude}`, `./${cfg.folder.tasks}/`, {
@@ -127,8 +111,7 @@
     src: cfg.folder.src,
     dest: cfg.folder.build,
     mainJs: cfg.file.mainJs,
-    checkProduction: true,
-    showError: showError
+    checkProduction: true
   });
 
   /**
@@ -138,7 +121,8 @@
     src: cfg.folder.src,
     dest: cfg.folder.build,
     vendorJs: cfg.file.vendorJs,
-    vendorJsMin: cfg.file.vendorJsMin
+    vendorJsMin: cfg.file.vendorJsMin,
+    checkProduction: true
   });
 
   /**
@@ -149,9 +133,7 @@
     dest: cfg.folder.build,
     mainScss: cfg.file.mainScss,
     mainScssMin: cfg.file.mainScssMin,
-    versions: cfg.autoprefixer.versions,
-    checkProduction: true,
-    showError: showError
+    checkProduction: true
   });
 
   /**
@@ -159,9 +141,7 @@
    */
   requireTask(`${cfg.task.buildSassFiles}`, `./${cfg.folder.tasks}/`, {
     sassFilesInfo: cfg.getPathesForSassCompiling(),
-    dest: cfg.folder.build,
-    versions: cfg.autoprefixer.versions,
-    showError: showError
+    dest: cfg.folder.build
   });
 
   /**
@@ -172,7 +152,7 @@
     dest: cfg.folder.build,
     vendorScss: cfg.file.vendorScss,
     vendorScssMin: cfg.file.vendorScssMin,
-    showError: showError
+    checkProduction: true
   });
 
   /**
@@ -249,17 +229,23 @@
    */
   gulp.task('default', gulp.series(
     cfg.task.cleanBuild,
+    cfg.task.esLint,
     gulp.parallel(
-      cfg.task.buildCustomJs,
-      cfg.task.buildJsVendors,
-      cfg.task.buildSass,
-      cfg.task.buildSassFiles,
-      cfg.task.buildStylesVendors,
-      cfg.task.fileInclude,
-      cfg.task.esLint,
-      cfg.task.imageMin
+      gulp.series(
+        cfg.task.fileInclude,
+        cfg.task.htmlHint,
+      ),
+      gulp.series(
+        cfg.task.buildSass,
+        cfg.task.buildSassFiles,
+        cfg.task.buildStylesVendors,
+      ),
+      gulp.series(
+        cfg.task.buildCustomJs,
+        cfg.task.buildJsVendors,
+      ),
     ),
-    cfg.task.htmlHint,
+    cfg.task.imageMin,
     cfg.task.copyFolders,
     gulp.parallel(
       cfg.task.browserSync,
@@ -275,17 +261,23 @@
       cfg.task.cleanProd,
       cfg.task.cleanBuild
     ),
+    cfg.task.esLint,
     gulp.parallel(
-      cfg.task.buildCustomJs,
-      cfg.task.buildJsVendors,
-      cfg.task.buildSass,
-      cfg.task.buildSassFiles,
-      cfg.task.buildStylesVendors,
-      cfg.task.fileInclude,
-      cfg.task.htmlHint,
-      cfg.task.esLint,
-      cfg.task.imageMin
+      gulp.series(
+        cfg.task.fileInclude,
+        cfg.task.htmlHint,
+      ),
+      gulp.series(
+        cfg.task.buildSass,
+        cfg.task.buildSassFiles,
+        cfg.task.buildStylesVendors,
+      ),
+      gulp.series(
+        cfg.task.buildCustomJs,
+        cfg.task.buildJsVendors,
+      ),
     ),
+    cfg.task.imageMin,
     cfg.task.copyFolders,
     cfg.task.copyFoldersProduction
   ), true);

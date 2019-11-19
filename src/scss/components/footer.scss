@@ -2,6 +2,9 @@
   background-color: #202020;
   padding: 31px 0 20px;
   margin-top: auto;
+  @include media('print') {
+    display: none;
+  }
   .row {
     align-items: center;
     @include media('<tablet') {
@@ -10,7 +13,6 @@
   }
   .social__list {
     @extend %listreset;
-
     display: flex;
     flex-wrap: wrap;
     li {
@@ -20,10 +22,10 @@
       }
     }
     a {
+      @include animate(color, 0.3s, ease);
       font-size: 19px;
       text-decoration: none;
       color: map-get($base, 'base-text-color');
-      @include animate(color , 0.3s, ease);
       &:hover {
         color: map-get($colors, 'orange');
         text-decoration: none;
@@ -40,5 +42,50 @@
     @include media('<tablet') {
       margin: 10px 0 0;
     }
+  }
+}
+.btn-scrollup {
+  @extend %btnreset;
+  @include animate(opacity box-shadow, 0.5s, ease);
+  position: fixed;
+  right: 52px;
+  bottom: 64px;
+  width: 53px;
+  height: 53px;
+  display: flex;
+  color: transparent;
+  background-color: map-get($colors, 'orange');
+  border-radius: 50%;
+  box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.25);
+  z-index: 5;
+  &:hover {
+    opacity: 0.8;
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.25);
+  }
+  @include media('print') {
+    display: none;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    border-color: map-get($colors, 'white') map-get($colors, 'white')
+      transparent transparent;
+    mix-blend-mode: color-dodge;
+  }
+  &:after {
+    transform: translate(-50%, -50%) rotateZ(-45deg);
+  }
+  @include media('<desktop') {
+    display: none;
+  }
+  .page_top & {
+    opacity: 0;
+    pointer-events: none;
   }
 }

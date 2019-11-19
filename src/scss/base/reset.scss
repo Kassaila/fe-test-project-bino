@@ -10,7 +10,9 @@ html {
 *:after {
   box-sizing: inherit;
 }
-
+*:focus {
+  outline: 2px solid #3672f3;
+}
 body {
   @include font-smoothing(on);
   color: map-get($base, 'base-text-color');

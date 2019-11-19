@@ -2,6 +2,9 @@
   margin-left: auto;
   display: flex;
   align-items: center;
+  @include media('print') {
+   display: none;
+  }
   &__list {
     display: flex;
     list-style: none;
@@ -27,6 +30,7 @@
     }
   }
   .scroll-to {
+    @include animate(color, 0.3s, ease);
     @extend %btnreset;
     font-family: map-get($base, 'base-font-sans-serif');
     font-weight: 700;
@@ -34,7 +38,6 @@
     text-transform: uppercase;
     border: 1px solid transparent;
     padding: 13px 0;
-    @include animate(all , 0.3s, ease);
     &:hover {
       color: map-get($colors, 'orange');
     }
@@ -47,19 +50,19 @@
     }
   }
   &__button_mobile {
+    @extend %btnreset;
     position: relative;
     display: none;
-    @extend %btnreset;
     padding: 0;
     &:before,
     &:after {
+      @include animate(transform, 0.5s, ease);
       content: '';
       position: absolute;
       width: 100%;
       height: 2px;
       background-color: #fff;
       transform-origin: 0;
-      @include animate(all , 0.5s, ease);
     }
     &:before {
       top: 0;
@@ -76,10 +79,12 @@
       justify-content: center;
     }
     span {
+      @include animate(opacity, 0.3s, ease);
+      @include hide-text;
       height: 2px;
+      color: transparent;
       background-color: #fff;
       transform-origin: 0;
-      @include animate(opacity, 0.3s, ease);
     }
     &.active {
       &:before {
