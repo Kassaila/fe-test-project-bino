@@ -38,9 +38,6 @@
       background-color: #202020;
     }
   }
-  .row {
-    position: relative;
-  }
   .to-content {
     @include animate(opacity transform);
     @extend %btnreset;
