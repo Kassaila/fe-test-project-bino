@@ -3,81 +3,67 @@ module.exports = {
     tasks: 'tasks',
     src: 'src',
     build: 'assets',
-    prod: 'production'
+    prod: 'production',
+    temp: '.temp',
   },
   file: {
     mainHtml: 'index.html',
     mainJs: 'app.js',
+    mainJsMin: 'app.min.js',
     vendorJs: 'vendor.js',
     vendorJsMin: 'vendor.min.js',
+    vendorJsTemp: 'vendor.temp.js',
     mainScss: 'styles.scss',
     mainScssMin: 'styles.min.css',
     vendorScss: 'vendor.scss',
     vendorScssMin: 'vendor.min.css',
   },
-  fileInclude: {
+  buildHtml: {
     templates: 'src/html/templates',
-    dest: './',
+    dest: './assets',
+  },
+  buildStyles: {
+    // Sorting type css media queries: 'desktop-first' || 'mobile-first'
+    sortType: 'desktop-first',
   },
   task: {
-    htmlHint: 'html-hint',
-    esLint: 'es-lint',
-    buildCustomJs: 'build-custom-js',
+    lintHtml: 'lint-html',
+    lintJs: 'lint-js',
+    buildHtml: 'build-html',
+    buildJs: 'build-js',
     buildJsVendors: 'build-js-vendors',
-    buildSass: 'build-sass',
-    buildSassFiles: 'compile-sass-files',
+    buildStyles: 'build-styles',
+    buildStylesCustom: 'build-styles-custom',
     buildStylesVendors: 'build-styles-vendors',
     imageMin: 'image-min',
     cleanProd: 'clean-production',
     cleanBuild: 'clean-build',
     copyFolders: 'copy-folders',
-    copyFoldersProduction: 'copy-folders-production',
-    fileInclude: 'file-include',
+    copyFoldersProd: 'copy-folders-production',
     browserSync: 'browser-sync-server',
     watch: 'watch',
   },
-  autoprefixer: {
-    browserslist: [
-      '.browserslistrc'
-    ]
-  },
   imageExtensions: 'jpg|jpeg|png|svg|gif|ico|tiff',
-  getPathesForSassCompiling: function () {
+  getPathesForStylesCustom: function () {
     return {
       files: [],
-      isGcmq: false
-     };
+      isGcmq: false,
+    };
   },
-  getPathesToCopyForProduction: function() {
+  getPathesToCopyForProduction: function () {
     return [
-      './**/*',
-      '!.*',
-      '!.*/**',
+      `./${this.folder.build}/**`,
       '.htaccess',
-      `!${this.folder.prod}`,
-      `!${this.folder.build}/images/info.txt`,
-      `!{${this.folder.src},${this.folder.src}/**}`,
-      '!{tasks,tasks/**}',
-      '!{node_modules,node_modules/**}',
-      '!CONTRIBUTING.md',
-      '!gulpfile.js',
-      '!gulp-config.js',
-      '!LICENSE',
-      '!package.json',
-      '!package-lock.json',
-      '!README.md',
-      '!readme.txt',
-      '!{sys_icon,sys_icon/**}'
     ];
   },
-  getPathesToCopy: function() {
+  getPathesToCopy: function () {
     return [
       `./${this.folder.src}/**`,
       `!{${this.folder.src}/images,${this.folder.src}/images/**}`,
       `!{${this.folder.src}/js,${this.folder.src}/js/**}`,
       `!{${this.folder.src}/html,${this.folder.src}/html/**}`,
       `!{${this.folder.src}/scss,${this.folder.src}/scss/**}`,
-      `!{${this.folder.src}/vendor_entries,${this.folder.src}/vendor_entries/**}`
+      `!{${this.folder.src}/vendor_entries,${this.folder.src}/vendor_entries/**}`,
     ];
   }
 };

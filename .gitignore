@@ -29,9 +29,11 @@ node_modules/
 /build/
 /assets/
 /production/
+/.temp/
 .sass-cache
 node_modules
 *.map
+/*.html
 .tmp
 tmp
 
