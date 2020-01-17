@@ -1,1 +1,1 @@
-## Test project - Bino - Wai & print version
+## Test project - Bino + WAI & print version
