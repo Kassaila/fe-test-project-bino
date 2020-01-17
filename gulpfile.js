@@ -1,7 +1,7 @@
 /**
  *
  *  Web Starter Kit
- *  Copyright (c) 2017 JustCoded.
+ *  Copyright (c) 2020 JustCoded.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -45,6 +45,9 @@
       if (settings.checkProduction) {
         settings.isProduction = process.argv[process.argv.length - 1] === 'build';
       }
+      if (settings.checkFix) {
+        settings.isFix = process.argv[process.argv.length - 1] === 'fix-js';
+      }
 
       let task = require(path + taskName + '.js').call(this, settings);
 
@@ -85,74 +88,83 @@
   }
 
   /**
-   * template HTML
+   * Template HTML
    */
-  requireTask(`${cfg.task.fileInclude}`, `./${cfg.folder.tasks}/`, {
-    templates: cfg.fileInclude.templates,
-    dest: cfg.fileInclude.dest
+  requireTask(`${cfg.task.buildHtml}`, `./${cfg.folder.tasks}/`, {
+    templates: cfg.buildHtml.templates,
+    dest: cfg.buildHtml.dest,
   });
 
   /**
-   * Hint HTML
+   * Lint HTML
    */
-  requireTask(`${cfg.task.htmlHint}`, `./${cfg.folder.tasks}/`);
-
-  /**
-   * Lint ES
-   */
-  requireTask(`${cfg.task.esLint}`, `./${cfg.folder.tasks}/`, {
-    src: cfg.folder.src
+  requireTask(`${cfg.task.lintHtml}`, `./${cfg.folder.tasks}/`, {
+    dest: cfg.buildHtml.dest,
   });
 
   /**
-   * Build custom js
+   * Lint JS
    */
-  requireTask(`${cfg.task.buildCustomJs}`, `./${cfg.folder.tasks}/`, {
+  requireTask(`${cfg.task.lintJs}`, `./${cfg.folder.tasks}/`, {
+    src: cfg.folder.src,
+    checkFix: true,
+  });
+
+  /**
+   * Build JS
+   */
+  requireTask(`${cfg.task.buildJs}`, `./${cfg.folder.tasks}/`, {
     src: cfg.folder.src,
     dest: cfg.folder.build,
     mainJs: cfg.file.mainJs,
-    checkProduction: true
+    mainJsMin: cfg.file.mainJsMin,
+    checkProduction: true,
   });
 
   /**
-   * Build js vendor (concatenate vendors array)
+   * Build JS vendor (concatenate vendors array)
    */
   requireTask(`${cfg.task.buildJsVendors}`, `./${cfg.folder.tasks}/`, {
     src: cfg.folder.src,
     dest: cfg.folder.build,
+    temp: cfg.folder.temp,
     vendorJs: cfg.file.vendorJs,
     vendorJsMin: cfg.file.vendorJsMin,
-    checkProduction: true
+    vendorJsTemp: cfg.file.vendorJsTemp,
+    checkProduction: true,
   });
 
   /**
-   * Build styles for application from SASS
+   * Build styles for application
    */
-  requireTask(`${cfg.task.buildSass}`, `./${cfg.folder.tasks}/`, {
+  requireTask(`${cfg.task.buildStyles}`, `./${cfg.folder.tasks}/`, {
     src: cfg.folder.src,
     dest: cfg.folder.build,
     mainScss: cfg.file.mainScss,
     mainScssMin: cfg.file.mainScssMin,
-    checkProduction: true
+    sortType: cfg.buildStyles.sortType,
+    checkProduction: true,
   });
 
   /**
-   * Compile scss files listed in the config
+   * Build styles custom files listed in the config
    */
-  requireTask(`${cfg.task.buildSassFiles}`, `./${cfg.folder.tasks}/`, {
-    sassFilesInfo: cfg.getPathesForSassCompiling(),
-    dest: cfg.folder.build
+  requireTask(`${cfg.task.buildStylesCustom}`, `./${cfg.folder.tasks}/`, {
+    stylesCustomInfo: cfg.getPathesForStylesCustom(),
+    dest: cfg.folder.build,
+    sortType: cfg.buildStyles.sortType,
+    checkProduction: true,
   });
 
   /**
-   * Build styles for vendor from SASS
+   * Build styles for vendor
    */
   requireTask(`${cfg.task.buildStylesVendors}`, `./${cfg.folder.tasks}/`, {
     src: cfg.folder.src,
     dest: cfg.folder.build,
     vendorScss: cfg.file.vendorScss,
     vendorScssMin: cfg.file.vendorScssMin,
-    checkProduction: true
+    checkProduction: true,
   });
 
   /**
@@ -160,21 +172,21 @@
    */
   requireTask(`${cfg.task.imageMin}`, `./${cfg.folder.tasks}/`, {
     src: cfg.folder.src,
-    dest: cfg.folder.build
+    dest: cfg.folder.build,
   });
 
   /**
    * Clean build folder
    */
   requireTask(`${cfg.task.cleanBuild}`, `./${cfg.folder.tasks}/`, {
-    src: cfg.folder.build
+    src: cfg.folder.build,
   });
 
   /**
    * Clean production folder
    */
   requireTask(`${cfg.task.cleanProd}`, `./${cfg.folder.tasks}/`, {
-    src: cfg.folder.prod
+    src: cfg.folder.prod,
   });
 
 
@@ -183,15 +195,15 @@
    */
   requireTask(`${cfg.task.copyFolders}`, `./${cfg.folder.tasks}/`, {
     dest: cfg.folder.build,
-    foldersToCopy: cfg.getPathesToCopy()
+    foldersToCopy: cfg.getPathesToCopy(),
   });
 
   /**
    * Copy folders to the production folder
    */
-  requireTask(`${cfg.task.copyFoldersProduction}`, `./${cfg.folder.tasks}/`, {
+  requireTask(`${cfg.task.copyFoldersProd}`, `./${cfg.folder.tasks}/`, {
     dest: cfg.folder.prod,
-    foldersToCopy: cfg.getPathesToCopyForProduction()
+    foldersToCopy: cfg.getPathesToCopyForProduction(),
   });
 
   /**
@@ -199,29 +211,28 @@
    */
   requireTask(`${cfg.task.browserSync}`, `./${cfg.folder.tasks}/`, {
     mainHtml: cfg.file.mainHtml,
-    browserSync: browserSync
+    dest: cfg.buildHtml.dest,
+    browserSync,
   });
 
   /**
    * Watch for file changes
    */
   requireTask(`${cfg.task.watch}`, `./${cfg.folder.tasks}/`, {
-    sassFilesInfo: cfg.getPathesForSassCompiling(),
     src: cfg.folder.src,
-    templates: cfg.folder.templates,
     dest: cfg.folder.build,
     imageExtensions: cfg.imageExtensions,
-    browserSync: browserSync,
-    deleteFile: deleteFile,
+    browserSync,
+    deleteFile,
     tasks: {
-      buildSassFiles: cfg.task.buildSassFiles,
-      buildCustomJs: cfg.task.buildCustomJs,
-      buildSass: cfg.task.buildSass,
-      esLint: cfg.task.esLint,
-      fileInclude: cfg.task.fileInclude,
-      htmlHint: cfg.task.htmlHint,
-      imageMin: cfg.task.imageMin
-    }
+      lintJs: cfg.task.lintJs,
+      buildJs: cfg.task.buildJs,
+      buildStyles: cfg.task.buildStyles,
+      buildStylesCustom: cfg.task.buildStylesCustom,
+      buildHtml: cfg.task.buildHtml,
+      lintHtml: cfg.task.lintHtml,
+      imageMin: cfg.task.imageMin,
+    },
   }, false);
 
   /**
@@ -229,19 +240,19 @@
    */
   gulp.task('default', gulp.series(
     cfg.task.cleanBuild,
-    cfg.task.esLint,
+    cfg.task.lintJs,
     gulp.parallel(
       gulp.series(
-        cfg.task.fileInclude,
-        cfg.task.htmlHint,
+        cfg.task.buildHtml,
+        cfg.task.lintHtml,
       ),
       gulp.series(
-        cfg.task.buildSass,
-        cfg.task.buildSassFiles,
+        cfg.task.buildStyles,
+        cfg.task.buildStylesCustom,
         cfg.task.buildStylesVendors,
       ),
       gulp.series(
-        cfg.task.buildCustomJs,
+        cfg.task.buildJs,
         cfg.task.buildJsVendors,
       ),
     ),
@@ -249,8 +260,8 @@
     cfg.task.copyFolders,
     gulp.parallel(
       cfg.task.browserSync,
-      cfg.task.watch
-    )
+      cfg.task.watch,
+    ),
   ));
 
   /**
@@ -261,24 +272,34 @@
       cfg.task.cleanProd,
       cfg.task.cleanBuild
     ),
-    cfg.task.esLint,
+    cfg.task.lintJs,
     gulp.parallel(
       gulp.series(
-        cfg.task.fileInclude,
-        cfg.task.htmlHint,
+        cfg.task.buildHtml,
+        cfg.task.lintHtml,
       ),
       gulp.series(
-        cfg.task.buildSass,
-        cfg.task.buildSassFiles,
+        cfg.task.buildStyles,
+        cfg.task.buildStylesCustom,
         cfg.task.buildStylesVendors,
       ),
       gulp.series(
-        cfg.task.buildCustomJs,
+        cfg.task.buildJs,
         cfg.task.buildJsVendors,
       ),
     ),
     cfg.task.imageMin,
     cfg.task.copyFolders,
-    cfg.task.copyFoldersProduction
+    cfg.task.copyFoldersProd,
   ), true);
+
+  /**
+   * Linting JS files
+   */
+  gulp.task('lint-js', gulp.series(cfg.task.lintJs));
+
+  /**
+  * Fix JS files
+  */
+  gulp.task('fix-js', gulp.series(cfg.task.lintJs));
 })();
