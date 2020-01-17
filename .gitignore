@@ -28,6 +28,7 @@ node_modules/
 # markup
 /build/
 /assets/
+/production/
 /.temp/
 .sass-cache
 node_modules
