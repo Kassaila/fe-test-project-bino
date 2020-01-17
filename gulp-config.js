@@ -53,7 +53,6 @@ module.exports = {
   getPathesToCopyForProduction: function () {
     return [
       `./${this.folder.build}/**`,
-      '.htaccess',
     ];
   },
   getPathesToCopy: function () {
